@@ -1,7 +1,7 @@
 % ============================================================================
 % UNIT 2 : તરંગ-કણ દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત
 % ============================================================================
-\chapter{તરંગ-કણ દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત \en{Wave-Particle Duality, Wave Packets and the Uncertainty Principle}}
+\chapter[એકમ 2 : દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતા]{તરંગ-કણ દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત \en{Wave--Particle Duality, Wave Packets and the Uncertainty Principle}}
 
 \section{પ્રસ્તાવના અને શૈક્ષણિક ઉદ્દેશ્યો}
 \begin{uddeshyo}
@@ -37,7 +37,7 @@ $v_p=\omega/k$. \textbf{સમૂહ વેગ (Group Velocity):} તરંગ-�
 \begin{equation}
 \Psi(x,0)=A\,e^{-x^{2}/2\sigma^{2}}\,e^{\ii k_0 x},
 \qquad \Psi(x,t)=\frac{A}{\sqrt{1+\ii\,\frac{\hbar t}{m\sigma^{2}}}}\;
-\exp\!\left[-\frac{x^{2}}{2\sigma^{2}\!\left(1+\ii\frac{\hbar t}{m\sigma^{2}}\right)}+\ii k_0x-\ii\frac{\hbar k_0^{2}t}{2m}\right].
+\exp\!\Big[-\tfrac{x^{2}}{2\sigma^{2}(1+\ii\hbar t/m\sigma^{2})}+\ii k_0x-\ii\tfrac{\hbar k_0^{2}t}{2m}\Big].
 \label{eq:gausspacket}
 \end{equation}
 સંભાવના ઘનતા ગોસિયન જ રહે છે પણ પહોળાઈ વધે છે:
@@ -118,10 +118,12 @@ v_g=\frac{p}{m}=v\quad(\text{કણ-ઝડપ}),\\
 \[
 \Delta p\gtrsim\frac{\hbar}{2R},\qquad
 K\approx\frac{(\Delta p)^{2}}{2m_e}=\frac{\hbar^{2}}{8m_eR^{2}}
+\]
+\[
 =\frac{(1.055\times10^{-34})^{2}}{8(9.11\times10^{-31})(5\times10^{-15})^{2}}
 \approx3\times10^{-11}\ \mathrm{J}\approx194\ \mathrm{MeV}.
 \]
-પરંતુ $\beta$-ક્ષયમાં ઉત્સર્જિત ઇલેક્ટ્રોનો ફક્ત $\sim1$ MeV ઊર્જા ધરે છે. $194$ MeV બંધનિત ઇલેક્ટ્રોન અસંગત છે $\Rightarrow$ ન્યુક્લિયસમાં ઇલેક્ટ્રોન હોઈ જ શકતો નથી. ✓
+પરંતુ $\beta$-ક્ષયમાં ઉત્સર્જિત ઇલેક્ટ્રોનો ફક્ત $\sim1$ MeV ઊર્જા ધરે છે. $194$ MeV બંધનિત ઇલેક્ટ્રોન અસંગત છે $\Rightarrow$ ન્યુક્લિયસમાં ઇલેક્ટ્રોન હોઈ જ શકતો નથી. $\checkmark$
 
 \paragraph{(ii) હાઇડ્રોજનની ભૂમિ-અવસ્થા ઊર્જા.}
 ત્રિજ્યા $r$ ની કક્ષામાં $\Delta p\sim\hbar/r$, એટલે $K\sim\hbar^{2}/2mr^{2}$; કુલ ઊર્જા:
@@ -264,7 +266,7 @@ $2\times10^{6}$ m/s ઝડપે ફરતા ઇલેક્ટ્રોન મ
 \[
 v_g=v_p-\lambda\left(-\frac{C}{\lambda^{2}}\right)=\frac{C}{\lambda}+\frac{C}{\lambda}=\frac{2C}{\lambda}=2v_p .
 \]
-સત્યાપન: અસાપેક્ષતાવાદી દ્રવ્ય-તરંગમાં ખરેખર $v_p\propto1/\lambda$ અને $v_g=2v_p=v$ ✓
+સત્યાપન: અસાપેક્ષતાવાદી દ્રવ્ય-તરંગમાં ખરેખર $v_p\propto1/\lambda$ અને $v_g=2v_p=v$ $\checkmark$
 \end{dahlo}
 
 \begin{dahlo}{દાખલો 2.3 : પેકેટ-ફેલાવો}
@@ -371,12 +373,12 @@ $\Delta p_x\simeq(h/\lambda)\sin\theta=(6.626\times10^{-34}/10^{-12})(0.5)=3.31\
 \subsection{અણઉકેલેલા દાખલા}
 \begin{enumerate}[label=\textbf{P\arabic*.}]
   \item $v_p=4\times10^{6}$ m/s ઇલેક્ટ્રોન માટે $v_g$ ગણો. \hfill [\textbf{જવાબ:} $8\times10^{6}$ m/s]
-  \item કોઈ તરંગ માટે $v_p=a+b\lambda$ હોય તો $v_g$ શોધો. \hfill [\textbf{જવાબ:} $v_g=a-2b\lambda+v_p$... એટલે $v_g=a-b\lambda$]
-  \item $\sigma=10$ nm ઇલેક્ટ્રોન પેકેટ $t=10^{-12}$ s પછી કેટલો ફેલાય? \hfill [\textbf{જવાબ:} $\approx115$ nm]
-  \item $\Delta x=1$ μm ઇલેક્ટ્રોન માટે $\Delta p_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.28\times10^{-29}$ kg m/s]
-  \item પ્રોટોન ($R=10^{-15}$ m) ન્યુક્લિયસ-ક્રમ બંધન માટે ન્યૂનતમ ઊર્જા ગણો. \hfill [\textbf{જવાબ:} $\approx0.1$ MeV]
+  \item કોઈ તરંગ માટે $v_p=a+b\lambda$ હોય તો $v_g$ શોધો. \hfill [\textbf{જવાબ:} $v_g=v_p-\lambda b=(a+b\lambda)-b\lambda=a$]
+  \item $\sigma=10$ nm ઇલેક્ટ્રોન પેકેટ $t=10^{-12}$ s પછી કેટલો ફેલાય? \hfill [\textbf{જવાબ:} $\approx15.3$ nm]
+  \item $\Delta x=1$ $\mu$m ઇલેક્ટ્રોન માટે $\Delta p_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.28\times10^{-29}$ kg m/s]
+  \item પ્રોટોન ($R=10^{-15}$ m) ન્યુક્લિયસ-ક્રમ બંધન માટે ન્યૂનતમ ઊર્જા ગણો. \hfill [\textbf{જવાબ:} $\approx5$ MeV]
   \item $\tau=10^{-8}$ s અવસ્થાની રેખાની આવૃત્તિ-પહોળાઈ ગણો. \hfill [\textbf{જવાબ:} $\approx8\times10^{6}$ Hz]
-  \item $\Delta\theta=60^\circ$ માટે $\Delta L_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.82\times10^{-35}$ J s]
+  \item $\Delta\theta=60^\circ$ માટે $\Delta L_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.04\times10^{-35}$ J s]
   \item $\omega=10^{14}$ rad/s દોલક ($m=9.11\times10^{-31}$ kg) ની શૂન્ય-બિંદુ ઊર્જા eV માં ગણો. \hfill [\textbf{જવાબ:} $\approx0.033$ eV]
   \item ગામા-સૂક્ષ્મદર્શક $\lambda=10^{-13}$ m, $\sin\theta=0.3$: $\Delta x$ ગણો. \hfill [\textbf{જવાબ:} $\approx3.3\times10^{-13}$ m]
   \item દાખલો P9 માં $\Delta p_x$ અને ઉત્પાદન $\Delta x\,\Delta p_x$ ગણો. \hfill [\textbf{જવાબ:} $\Delta p_x\approx1.99\times10^{-21}$; ઉત્પાદન $\approx h$]
@@ -448,15 +450,15 @@ $\Delta p_x\simeq(h/\lambda)\sin\theta=(6.626\times10^{-34}/10^{-12})(0.5)=3.31\
 
 \begin{javabchavi}{MCQ પગલાંવાર સમજૂતી (મુખ્ય ગણતરી-આધારિત પ્રશ્નો)}
 \begin{description}[style=nextline,itemsep=0pt]
-  \item[3.] અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ: $v_p=v/2$, $v_g=v$ ⇒ ગુણોત્તર $1{:}2$.
-  \item[4.] $v_p=c^2/v$, $v_g=v$ ⇒ $v_pv_g=c^2$ — સાપેક્ષતાવાદી સંબંધ.
+  \item[3.] અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ: $v_p=v/2$, $v_g=v$ $\Rightarrow$ ગુણોત્તર $1{:}2$.
+  \item[4.] $v_p=c^2/v$, $v_g=v$ $\Rightarrow$ $v_pv_g=c^2$ — સાપેક્ષતાવાદી સંબંધ.
   \item[6.] $v_p\propto\lambda\Rightarrow\dd v_p/\dd\lambda>0\Rightarrow v_g=v_p-\lambda(\text{ધન})<v_p$; $v_p=a\lambda$ માટે $v_g=a\lambda-a\lambda=0$.
-  \item[17.] $K\sim\hbar^2/8mR^2$ અને $R=10^{-14}$ m ⇒ $\approx95$ MeV → વિકલ્પ (C).
-  \item[20.] ચોક્કસ શ્રોડિન્જર ઉકેલ $E_n=(n+\tfrac12)\hbar\omega$; $n=0$ ⇒ $\hbar\omega/2$.
-  \item[23.] $\Delta E=h\Delta\nu\sim\hbar/2\tau\Rightarrow\Delta\nu\sim1/4\pi\tau\approx1/2\pi\tau$ (ક્રમ) → (B).
+  \item[17.] $K\sim\hbar^2/8mR^2$ અને $R=10^{-14}$ m $\Rightarrow$ $\approx95$ MeV $\to$ વિકલ્પ (C).
+  \item[20.] ચોક્કસ શ્રોડિન્જર ઉકેલ $E_n=(n+\tfrac12)\hbar\omega$; $n=0$ $\Rightarrow$ $\hbar\omega/2$.
+  \item[23.] $\Delta E=h\Delta\nu\sim\hbar/2\tau\Rightarrow\Delta\nu\sim1/4\pi\tau\approx1/2\pi\tau$ (ક્રમ) $\to$ (B).
   \item[28.] $\Delta p\ge\hbar/2\Delta x=1.055\times10^{-34}/(10^{-10})=1.06\times10^{-24}$ kg m/s.
   \item[40.] $\tau\gtrsim\hbar/2\Delta E=(1.055\times10^{-34})/(2\times1.602\times10^{-25})=3.3\times10^{-10}$ s.
-  \item[46.] $\tau_s=m\sigma^{2}/\hbar=9.11\times10^{-31}\times10^{-18}/1.055\times10^{-34}\approx8.6\times10^{-15}$ s ≈ 9 fs.
+  \item[46.] $\tau_s=m\sigma^{2}/\hbar=9.11\times10^{-31}\times10^{-18}/1.055\times10^{-34}\approx8.6\times10^{-15}$ s $\approx$ 9 fs.
   \item[47.] $\Delta L\ge\hbar/2\Delta\theta=\hbar/2\pi$.
 \end{description}
 શેષ પ્રશ્નો વ્યાખ્યા-આધારિત છે; \S2.2--\S2.3નાં સૂત્રો સાથે સરખાવો.
