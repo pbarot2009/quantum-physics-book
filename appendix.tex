@@ -1,0 +1,208 @@
+% =====================================================================
+% પરિશિષ્ટો : સ્થિરાંકો, સૂત્ર-સંગ્રહ, ઉત્તર-કી, પરિભાષા કોશ, સંદર્ભગ્રંથો
+% =====================================================================
+\appendix
+
+% ---------------------------------------------------------------------
+\chapter{મૂળભૂત ભૌતિક સ્થિરાંકો\\{\large (Fundamental Physical Constants)}}
+\label{app:constants}
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{સ્થિરાંક} & \textbf{ચિહ્ન} & \textbf{મૂલ્ય} & \textbf{એકમ} \\
+\midrule
+પ્રકાશની ઝડપ (Speed of Light)          & $c$      & $2.998\times10^{8}$        & m\,s$^{-1}$ \\
+પ્લાંક સ્થિરાંક (Planck Constant)       & $h$      & $6.626\times10^{-34}$      & J\,s \\
+ઘટાયેલ પ્લાંક સ્થિરાંક                  & $\hbar$  & $1.055\times10^{-34}$      & J\,s \\
+વિદ્યુત વીજભાર (Elementary Charge)       & $e$      & $1.602\times10^{-19}$      & C \\
+ઇલેક્ટ્રોન-સ્કંધ (Electron Mass)         & $m_e$    & $9.109\times10^{-31}$      & kg \\
+પ્રોટોન-સ્કંધ (Proton Mass)              & $m_p$    & $1.673\times10^{-27}$      & kg \\
+ન્યૂટ્રોન-સ્કંધ (Neutron Mass)           & $m_n$    & $1.675\times10^{-27}$      & kg \\
+બોલ્ટ્ઝમાન સ્થિરાંક                      & $k_B$    & $1.381\times10^{-23}$      & J\,K$^{-1}$ \\
+શૂન્યાવકાશ પારગમ્યતા                     & $\varepsilon_0$ & $8.854\times10^{-12}$ & F\,m$^{-1}$ \\
+શૂન્યાવકાશ ભેદ્યતા                        & $\mu_0$  & $4\pi\times10^{-7}$        & H\,m$^{-1}$ \\
+રીડબર્ગ ઊર્જા (Rydberg Energy)          & $R_\infty hc$ & $13.606$             & eV \\
+બોર ત્રિજ્યા (Bohr Radius)               & $a_0$    & $5.292\times10^{-11}$      & m \\
+ઇલેક્ટ્રોન કૉમ્પ્ટન તરંગલંબાઈ            & $\Lambda_e$ & $2.426\times10^{-12}$   & m \\
+સ્ટેફન-બોલ્ટ્ઝમાન સ્થિરાંક                & $\sigma$ & $5.670\times10^{-8}$       & W\,m$^{-2}$K$^{-4}$ \\
+વિન વિસ્થાપન સ્થિરાંક                    & $b$      & $2.898\times10^{-3}$       & m\,K \\
+અણુભાર એકમ                              & $u$      & $1.6605\times10^{-27}$     & kg \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{ઉપયોગી સંખ્યાત્મક સંબંધો:}
+\begin{align*}
+  E_\gamma(\mathrm{eV}) &= \frac{1240}{\lambda(\mathrm{nm})}
+  & \lambda(\text{\AA}) &= \frac{12.27}{\sqrt{V(\mathrm{volt})}}\quad(\text{ઇલેક્ટ્રોન})\\[1mm]
+  \kB T(T=300\,\mathrm{K}) &= 25.9\ \mathrm{meV}
+  & \Delta\lambda_C(180^\circ) &= 4.86\ \mathrm{pm}
+\end{align*}
+
+% ---------------------------------------------------------------------
+\chapter{સૂત્ર-સંગ્રહ : પરીક્ષા-તૈયારી પત્રિકા\\{\large (Formula Sheet for GATE/NET Revision)}}
+
+\section*{એકમ 1 -- જૂનો ક્વોન્ટમ વાદ}
+\begin{itemize}
+  \item પ્લાંક: $u(\nu,T)=\dfrac{8\pi h\nu^{3}}{c^{3}}\dfrac{1}{e^{h\nu/k_BT}-1}$;\quad
+        $\bar\varepsilon=\dfrac{h\nu}{e^{h\nu/k_BT}-1}$
+  \item સ્ટેફન-બોલ્ટ્ઝમાન $R=\sigma T^{4}$;\quad વિન $\lambda_{\max}T=b$
+  \item આઇન્સ્ટાઇન $eV_s=h\nu-\phi=h(\nu-\nu_0)$
+  \item કૉમ્પ્ટન $\Delta\lambda=\dfrac{h}{m_ec}(1-\cos\theta)=2\Lambda\sin^{2}\dfrac{\theta}{2}$
+  \item ડી બ્રોગ્લી $\lambda=h/p$;\quad ઔષ્ધિજ $\lambda=h/\sqrt{3mk_BT}$
+  \item બોર-સોમરફેલ્ડ $\oint p_i\,\dd q_i=n_i h$
+\end{itemize}
+
+\section*{એકમ 2 -- દ્વૈતતા અને અનિશ્ચિતતા}
+\begin{itemize}
+  \item $v_p=\omega/k$;\quad $v_g=\dd\omega/\dd k=v_p-\lambda\,\dd v_p/\dd\lambda$;
+        મુક્ત કણ: $v_g=v$, $v_pv_g=c^2$ (સાપેક્ષિક)
+  \item પેકેટ-ફેલાવો $\sigma(t)=\sigma\sqrt{1+(\hbar t/m\sigma^{2})^{2}}$
+  \item $\Delta x\,\Delta p_x\ge\dfrac{\hbar}{2}$;\quad
+        $\Delta E\,\Delta t\ge\dfrac{\hbar}{2}$;\quad
+        $\Delta L_z\,\Delta\varphi\ge\dfrac{\hbar}{2}$
+  \item કુદરતી પહોળાઈ $\Gamma=\dfrac{\hbar}{\tau}$;\quad શૂન્ય-બિંદુ ઊર્જા $E_0=\dfrac{\hbar\omega}{2}$
+\end{itemize}
+
+\section*{એકમ 3--4 -- શ્રોડિન્જર યાંત્રિકી અને ચોક્કસ ઉકેલો}
+\begin{itemize}
+  \item TDSE: $i\hbar\dfrac{\partial\Psi}{\partial t}=\hat H\Psi$;\quad
+        TISE: $-\dfrac{\hbar^{2}}{2m}\nabla^{2}\psi+V\psi=E\psi$
+  \item અપેક્ષિત મૂલ્ય $\langle A\rangle=\displaystyle\int\Psi^{*}\hat A\Psi\,\dd^3r$
+  \item અનંત કૂવો: $E_n=\dfrac{n^{2}\pi^{2}\hbar^{2}}{2mL^{2}}$;\quad
+        $\psi_n=\sqrt{\dfrac{2}{L}}\sin\dfrac{n\pi x}{L}$
+  \item આવર્તક દોલક: $E_n=(n+\tfrac12)\hbar\omega$, Hermite બહુપદી ઉકેલ
+  \item અવરોધ-સુરંગન (Tunneling): $T\simeq16\,e^{-2\kappa a}\Bigl(1-\tfrac{E}{V_0}\Bigr)e^{-2\kappa a}$ ક્રમ,
+        $\kappa=\sqrt{2m(V_0-E)}/\hbar$; ચોક્કસ સ્વરૂપ એકમ 4 માં
+  \item Ehrenfest: $\langle x\rangle$ ચિરસંમત ગતિ-સમીકરણને અનુસરે છે
+\end{itemize}
+
+\section*{એકમ 5 -- ક્ષોભ સિદ્ધાંત, આંકડાશાસ્ત્ર અને આધુનિક તકનીકો}
+\begin{itemize}
+  \item ક્ષોભ સિદ્ધાંત: $E_n^{(1)}=\langle n^{(0)}|\hat H'|n^{(0)}\rangle$
+  \item ફર્મી ઊર્જા $E_F=\dfrac{\hbar^{2}}{2m}(3\pi^{2}n)^{2/3}$
+  \item FD/BE: $f(E)=\bigl[e^{(E-\mu)/k_BT}\pm1\bigr]^{-1}$
+  \item આઇન્સ્ટાઇન સંબંધ $A_{21}/B_{21}=8\pi h\nu^{3}/c^{3}$, $B_{12}=B_{21}$
+  \item ક્યુબિટ $|\psi\rangle=\alpha|0\rangle+\beta|1\rangle$, $|\alpha|^{2}+|\beta|^{2}=1$
+\end{itemize}
+
+% ---------------------------------------------------------------------
+\chapter{MCQ ઉત્તર-કી સંકલન\\{\large (Consolidated Answer Key)}}
+\label{app:answers}
+
+દરેક એકમની MCQ-યાદીની ઉત્તર-કી ત્યાં જ `javabchavi` બોક્સમાં આપેલ છે. સગવડ માટે એકમ 1 અને 2 ની
+સંક્ષિપ્ત કી અહીં પુનઃ આપાય છે.
+
+\section*{એકમ 1}
+\begin{center}
+\begin{tabular}{@{}l*{10}{c}@{}}
+\toprule
+પ્રશ્ન & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+\midrule
+ઉત્તર & b & d & a & b & b & b & a & a & b & b\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{એકમ 2 (50 MCQ)}
+પૂર્ણ કી અને ગણતરી-આધારિત પ્રશ્નોની પગલાંવાર સમજૂતી એકમ 2 ના અંતે આપેલ છે
+(1-B, 2-C, 3-B, 4-B, 5-C, \dots, 50-C).
+
+\paragraph{સ્વ-પરીક્ષણ સૂચન:} કોઈ પ્રશ્નમાં ભૂલ હોય તો સંબંધિત એકમના વિભાગ પર પાછા જાઓ --
+દરેક MCQ પુસ્તકના કોઈક સૂત્ર અથવા ઉત્પત્તિ સાથે સીધો સંબંધ ધરે છે.
+
+% ---------------------------------------------------------------------
+\chapter{દ્વિભાષી પરિભાષા કોશ\\{\large (Gujarati--English Glossary of Technical Terms)}}
+\label{app:glossary}
+
+\begin{center}
+\begin{tabular}{@{}p{0.42\linewidth}p{0.52\linewidth}@{}}
+\toprule
+\textbf{ગુજરાતી પરિભાષા} & \textbf{English Term} \\
+\midrule
+કૃષ્ણિકા વિકિરણ & Black body radiation \\
+વર્ણપટ ઊર્જા ઘનતા & Spectral energy density \\
+અલ્ટ્રાવાયોલેટ આપત્તિ & Ultraviolet catastrophe \\
+મોડ ઘનતા & Mode density \\
+પ્રકાશ-વિદ્યુત અસર & Photoelectric effect \\
+કાર્ય વિધેય & Work function \\
+દેહલી આવૃત્તિ & Threshold frequency \\
+અટકાવતી વોલ્ટેજ & Stopping potential \\
+ફોટોન / પ્રકાશ ક્વોન્ટમ & Photon / Light quantum \\
+કૉમ્પ્ટન વિક્ષેપણ & Compton scattering \\
+પદાર્થ તરંગ & Matter wave \\
+તરંગ-કણ દ્વૈતતા & Wave--particle duality \\
+કળા ઝડપ / સમૂહ ઝડપ & Phase velocity / Group velocity \\
+તરંગ પેકેટ & Wave packet \\
+ડિસ્પર્શન & Dispersion \\
+અનિશ્ચિતતા સિદ્ધાંત & Uncertainty principle \\
+વિચાર પ્રયોગ & Gedanken experiment \\
+શૂન્ય-બિંદુ ઊર્જા & Zero-point energy \\
+કુદરતી રેખા-પહોળાઈ & Natural line broadening \\
+તરંગ વિધેય & Wave function \\
+જન્મ-સંભાવના અર્થઘટન & Born probability interpretation \\
+સામ્યાવસ્થા પ્રવાહ & Probability current density \\
+ઑપરેટર / સંક્રિયક & Operator \\
+હર્મિટિયન (સ્વયં-સહયોગી) ઑપરેટર & Hermitian operator \\
+આગેક્રમ (કમ્યુટેટર) & Commutator \\
+અપેક્ષિત મૂલ્ય & Expectation value \\
+અધોહસ્તે (સામાન્યીકૃત) & Normalized \\
+સ્થિતિ-ઊર્જા કૂવો & Potential well \\
+સ્થિતિ-ઊર્જા અવરોધ & Potential barrier \\
+સુરંગન અસર & Tunneling effect \\
+આવર્તક દોલક & Harmonic oscillator \\
+કોણીય સંવેગ & Angular momentum \\
+ગોળીય સંમેલન વિધેયો & Spherical harmonics \\
+કક્ષીય / ચુંબકીય સંખ્યા & Orbital / Magnetic quantum number \\
+ક્ષીણતા (ડીજનરસી) & Degeneracy \\
+ક્ષોભ સિદ્ધાંત & Perturbation theory \\
+સમાન કણો & Identical particles \\
+પૌલી બહિષ્કાર નિયમ & Pauli exclusion principle \\
+ફર્મી ઊર્જા સ્તર & Fermi energy level \\
+વસ્તી ઉલટાણ & Population inversion \\
+પ્રેરિત ઉત્સર્જન & Stimulated emission \\
+ક્વોન્ટમ અવરોધન & Quantum confinement \\
+અવસ્થા-ઘનતા & Density of states \\
+ક્યુબિટ & Qubit \\
+અધિસ્થિતિ & Superposition \\
+ગૂંથણ (જોડાણ) & Entanglement \\
+ક્વોન્ટમ કી-વિતરણ & Quantum key distribution \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ---------------------------------------------------------------------
+\chapter{સંદર્ભગ્રંથો અને વધુ વાંચન\\{\large (References and Further Reading)}}
+
+\begin{enumerate}
+  \item Beiser, A., \emph{Concepts of Modern Physics}, 6th ed., McGraw-Hill.
+  \item Eisberg, R.\ \& Resnick, R., \emph{Quantum Physics of Atoms, Molecules, Solids,
+        Nuclei and Particles}, 2nd ed., Wiley.
+  \item Griffiths, D.\,J., \emph{Introduction to Quantum Mechanics}, 3rd ed., Cambridge
+        University Press.
+  \item Schiff, L.\,I., \emph{Quantum Mechanics}, 3rd ed., McGraw-Hill.
+  \item Gasiorowicz, S., \emph{Quantum Physics}, 3rd ed., Wiley.
+  \item Ghatak, A., \emph{Basic Quantum Mechanics}, Macmillan India.
+  \item Mathur, D.\,S., \emph{Elements of Properties of Matter \& Atomic Physics}, Shukla
+        \& Co. (ગુજરાત વિદ્યાર્થી-માર્ગદર્શન પરંપરા).
+  \item NCERT/GSEB ધોરણ 11--12 ભૌતિકવિજ્ઞાન પાઠ્યપુસ્તકો, ગુજરાત રાજ્ય પાઠ્યપુસ્તક મંડળ,
+        ગાંધીનગર.
+  \item GTU Engineering Physics (3110016 / BE01000021) અભ્યાસક્રમ અને પ્રશ્ન-બેંક,
+        ગુજરાત ટેકનોલોજિકલ યુનિવર્સિટી.
+  \item ગુજરાત ગ્રંથ નિર્માણ બોર્ડ / યુનિવર્સિટી ગ્રંથ નિર્માણ બોર્ડ, ગુજરાત --
+        ભૌતિકવિજ્ઞાન પરિભાષા-કોશ પરંપરા અને દ્વિભાષી પાઠ્ય-ગ્રંથ શ્રેણી.
+  \item Nielsen, M.\,A.\ \& Chuang, I.\,L., \emph{Quantum Computation and Quantum
+        Information}, Cambridge University Press.
+  \item Planck, M. (1901), ``On the Law of Distribution of Energy in the Normal
+        Spectrum'', \emph{Ann. der Physik}; Compton, A.\,H. (1923), \emph{Phys.\ Rev.},
+        \textbf{21}, 483; Davisson--Germer (1927), \emph{Phys.\ Rev.}, \textbf{30}, 705.
+\end{enumerate}
+
+\vspace{6mm}
+\begin{mulmudda}
+\textbf{સમાપન}: આ ગ્રંથ ક્વોન્ટમ ભૌતિકવિજ્ઞાનના ઐતિહાસિક પ્રારંભથી ક્વોન્ટમ ગણતરી અને
+ક્વોન્ટમ સંદેશાવ્યવહાર સુધીની સંપૂર્ણ સફર ગુજરાતી માધ્યમમાં આપે છે. વિદ્યાર્થીઓને સલાહ છે કે
+દરેક ઉત્પત્તિ જાતે કરી જુઓ, TikZ આકૃતિઓના પરિમાણો બદલી પ્રયોગ કરો, અને MCQ/સ્વાધ્યાય
+ઉકેલો સૂત્ર-સંગ્રહ (પરિશિષ્ટ B) સાથે સરખાવો.
+\end{mulmudda}

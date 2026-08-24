@@ -1,0 +1,526 @@
+% ============================================================================
+% UNIT 5 : આધુનિક ક્વોન્ટમ તકનીકી, આંકડાશાસ્ત્ર અને એન્જિનિયરિંગ અનુપ્રયોગો
+% ============================================================================
+\chapter{આધુનિક ક્વોન્ટમ તકનીકી, આંકડાશાસ્ત્ર અને એન્જિનિયરિંગ અનુપ્રયોગો \en{Modern Quantum Technologies, Statistics and Engineering Applications}}
+
+\section{પ્રસ્તાવના અને શૈક્ષણિક ઉદ્દેશ્યો}
+\begin{uddeshyo}
+આ એકમના અભ્યાસ પછી વિદ્યાર્થી:
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item કાળ-સ્વતંત્ર અ-ક્ષીણ (Non-degenerate) ક્ષોભ સિદ્ધાંત (Perturbation Theory)નાં પ્રથમ-ક્રમ સુધારા તારવી શકશે.
+  \item સમાન કણો, સમમિતીકરણ અને પૌલી બહિષ્કાર નિયમ (Pauli Exclusion Principle) સમજી શકશે.
+  \item બોઝ-આઇન્સ્ટાઇન, ફર્મી-ડિરાક અને બોલ્ટ્ઝમાન વિતરણો સરખાવી શકશે; $E_F$ ગણી શકશે.
+  \item ક્વોન્ટમ અવરોધન (Quantum Confinement) — 2D કૂવા, 1D વાયર, 0D ડોટ — અને અવસ્થા-ઘનતા (Density of States) વિશ્લેષણ કરી શકશે.
+  \item લેસર ભૌતિકી — પ્રેરિત ઉત્સર્જન, આઇન્સ્ટાઇન $A,B$ ગુણાંક, વસ્તી ઉલટાણ, રૂબી અને He-Ne લેસર — સમજાવી શકશે.
+  \item ક્યુબિટ, બ્લોચ ગોળો, બેલ અવસ્થાઓ, ક્વોન્ટમ ગેટો અને BB84 ક્રિપ્ટોગ્રાફી સમજી/ઉપયોગ કરી શકશે.
+\end{enumerate}
+\end{uddeshyo}
+
+\section{વિસ્તૃત સૈદ્ધાંતિક વિવરણ}
+
+\subsection{ક્ષોભ સિદ્ધાંત : પ્રથમ-ક્રમ અ-ક્ષીણ \en{First-Order Non-degenerate Perturbation Theory}}
+ખરો હેમિલ્ટોનિયન $\hat H=\hat H_0+\lambda\hat H'$ ($\hat H'$ = નાનું ક્ષોભ). $\hat H_0$ નાં જ્ઞાત ઉકેલ: $\hat H_0|n^{(0)}\rangle=E_n^{(0)}|n^{(0)}\rangle$. શક્તિ-શ્રેણી ધારણ:
+\[
+E_n=E_n^{(0)}+\lambda E_n^{(1)}+\cdots,\qquad
+|n\rangle=|n^{(0)}\rangle+\lambda|n^{(1)}\rangle+\cdots .
+\]
+$\lambda$ નાં ગુણકોની સરખામણીથી પ્રથમ-ક્રમ:
+\begin{equation}
+\boxed{\;E_n^{(1)}=\langle n^{(0)}|\hat H'|n^{(0)}\rangle\;}
+\label{eq:perturb}
+\end{equation}
+— એટલે \emph{ક્ષોભનું અપેક્ષિત મૂલ્ય} જ ઊર્જા-સુધારો. ઉદાહરણ: દોલકમાં સ્થિર વિદ્યુત ક્ષેત્ર (Stark) અથવા કૂવામાં નાનું $V_1x$.
+
+\subsection{સમાન કણો અને પૌલી બહિષ્કાર નિયમ \en{Identical Particles and Pauli Principle}}
+બે સમાન કણોની અવસ્થા અવલોકન-અર્થઘટન માટે કણ-વિનિમય હેઠળ સમમિત હોવી જ જોઈએ:
+\[
+\Psi_{\pm}(q_1,q_2)=\frac{1}{\sqrt2}\big[\psi_a(q_1)\psi_b(q_2)\pm\psi_a(q_2)\psi_b(q_1)\big]:
+\]
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+કણ-પ્રકાર & સમમિતિ & આંકડાશાસ્ત્ર \\
+\midrule
+બોસોન (સ્પિન $0,1,2\dots$) & $+$ સમમિત & બોઝ-આઇન્સ્ટાઇન \\
+ફર્મિઓન (અર્ધ સ્પિન) & $-$ પ્રતિસમમિત & ફર્મી-ડિરાક \\
+\bottomrule
+\end{tabular}
+\end{center}
+ફર્મિઓન માટે $\psi_a=\psi_b$ હોય તો $\Psi_{-}=0$ ⇒ એક ક્વોન્ટમ અવસ્થામાં બે સમાન ફર્મિઓન ન રહી શકે — \textbf{પૌલી બહિષ્કાર નિયમ}. આ જ નિયમ આવર્તન કોષ્ટક, ઇલેક્ટ્રોન વાયુ અને અર્ધવાહક બેન્ડ-રચનાનો મૂળ છે.
+
+\subsection{ક્વોન્ટમ આંકડાશાસ્ત્ર \en{Quantum Statistics}}
+ઊર્જા $E$ અવસ્થાની સરેરાશ વસ્તી:
+\begin{equation}
+f(E)=\frac{1}{e^{(E-\mu)/k_BT}\pm1}:\quad
+\begin{cases}
++1:&\text{ફર્મી-ડિરાક},\\
+-1:&\text{બોઝ-આઇન્સ્ટાઇન},
+\end{cases}
+\qquad
+f_{MB}=e^{-(E-\mu)/k_BT}.
+\label{eq:stats}
+\end{equation}
+ધાતુનાં ઇલેક્ટ્રોન માટે $T=0$: $f(E)=1$ જો $E<E_F$; $f(E)=0$ જો $E>E_F$, જ્યાં
+\begin{equation}
+E_F=\frac{\hbar^{2}}{2m}\left(3\pi^{2}n\right)^{2/3}
+\qquad(n=\text{ઇલેક્ટ્રોન ઘનતા})
+\label{eq:fermi}
+\end{equation}
+— \textbf{ફર્મી ઊર્જા}. તાંબામાં $n=8.5\times10^{28}$ m$^{-3}$ ⇒ $E_F\approx7.0$ eV.
+
+\subsection{ક્વોન્ટમ અવરોધન અને અવસ્થા-ઘનતા \en{Quantum Confinement and DOS}}
+જ્યારે કોઈ પરિમાણ ડી બ્રોગ્લી તરંગલંબાઈ ક્રમનો હોય, ત્યારે તે દિશામાં ઊર્જા ક્વોન્ટાઇઝ થાય:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+સંરચના & સ્વતંત્ર દિશા & અવસ્થા-ઘનતા $\rho(E)$ \\
+\midrule
+3D બલ્ક & 3 & $\propto\sqrt{E}$ \\
+2D ક્વોન્ટમ કૂવો & 2 & સિડી-આકાર (પગથિયાં) : પ્રતિ ઉપ-બેન્ડ અચલાંક \\
+1D ક્વોન્ટમ વાયર & 1 & $\propto1/\sqrt{E-E_n}$ (વેન કાંટા) \\
+0D ક્વોન્ટમ ડોટ & 0 & ડેલ્ટા-કાર્યો (પરમાણુ જેવાં અસતત સ્તરો) \\
+\bottomrule
+\end{tabular}
+\end{center}
+ડોટમાં ઊર્જા-અંતર $\Delta E\sim\pi^2\hbar^2/2mL^2$ ⇒ નાનું $L$ (નેનો-કણ) ⇒ વિશાળ બેન્ડ ગેપ ⇒ રંગ-ટ્યૂનિંગ (CdSe QD: 2–8 nm ⇒ નીલમ→લાલ).
+
+\subsection{લેસર ભૌતિકી \en{LASER Physics}}
+\textbf{LASER} = Light Amplification by Stimulated Emission of Radiation. ત્રણ પ્રક્રિયા (આવૃત્તિ $\nu=(E_2-E_1)/h$):
+\begin{enumerate}[label=(\alph*)]
+  \item શોષણ: દર $\propto B_{12}u(\nu)N_1$;
+  \item સ્વસ્પંદિત (Spontaneous) ઉત્સર્જન: $A_{21}N_2$;
+  \item \textbf{પ્રેરિત ઉત્સર્જન (Stimulated Emission)}: $B_{21}u(\nu)N_2$ — આગમન-તરંગ સાથે સમ-કલા, સમ-દિશા, સમ-ધ્રુવીકરણમાં ફોટોન-જોડી!
+\end{enumerate}
+આઇન્સ્ટાઇન તારણી (1917): થર્મલ સંતુલનમાં પ્લાંક વિતરણ મેળવવા હોય તો:
+\begin{equation}
+A_{21}/B_{21}=8\pi h\nu^{3}/c^{3},\qquad B_{12}=B_{21}
+\label{eq:einsteinAB}
+\end{equation}
+— એટલે પ્રેરિત ઉત્સર્જન શક્ય જ છે અને ઉચ્ચ $\nu$ પર તે મુશ્કેલ ($\propto\nu^3$).
+સામાન્ય સંતુલનમાં $N_2<N_1$; લેસર માટે \textbf{વસ્તી ઉલટાણ (Population Inversion)} $N_2>N_1$ જરૂરી — ત્રણ-સ્તર (રૂબી) અથવા ચાર-સ્તર (He-Ne, Nd:YAG) પંપિંગથી.
+\begin{itemize}[itemsep=2pt]
+  \item \textbf{રૂબી લેસર (1960, Maiman):} Al$_2$O$_3$+Cr$^{3+}$; ત્રણ-સ્તર; ગ્રીન ફ્લેશ-લેમ્પ પંપ → $694.3$ nm લાલ પલ્સ.
+  \item \textbf{He-Ne લેસર:} ગેસ-વિસર્જન; He ની મેટાસ્થિર અવસ્થા Ne ને પંપ કરે (ઊર્જા-સ્થાનાંતર); ચાર-સ્તર; $632.8$ nm સતત CW.
+\end{itemize}
+
+\subsection{ક્વોન્ટમ કમ્પ્યુટિંગનાં પાયા \en{Foundations of Quantum Computing}}
+\paragraph{ક્લાસિકલ બિટ vs ક્યુબિટ (Qubit):} બિટ $\in\{0,1\}$; ક્યુબિટ:
+\begin{equation}
+|\psi\rangle=\alpha|0\rangle+\beta|1\rangle,\qquad |\alpha|^{2}+|\beta|^{2}=1 .
+\label{eq:qubit}
+\end{equation}
+$n$ ક્યુબિટ $2^{n}$ અવસ્થાઓની અધિસ્થિતિ એકસાથે ધરે છે.
+\paragraph{બ્લોચ ગોળો (Bloch Sphere):} $|\psi\rangle=\cos(\theta/2)|0\rangle+e^{\ii\phi}\sin(\theta/2)|1\rangle$ — $(\theta,\phi)$ ગોળાનો બિંદુ; ઉત્તર ધ્રુવ $|0\rangle$, દક્ષિણ $|1\rangle$, વિષુવવૃત્ત સમાન-મિશ્રણ.
+\paragraph{ગૂંથણ (Entanglement):} બેલ અવસ્થાઓ:
+\[
+|\Phi^{\pm}\rangle=\tfrac{1}{\sqrt2}(|00\rangle\pm|11\rangle),\qquad
+|\Psi^{\pm}\rangle=\tfrac{1}{\sqrt2}(|01\rangle\pm|10\rangle),
+\]
+— કોઈ એકલ-ક્યુબિટ ઉત્પાદન $|\psi\rangle\otimes|\psi'\rangle$ તરીકે લખી ન શકાય; માપનનાં પરિણામો સંપૂર્ણ સહસંબંધિત.
+\paragraph{ક્વોન્ટમ લૉજિક ગેટો:}
+\[
+X=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad
+H=\frac{1}{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},\quad
+CNOT:\ |c,t\rangle\to|c,\ t\oplus c\rangle .
+\]
+$H|0\rangle=(|0\rangle+|1\rangle)/\sqrt2$ — અધિસ્થિતિનું નિર્માણ; $H^2=I$. CNOT + H થી $|00\rangle$ માંથી $|\Phi^+\rangle$ બનાવાય.
+\paragraph{BB84 ક્વોન્ટમ કી-વિતરણ (Bennett-Brassard, 1984):}
+એલિસ યાદ્રચ્છિક રીતે $Z$-આધાર ($|0\rangle,|1\rangle$) કે $X$-આધાર ($|\pm\rangle$) માં બિટ મોકલે; બોબ યાદ્રચ્છિક આધારમાં માપે; પછી ખુલ્લા ચેનલ પર આધારોની સરખામણીથી સ્કિપ્ટ-બિટ્સ રાખે. ઈવનું મધ્યવર્તી-માપન નો-ક્લોનિંગ પ્રમેયને કારણે ત્રુટિ-દર વધારે (~25%) — શોધાય છે. સુરક્ષા ગણતરી-કઠિનતા પર નહીં, ભૌતિક નિયમો પર!
+
+\section{સંપૂર્ણ ગાણિતિક સાબિતીઓ}
+
+\subsection{$E_n^{(1)}=\langle n^{(0)}|\hat H'|n^{(0)}\rangle$ ની તારણી}
+શક્તિ-શ્રેણી $\hat H|n\rangle=E_n|n\rangle$ માં રાખી $\lambda$ ગુણક સરખાવીએ:
+\[
+(\hat H_0-E_n^{(0)})|n^{(1)}\rangle=(E_n^{(1)}-\hat H')|n^{(0)}\rangle .
+\]
+ડાબી બાજુ $\langle n^{(0)}|$ થી આંતરિક ગુણાકાર: $\langle n^{(0)}|(\hat H_0-E_n^{(0)})=0$ (હર્મિટિયનત્વ):
+\[
+0=E_n^{(1)}-\langle n^{(0)}|\hat H'|n^{(0)}\rangle
+\Rightarrow\boxed{E_n^{(1)}=\langle n^{(0)}|\hat H'|n^{(0)}\rangle .}
+\]
+
+\subsection{ફર્મી ઊર્જા $E_F=\dfrac{\hbar^{2}}{2m}(3\pi^{2}n)^{2/3}$ ની તારણી}
+સંવેગ-અવકાશમાં $T=0$ ઇલેક્ટ્રોનો ફર્મી ગોળા ($p\le p_F$) ભરે. પ્રતિ-એકક આયતન $h^{3}$ અવકાશમાં એક અવસ્થા; સ્પિન-2 ગણી:
+\[
+N=2\cdot\frac{\frac43\pi p_F^{3}}{h^{3}}V=\frac{8\pi V}{3h^{3}}p_F^{3}.
+\]
+ઇલેક્ટ્રોન ઘનતા $n=N/V$:
+\[
+p_F=h\left(\frac{3n}{8\pi}\right)^{1/3}=\hbar(3\pi^{2}n)^{1/3}
+\Rightarrow
+E_F=\frac{p_F^{2}}{2m}=\boxed{\frac{\hbar^{2}}{2m}(3\pi^{2}n)^{2/3}} . 
+\]
+
+\subsection{આઇન્સ્ટાઇન $A/B$ સંબંધની તારણી}
+થર્મલ સંતુલનમાં ઉપર-અને નીચે-સંક્રમણ દર સમાન:
+\[
+N_1B_{12}u(\nu)=N_2\left[A_{21}+B_{21}u(\nu)\right].
+\]
+બોલ્ટ્ઝમાન $N_2/N_1=e^{-h\nu/k_BT}$ અને $g_1=g_2$ ધારી:
+\[
+u(\nu)=\frac{A_{21}}{B_{12}e^{h\nu/k_BT}-B_{21}} .
+\]
+પ્લાંક વિતરણ $u=\dfrac{8\pi h\nu^{3}}{c^{3}}\dfrac{1}{e^{h\nu/k_BT}-1}$ સાથે સરખાવતાં:
+\[
+B_{12}=B_{21},\qquad A_{21}=\frac{8\pi h\nu^{3}}{c^{3}}B_{21} . \checkmark
+\]
+પરિણામ: (i) પ્રેરિત ઉત્સર્જનનું ભવિષ્યવાણી; (ii) UV/X-ray લેસર મુશ્કેલ ($A\propto\nu^{3}$ ⇒ સ્વસ્પંદન પ્રબળ).
+
+\subsection{બેલ અવસ્થાનાં સહસંબંધો : ઉદાહરણ}
+$|\Phi^{+}\rangle=\tfrac{1}{\sqrt2}(|00\rangle+|11\rangle)$ માં પ્રથમ ક્યુબિટ $Z$-આધારે માપે તો: $0$ મળે (સંભાવના $\tfrac12$) ⇒ બીજો પણ ચોક્કસ $|0\rangle$; $1$ મળે ⇒ બીજો ચોક્કસ $|1\rangle$. $X$-આધારે માપે તો પણ સંપૂર્ણ સહસંબંધ ($|++\rangle$ અથવા $|--\rangle$). એકલ-અવસ્થા ઉત્પાદન ધારણ $(a|0\rangle+b|1\rangle)\otimes(c|0\rangle+d|1\rangle)$ માં $ac=1/\sqrt2$, $bd=1/\sqrt2$, $ad=bc=0$ સાથે વિરોધાભાસ — એટલે ગૂંથણ અનિવાર્ય છે.
+
+\subsection{CNOT + H થી $|\Phi^{+}\rangle$ નિર્માણ}
+\[
+|00\rangle\xrightarrow{\ H_1\ }\tfrac{1}{\sqrt2}(|0\rangle+|1\rangle)\otimes|0\rangle
+=\tfrac{1}{\sqrt2}(|00\rangle+|10\rangle)
+\xrightarrow{\ CNOT_{1\to2}\ }
+\tfrac{1}{\sqrt2}(|00\rangle+|11\rangle)=|\Phi^{+}\rangle . \checkmark
+\]
+
+\section{એન્જિનિયરિંગ અને તકનીકી ઉપયોગો}
+\begin{upayogbox}{B.Tech/B.E.\ ઉદ્યોગ ઉપયોગો (એકમ 5)}
+\begin{enumerate}[label=\textbullet]
+  \item \textbf{અર્ધવાહક ઉપકરણો:} ફર્મી-ડિરાક આંકડાશાસ્ત્ર MOSFET ધારા, p-n જંક્ષન અને $E_F$ સ્થાનાંતરણનું મૂળ (EE/ECE/CSE-hardware).
+  \item \textbf{QLED/ક્વોન્ટમ ડોટ ડિસ્પ્લે:} અવરોધનથી બેન્ડ-ગેપ ટ્યૂનિંગ — Samsung QLED TV, બાયો-ઇમેજિંગ માર્કર.
+  \item \textbf{ઑપ્ટિકલ સંદેશાવ્યવહાર અને ઔદ્યોગિક લેસર:} DFB લેસર ડાયોડ, ફાઈબર કટિંગ/વેલ્ડિંગ, LIDAR, LASIK (Mechanical/ECE/Medical).
+  \item \textbf{ક્વોન્ટમ કમ્પ્યુટિંગ (CSE):} IBM Quantum/Qiskit, Google Sycamore; H, CNOT સર્કિટો શેર-આધાર (Shor) અને શોધ (Grover) એલ્ગોરિધમોનાં બિલ્ડિંગ બ્લોક.
+  \item \textbf{QKD સુરક્ષા નેટવર્ક્સ:} ID Quantique/Toshiba વ્યાપારી BB84 સિસ્ટમો બેંક-ડેટા લિંકમાં ઉપયોગાય છે.
+\end{enumerate}
+\end{upayogbox}
+
+\section{TikZ / PGFPlots ભૌતિક આકૃતિઓ}
+
+\subsection*{આકૃતિ 5.1 : FD vs BE vs MB વિતરણો}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.72\linewidth,height=6cm,xlabel={$E-\mu$ ($k_BT$ એકમ)},
+ ylabel={$f(E)$},domain=-4:6,samples=300,axis lines=box,ymin=0,ymax=1.05]
+ \addplot[blue,very thick]{1/(exp(x)+1)};
+ \addlegendentry{ફર્મી-ડિરાક};
+ \addplot[red,dashed,very thick,domain=0.01:6]{exp(-x)};
+ \addlegendentry{બોલ્ટ્ઝમાન};
+ \addplot[green!50!black,dotted,very thick,domain=0.01:6]{exp(-x)/(1-exp(-x))*0.35};
+ \addlegendentry{બોઝ-આઇન્સ્ટાઇન ($\times0.35$)};
+\end{axis}
+\end{tikzpicture}
+\caption{$E=\mu$ પર FD ચોક્કસ $\tfrac12$; ફર્મિઓન '1 અવસ્થા–1 કણ', બોસોન 'ઢગલી'.}
+\end{figure}
+
+\subsection*{આકૃતિ 5.2 : અવસ્થા-ઘનતા — 3D/2D/1D/0D}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.86\linewidth,height=5.8cm,xlabel={$E$},ylabel={$\rho(E)$},
+ axis lines=middle,xmin=0,xmax=5,ymin=0,ymax=3.2,
+ xtick={1,2,3},xticklabels={$E_1$,$E_2$,$E_3$}]
+ % 2D staircase
+ \addplot[blue,very thick] coordinates {(0,0)(1,0)(1,1)(2,1)(2,2)(3,2)(3,3)(5,3)};
+ \addlegendentry{2D કૂવો (સિડી)}
+ % 3D sqrt
+ \addplot[red,dashed,very thick,domain=1:5,samples=120]{sqrt(max(x-1,0))};
+ \addlegendentry{3D બલ્ક ($\sqrt{E}$)}
+ % 1D van Hove
+ \addplot[green!50!black,thick,domain=1.001:2,samples=200]{1/sqrt(x-1)*0.25};
+ \addplot[green!50!black,thick,domain=2.001:3,samples=200]{1/sqrt(x-2)*0.18+0.9};
+ \addlegendentry{1D વાયર ($1/\sqrt{}$)}
+\end{axis}
+\end{tikzpicture}
+\caption{પરિમાણ-ઘટાડો સાથે અવસ્થા-ઘનતાનું સ્વરૂપ બદલાય છે.}
+\end{figure}
+
+\subsection*{આકૃતિ 5.3 : ત્રણ-સ્તર રૂબી લેસરની સ્તર-સંરચના}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+ \draw[thick,-Stealth] (0,0) -- (0,4.4);
+ \node[left] at (0,4.4) {$E$};
+ \draw[very thick,green!50!black] (1,3.8) -- (4,3.8); \node[right] at (4.1,3.8) {પંપ બેન્ડ};
+ \draw[very thick,violet!70!black] (1,2.9) -- (4,2.9); \node[right] at (4.1,2.9) {$E_2$ (મેટાસ્થિર)};
+ \draw[very thick,cyan!60!black] (1,0.8) -- (4,0.8); \node[right] at (4.1,0.8) {$E_1$ (ભૂમિ)};
+ \draw[-Stealth,orange!80!black,ultra thick] (2.2,0.95) -- (2.2,3.65);
+ \node[orange!80!black,left] at (2.15,2.3) {ફ્લેશ-પંપ};
+ \draw[-Stealth,gray,thick] (2.9,3.7) -- (2.9,3.0);
+ \node[gray,right] at (2.95,3.35) {અ-વિકિરણીય};
+ \draw[-Stealth,red,ultra thick] (3.4,2.75) -- (3.4,0.95);
+ \node[red,right] at (3.45,1.85) {લેસર $694.3$ nm};
+\end{tikzpicture}
+\caption{ત્રણ-સ્તર પંપિંગ: મેટાસ્થિર અવસ્થામાં વસ્તી ઉલટાણ.}
+\end{figure}
+
+\subsection*{આકૃતિ 5.4 : He-Ne લેસરનું સ્કીમેટિક}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+ \draw[very thick] (0.6,0) rectangle (7.4,1.2);
+ \node at (4,0.6) {He + Ne (ગેસ વિસર્જન)};
+ \draw[line width=2.5pt,orange!70!black] (-0.4,1.2) -- (-0.4,0);
+ \node[left] at (-0.5,0.6) {M$_1$ 100\%};
+ \draw[line width=1.5pt,orange!70!black] (8.4,1.2) -- (8.4,0);
+ \node[right] at (8.5,0.6) {M$_2$ 99\%};
+ \draw[-Stealth,red,ultra thick] (8.5,0.6) -- (10.2,0.6);
+ \node[right] at (10.25,0.6) {$632.8$ nm};
+ \draw[thick] (-0.4,1.2) -- (8.4,1.2);
+ \draw[dashed] (-0.4,0) -- (8.4,0);
+ \draw[<->,cyan!60!black] (2,1.45) -- node[above]{ઑપ્ટિકલ કેવિટી} (6,1.45);
+\end{tikzpicture}
+\caption{He-Ne લેસર: ઊંચી-પરાવર્તક કેવિટીમાં પ્રતિફળ-પ્રવર્ધન (Gain) દ્વારા સતત કિરણ.}
+\end{figure}
+
+\subsection*{આકૃતિ 5.5 : બ્લોચ ગોળો અને H/X ગેટ ક્રિયા}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+ \draw[cyan!55!black,thick] (0,0) circle (1.6);
+ \draw[cyan!55!black,dashed] (0,0) circle (1.6 and 0.55);
+ \draw[-Stealth,thick] (0,-1.9) -- (0,2.0); \draw[-Stealth,thick] (-1.85,0) -- (1.85,0);
+ \node[above] at (0,2.0) {$|0\rangle$};
+ \node[below] at (0,-1.9) {$|1\rangle$};
+ \fill[violet!70!black] (1.13,1.13) circle (0.06);
+ \draw[thick,violet!70!black] (0,0) -- (1.13,1.13);
+ \node[violet!70!black,right] at (1.15,1.25) {$|\psi\rangle=(\theta,\phi)$};
+ \node[left] at (-1.9,0) {$y$}; \node[below right] at (1.85,-0.05) {$x$};
+ \draw[-Stealth,orange!80!black,very thick] (0,-1.9) arc[start angle=270,end angle=315,radius=1.9];
+ \node[orange!80!black] at (1.55,-1.75) {$H$-ગેટ};
+\end{tikzpicture}
+\caption{ક્યુબિટ-અવસ્થા બ્લોચ ગોળા પર બિંદુ; ગેટો તેને ફેરવે છે ($H$: $|0\rangle\leftrightarrow$ વિષુવવૃત્ત).}
+\end{figure}
+
+\subsection*{આકૃતિ 5.6 : CNOT + H ગૂંથણ-સર્કિટ અને BB84 પ્રવાહ}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9]
+ % circuit
+ \draw[thick] (0,1.5) -- (5.2,1.5); \node[left] at (-0.15,1.5) {$q_1$};
+ \draw[thick] (0,0) -- (5.2,0);     \node[left] at (-0.15,0) {$q_2$};
+ \node[draw,minimum width=0.55cm,minimum height=0.55cm] at (1,1.5) {\small H};
+ \node[fill,circle,radius=0.09] at (3,1.5) {};
+ \draw[thick] (3,1.5) -- (3,0);
+ \node[draw,minimum width=0.55cm,minimum height=0.55cm] at (3,0) {$\oplus$};
+ \node[right] at (5.3,1.5) {}; \node[right] at (5.3,0.75) {$\Rightarrow\ |\Phi^{+}\rangle$};
+ \begin{scope}[shift={(7.2,0)}]
+ \node at (1.5,1.9) {\small BB84};
+ \node[align=center] at (1.5,1.1) {\tiny એલિસ: યાદૃચ્છિક બિટ\\ \tiny + આધાર ($Z$/$X$)};
+ \draw[-Stealth,thick] (0,0.35) -- node[above]{\tiny ફોટોન} (3,0.35);
+ \node[align=center] at (1.5,-0.45) {\tiny બોબ: યાદૃચ્છિક આધારે માપન};
+ \draw[-Stealth,thick] (0,-0.95) -- node[above]{\tiny આધાર-સરખામણી} (3,-0.95);
+ \node[align=center] at (1.5,-1.7) {\tiny સામાન્ય આધાર ⇒ સુરક્ષિત કી};
+ \end{scope}
+\end{tikzpicture}
+\caption{(a) H+CNOT થી બેલ-અવસ્થા નિર્માણ; (b) BB84 કી-વિતરણ પ્રોટોકૉલ.}
+\end{figure}
+
+\section{સંપૂર્ણ ઉકેલેલા દાખલા}
+\begin{dahlo}{દાખલો 5.1 : ક્ષોભ સિદ્ધાંત — કૂવામાં રેખીય ક્ષોભ}
+અનંત કૂવામાં નાનું ક્ષોભ $\hat H'=V_1x/L$ ($x\in[0,L]$) ઉમેરેલ છે. ભૂમિ-અવસ્થાનો પ્રથમ-ક્રમ ઊર્જા-સુધારો ગણો.
+\tcblower
+\textbf{ઉકેલ:} $E_1^{(1)}=\langle\psi_1|\hat H'|\psi_1\rangle=\dfrac{V_1}{L}\int_0^Lx\,\dfrac{2}{L}\sin^{2}\dfrac{\pi x}{L}\dd x$.
+જાણીતું સંકલન $\int_0^Lx\sin^{2}(\pi x/L)\dd x=L^{2}/4$:
+\[
+E_1^{(1)}=\frac{2V_1}{L^{2}}\cdot\frac{L^{2}}{4}=\frac{V_1}{2}.
+\]
+અર્થઘટન: ક્ષોભનું સરેરાશ મૂલ્ય $\bar V=V_1/2$ — સમજણ-સુસંગત.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.2 : દોલકમાં Stark-જેવો ક્ષોભ}
+દોલકમાં $\hat H'=\lambda x$ માટે $E_0^{(1)}$ ગણો.
+\tcblower
+\textbf{ઉકેલ:} $\psi_0\propto e^{-\xi^{2}/2}$ સમ-સમિતિય; $x$ વિષમ ⇒ સંકલન વિષમ ⇒
+\[
+E_0^{(1)}=\lambda\langle0|x|0\rangle=0 .
+\]
+(સમ-સમિતિ અવસ્થામાં વિષમ-ક્ષોભનો પ્રથમ-ક્રમ સુધારો શૂન્ય; બીજા-ક્રમમાં $\Delta E\propto\lambda^{2}$.)
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.3 : તાંબાની ફર્મી ઊર્જા}
+Cu: $n=8.5\times10^{28}$ m$^{-3}$. $E_F$ ગણો.
+\tcblower
+\textbf{ઉકેલ:}
+\[
+E_F=\frac{(1.055\times10^{-34})^{2}}{2\times9.11\times10^{-31}}\,(3\pi^{2}\times8.5\times10^{28})^{2/3}.
+\]
+$(3\pi^{2}n)=2.51\times10^{30}$; $(2.51\times10^{30})^{2/3}=1.84\times10^{20}$ m$^{-2}$.
+\[
+E_F=6.11\times10^{-39}\times1.84\times10^{20}=1.124\times10^{-18}\ \mathrm{J}=7.0\ \mathrm{eV}.
+\]
+સંગત ફર્મી વેગ $v_F=\sqrt{2E_F/m}=1.57\times10^{6}$ m/s — ઇલેક્ટ્રોન ઑર્ડા-તાપે પણ Fermi-ઝડપે ફરે!
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.4 : FD વસ્તીની ગણતરી}
+$E-E_F=0.05$ eV અને $T=300$ K માટે $f(E)$ ગણો.
+\tcblower
+\textbf{ઉકેલ:} $k_BT=0.0259$ eV; $e^{(E-E_F)/k_BT}=e^{1.93}=6.89$:
+\[
+f=\frac{1}{6.89+1}=0.127 .
+\]
+એટલે $\mu$ થી $2k_BT$ ઉપર વસ્તી પહેલેથી 87% ઘટેલી — FD 'તીક્ષ્ણ સપાટી'.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.5 : ક્વોન્ટમ ડોટનું બેન્ડ-ગેપ ટ્યૂનિંગ}
+ઇલેક્ટ્રોન ($m=m_e$) ને $L=2$ nm ડોટ (અનંત-કૂવા મોડેલ) માં બંધ કરેલ છે. $E_1$ ગણો.
+\tcblower
+\textbf{ઉકેલ:} $E_1=\dfrac{\pi^{2}\hbar^{2}}{2mL^{2}}
+=\dfrac{9.87\times(1.055\times10^{-34})^{2}}{2\times9.11\times10^{-31}\times4\times10^{-18}}
+=1.507\times10^{-19}$ J $=0.94$ eV.
+$L$ નાનું ⇒ ઊર્જા મોટી — એટલે જ નાના CdSe ડોટ નીલમ ઉત્સર્જિત કરે અને મોટા લાલ.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.6 : આઇન્સ્ટાઇન $A$-ગુણાંક}
+$\nu=5\times10^{14}$ Hz ($\lambda=600$ nm) સંક્રમણ માટે $A_{21}/B_{21}$ ગણો.
+\tcblower
+\textbf{ઉકેલ:}
+\[
+\frac{A}{B}=\frac{8\pi h\nu^{3}}{c^{3}}=\frac{8\pi\times6.626\times10^{-34}\times125\times10^{42}}{27\times10^{24}}
+=7.71\times10^{-14}\ \mathrm{J\,s/m^{3}} .
+\]
+IR/દૃશ્ય કરતાં X-ray ($\times1000$ આવૃત્તિ) માં આ ગુણોત્તર $10^{9}$ ગણું — X-ray લેસરની મુશ્કેલીનું મૂળ.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.7 : વસ્તી ઉલટાણ અને પ્રવર્ધન}
+અવસ્થા-જોડીમાં $N_2/N_1=e^{-h\nu/k_BT}$; $T=300$ K, $\lambda=694$ nm માટે ગુણોત્તર ગણો અને લેસર શા માટે અશક્ય તે દર્શાવો.
+\tcblower
+\textbf{ઉકેલ:} $h\nu=1240/694=1.787$ eV; $k_BT=0.0259$ eV:
+\[
+\frac{N_2}{N_1}=e^{-1.787/0.0259}=e^{-69}=1\times10^{-30}.
+\]
+સંતુલનમાં ઉચ્ચ અવસ્થા લગભગ ખાલી — વસ્તી ઉલટાણ માટે બાહ્ય પંપિંગ અનિવાર્ય.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.8 : ક્યુબિટ અવસ્થાનું માપન}
+$|\psi\rangle=\frac{1}{\sqrt3}|0\rangle+\sqrt{\frac23}|1\rangle$ માટે (a) $Z$-માપનની સંભાવનાઓ, (b) $\langle Z\rangle$ ગણો.
+\tcblower
+\textbf{ઉકેલ:} (a) $P(0)=|\tfrac1{\sqrt3}|^{2}=\tfrac13$; $P(1)=\tfrac23$ (શરત $P_0+P_1=1$ ✓).
+(b) $\langle Z\rangle=P(0)-P(1)=\tfrac13-\tfrac23=-\tfrac13$.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.9 : H-ગેટની ક્રિયા}
+$H|1\rangle$ ગણો અને $Z$-માપન સંભાવનાઓ શોધો.
+\tcblower
+\textbf{ઉકેલ:}
+\[
+H|1\rangle=\frac{1}{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix}
+=\frac{1}{\sqrt2}\begin{pmatrix}1\\-1\end{pmatrix}=\frac{|0\rangle-|1\rangle}{\sqrt2}=|-\rangle .
+\]
+$Z$-માપન: $P(0)=P(1)=\tfrac12$. ($H^2=I$ તપાસ: $H|-\rangle=|1\rangle$ ✓)
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 5.10 : BB84 માં ઈવની શોધ}
+ઈવ દરેક ફોટોન યાદ્રચ્છિક આધારે માપી-ફરી મોકલે. સ્કિપ્ટ-બિટ્સ (સમાન આધાર પસંદ થયેલા) માં ત્રુટિ-દર કેટલો?
+\tcblower
+\textbf{ઉકેલ:} સકિપ્ટ-બિટમાં એલિસ-બોબ આધાર સમાન. ઈવનો આધાર સમાન હોય (સંભાવના $\tfrac12$): કોઈ ત્રુટિ. ભિન્ન હોય ($\tfrac12$): બોબનું પરિણામ યાદૃચ્છિક ⇒ $\tfrac12$ સંભાવનાએ ત્રુટિ.
+\[
+\text{ત્રુટિ-દર}=\frac12\times\frac12=\frac14=25\% .
+\]
+સામાન્ય ચેનલ-ત્રુટિ ($\sim$%) થી 25% સ્પષ્ટ અલગ — ઈવ શોધાય છે.
+\end{dahlo}
+
+\section{સ્વાધ્યાય}
+
+\subsection{વૈચારિક પ્રશ્નો}
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+  \item ક્ષોભ સિદ્ધાંત ક્યારે લાગુ પડતું નથી? (ક્ષીણતા/મોટો ક્ષોભ)
+  \item ફર્મિઓનનાં પ્રતિસમમિત અવસ્થા-વિધેયમાંથી પૌલી નિયમ કેવી રીતે સીધો નીકળે છે?
+  \item બોસોનો 'એકસાથે એક અવસ્થામાં ઢગલાં' વર્તન કયા પ્રયોગોમાં દેખાય છે?
+  \item $T=0$ પર પણ ધાતુનાં ઇલેક્ટ્રોન eV-ક્રમ ઊર્જા કેમ ધરે છે?
+  \item ક્વોન્ટમ ડોટનો રંગ કદ સાથે કેમ બદલાય છે?
+  \item પ્રેરિત ઉત્સર્જનની 'ફોટોન-નકલ' લેસરની સુસંગતતા કેમ આપે છે?
+  \item $A/B\propto\nu^{3}$ પરિણામ X-ray લેસરની મુશ્કેલીને કેવી રીતે સમજાવે?
+  \item ત્રણ-સ્તર vs ચાર-સ્તર લેસરમાં કાર્યક્ષમતાનો તફાવત સમજાવો.
+  \item નો-ક્લોનિંગ પ્રમેય BB84ની સુરક્ષાને કેવી રીતે ખાતરી કરે?
+  \item ગૂંથિત અવસ્થા ક્લાસિકલ સહસંબંધથી કેવી રીતે ભિન્ન છે?
+\end{enumerate}
+
+\subsection{અણઉકેલેલા દાખલા}
+\begin{enumerate}[label=\textbf{P\arabic*.}]
+  \item અનંત કૂવામાં $\hat H'=V_1\sin(\pi x/L)$ માટે $E_1^{(1)}$ ગણો. \hfill [\textbf{જવાબ:} $V_1/2$]
+  \item લોખંડ ($n=8.5\times10^{28}\times2$ d-electron ધારી $n=1.7\times10^{29}$) માટે $E_F$ ગણો. \hfill [\textbf{જવાબ:} $\approx11$ eV]
+  \item $E-E_F=-0.03$ eV, $T=300$ K: $f(E)$ ગણો. \hfill [\textbf{જવાબ:} $\approx0.73$]
+  \item ડોટ $L=5$ nm માટે $E_1$ (ઇલેક્ટ્રોન) ગણો. \hfill [\textbf{જવાબ:} $\approx0.15$ eV]
+  \item $\lambda=500$ nm માટે $A/B$ ગણો. \hfill [\textbf{જવાબ:} $\approx1.33\times10^{-13}$ J s/m$^3$]
+  \item $|\psi\rangle=(|0\rangle+\ii|1\rangle)/\sqrt2$ માટે $Z$-માપન સંભાવનાઓ અને $\langle Z\rangle$. \hfill [\textbf{જવાબ:} $\tfrac12,\tfrac12;\ 0$]
+  \item CNOT($|10\rangle$) = ? \hfill [\textbf{જવાબ:} $|11\rangle$]
+  \item H બે વાર લાગુ કરવાથી $|0\rangle$ પર શું પરિણામ? \hfill [\textbf{જવાબ:} $|0\rangle$ ($H^2=I$)]
+  \item BB84 વિના ઈવ હોય તો સ્કિપ્ટ-બિટ ત્રુટિ-દર? \hfill [\textbf{જવાબ:} $0$]
+  \item ફોટોન માટે $E_F$-જેવી ગણતરી કેમ લાગુ નથી? \hfill [\textbf{જવાબ:} બોસોન; સંખ્યા સંરક્ષિત નથી]
+\end{enumerate}
+
+\section{50 ઉચ્ચ સ્તરીય MCQs}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item પ્રથમ-ક્રમ ઊર્જા-સુધારો: (A) $\langle n|H'|n\rangle$ (B) $H'^{2}$ (C) 0 (D) $1/E_n$
+  \item ક્ષોભ સિદ્ધાંત માન્ય જ્યારે: (A) $H'$ નાનું (B) $H'$ મોટું (C) ક્ષીણ અવસ્થાઓ (D) $V=0$
+  \item ફર્મિઓન અવસ્થા-વિધેય વિનિમય હેઠળ: (A) સમમિત (B) પ્રતિસમમિત (C) અસમિત (D) શૂન્ય
+  \item બોસોન સ્પિન: (A) અર્ધ-પૂર્ણાંક (B) પૂર્ણાંક (C) 1/2 (D) કોઈ નહીં
+  \item પૌલી નિયમ લાગુ પડે: (A) બોસોનો (B) ફર્મિઓનો (C) ફોટોનો (D) તમામ કણો
+  \item FD વિતરણ $E=E_F$ પર ($T>0$): (A) 0 (B) 1 (C) $\tfrac12$ (D) $\infty$
+  \item $T=0$ પર $E>E_F$ માટે $f=$ ? (A) 1 (B) $\tfrac12$ (C) 0 (D) $e^{-E}$
+  \item $E_F\propto n^{?}$: (A) $1/3$ (B) $2/3$ (C) $3/2$ (D) 1
+  \item ધાતુમાં $E_F$ નો ક્રમ: (A) meV (B) eV (C) keV (D) MeV
+  \item BE વિતરણમાં એક અવસ્થાની વસ્તી: (A) ≤1 (B) અપરિમિત (C) =0 (D) =1
+  \item ફોટોન વાપરે છે: (A) FD (B) BE (C) MB (D) કંઈ નહીં
+  \item અવસ્થા-ઘનતા 3D બલ્ક $\propto$: (A) $E$ (B) $\sqrt{E}$ (C) $1/\sqrt{E}$ (D) અચલાંક
+  \item 2D સિસ્ટમની $\rho(E)$: (A) સિડી-આકાર (B) $\sqrt{E}$ (C) ડેલ્ટા (D) $E^{2}$
+  \item 0D ડોટની $\rho(E)$: (A) સિડી (B) ડેલ્ટા-કાર્યો (C) $\sqrt{E}$ (D) $E^{-1}$
+  \item ક્વોન્ટમ ડોટ નાનું થાય તો ઉત્સર્જન રંગ: (A) લાલ→નીલમ (B) નીલમ→લાલ (C) અપરિવર્તિત (D) સફેદ
+  \item ક્વોન્ટમ અવરોધન થાય જ્યારે કદ $\lesssim$: (A) μm (B) mm (C) ડી બ્રોગ્લી $\lambda$ (D) cm
+  \item પ્રેરિત ઉત્સર્જનમાં ઉત્સર્જિત ફોટોન: (A) યાદૃચ્છિક દિશા (B) આગમન ફોટોન સાથે સુસંગત (C) વિરુદ્ધ દિશા (D) અલગ આવૃત્તિ
+  \item આઇન્સ્ટાઇન સંબંધ: (A) $B_{12}>B_{21}$ (B) $B_{12}=B_{21}$ (C) $A=B$ (D) $A=0$
+  \item $A/B\propto$ ? (A) $\nu$ (B) $\nu^{2}$ (C) $\nu^{3}$ (D) $1/\nu$
+  \item વસ્તી ઉલટાણ એટલે: (A) $N_2>N_1$ (B) $N_2=N_1$ (C) $N_2<N_1$ (D) $N_1=0$
+  \item રૂબી લેસર ક્રિયાશીલ આયન: (A) Nd$^{3+}$ (B) Cr$^{3+}$ (C) Ne (D) He
+  \item રૂબી લેસર તરંગલંબાઈ: (A) $632.8$ nm (B) $694.3$ nm (C) $1064$ nm (D) $488$ nm
+  \item રૂબી પંપિંગ-સ્તરો: (A) બે (B) ત્રણ (C) ચાર (D) પાંચ
+  \item He-Ne માં ઊર્જા-સ્થાનાંતરણ થાય: (A) He→Ne (B) Ne→He (C) કેવિટી→ગેસ (D) દિવાલ→ગેસ
+  \item He-Ne લેસર $\lambda$: (A) $694.3$ nm (B) $632.8$ nm (C) $1064$ nm (D) $337$ nm
+  \item ચાર-સ્તર લેસર વધુ કાર્યક્ષમ કારણ: (A) નીચલો સ્તર ખાલી રહે (B) વધુ પંપ શક્તિ (C) મોટી કેવિટી (D) લાંબી તરંગ
+  \item લેસરની વિશેષતા નથી: (A) સુસંગતતા (B) એકવર્ણીયતા (C) દિશાત્મકતા (D) વ્યાપક સતત વર્ણપટ
+  \item ક્યુબિટ સામાન્ય અવસ્થા: (A) $\alpha|0\rangle+\beta|1\rangle$ (B) 0 કે 1 (C) $\infty$ (D) $|00\rangle$
+  \item $|\alpha|^{2}+|\beta|^{2}=$ ? (A) 0 (B) 1 (C) 2 (D) $\tfrac12$
+  \item બ્લોચ ગોળાનો ઉત્તર ધ્રુવ: (A) $|1\rangle$ (B) $|0\rangle$ (C) $|+\rangle$ (D) $|-\rangle$
+  \item $H|0\rangle=$ ? (A) $|0\rangle$ (B) $|1\rangle$ (C) $(|0\rangle+|1\rangle)/\sqrt2$ (D) $(|0\rangle-|1\rangle)/\sqrt2$
+  \item Pauli-X ગેટ ક્રિયા: (A) બિટ-ફ્લિપ (B) કલા-ફ્લિપ (C) માપન (D) ક્ષતિ
+  \item CNOT નિયંત્રિત બિટ 0 હોય તો લક્ષ્ય: (A) ફ્લિપ (B) અપરિવર્તિત (C) શૂન્ય (D) અધિસ્થિતિ
+  \item બેલ અવસ્થા છે: (A) ગૂંથિત (B) અલગ કરી શકાય (C) શાસ્ત્રીય (D) એક-ક્યુબિટ
+  \item $|\Phi^{+}\rangle=$ ? (A) $(|01\rangle+|10\rangle)/\sqrt2$ (B) $(|00\rangle+|11\rangle)/\sqrt2$ (C) $|00\rangle$ (D) $(|00\rangle-|11\rangle)/\sqrt2$
+  \item $n$ ક્યુબિટની અવસ્થા-અવકાશ પરિમાણ: (A) $n$ (B) $2n$ (C) $2^{n}$ (D) $n^{2}$
+  \item નો-ક્લોનિંગ પ્રમેય: (A) અજ્ઞાત ક્વોન્ટમ અવસ્થાની નકલ અશક્ય (B) નકલ શક્ય (C) માપન અશક્ય (D) ગેટ અશક્ય
+  \item BB84 માં આધારો સંખ્યા: (A) 1 (B) 2 (C) 3 (D) 4
+  \item BB84 માં ઈવ-હસ્તક્ષેપ ત્રુટિ-દર: (A) 0 (B) ~25% (C) 50% (D) 100%
+  \item BB84ના પ્રતિપાદક: (A) શોર (B) બેનેટ-બ્રાસાર્ડ (C) ગ્રોવર (D) ફેનમેન
+  \item QKD સુરક્ષાનો આધાર: (A) ગણતરી-કઠિનતા (B) ભૌતિક નિયમો (C) પાસવર્ડ (D) RSA
+  \item શરૂઆત $|00\rangle$ થી $|\Phi^{+}\rangle$ બનાવવા જરૂરી ગેટ-ક્રમ: (A) H+CNOT (B) X+Z (C) Z+H (D) ફક્ત CNOT
+  \item FD વિતરણ ઉચ્ચ $T$/$\mu$ થી દૂર મર્યાદામાં બદલાય: (A) BE (B) MB (C) ડેલ્ટા (D) અચલાંક
+  \item ધાતુ-ઇલેક્ટ્રોનની ગતિઊર્જા મોટા ભાગે આવે છે: (A) થર્મલથી (B) પૌલી-દબાણ/ફર્મી ભરણથી (C) ગુરુત્વથી (D) ચુંબકીયથી
+  \item ક્વોન્ટમ કૂવાની સંરચના: (A) પહોળી-બેન્ડ અવરોધક બે સ્તરો વચ્ચે સાંકડી-બેન્ડ સ્તર (B) એક જ સ્તર (C) વાયર (D) ડોટ
+  \item લેસરની રેખા-પહોળાઈ મર્યાદિત કરે: (A) પંપ શક્તિ (B) અવસ્થા આયુ ($\Delta E\,\Delta t$) (C) કેવિટી લંબાઈ જ (D) દિવાલ પરાવર્તન
+  \item $Z$-ગેટ $|+\rangle$ પર ક્રિયા કરે: (A) $|+\rangle$ (B) $|-\rangle$ (C) $|0\rangle$ (D) $|1\rangle$
+  \item ક્વોન્ટમ ટેલિપોર્ટેશન માટે જરૂરી સાધન: (A) ગૂંથિત જોડી + શાસ્ત્રીય ચેનલ (B) ફક્ત ફોટોન (C) ફક્ત કેબલ (D) લેસર
+  \item MB આંકડાશાસ્ત્ર માન્ય જ્યારે: (A) વસ્તી પ્રતિ-અવસ્થા ≪1 (B) વસ્તી વધુ (C) ફર્મિઓન માત્ર (D) $T=0$
+  \item $E_F$ પર ઇલેક્ટ્રોનનો દરેક સંવેગ: (A) $p_F=\hbar(3\pi^{2}n)^{1/3}$ (B) 0 (C) $mv_T$ (D) અનંત
+\end{enumerate}
+
+\subsection*{જવાબ ચાવી અને પગલાંવાર સમજૂતી}
+\begin{javabchavi}{MCQ જવાબ ચાવી (એકમ 5)}
+1-A | 2-A | 3-B | 4-B | 5-B | 6-C | 7-C | 8-B | 9-B | 10-B |
+11-B | 12-B | 13-A | 14-B | 15-A | 16-C | 17-B | 18-B | 19-C | 20-A |
+21-B | 22-B | 23-B | 24-A | 25-B | 26-A | 27-D | 28-A | 29-B | 30-B |
+31-C | 32-A | 33-B | 34-A | 35-B | 36-C | 37-A | 38-B | 39-B | 40-B |
+41-B | 42-A | 43-B | 44-B | 45-A | 46-B | 47-B | 48-A | 49-A | 50-A
+\end{javabchavi}
+
+\begin{javabchavi}{MCQ પગલાંવાર સમજૂતી (મુખ્ય ગણતરી-આધારિત પ્રશ્નો)}
+\begin{description}[style=nextline,itemsep=0pt]
+  \item[6./7.] FD: $f=(e^{(E-\mu)/kT}+1)^{-1}$; $E=\mu$ પર $f=\tfrac12$; $T=0$ પર step — $E_F$ થી ઉપર શૂન્ય.
+  \item[8.] ફર્મી-ગોળો તર્કથી $p_F=\hbar(3\pi^{2}n)^{1/3}$ ⇒ $E_F\propto n^{2/3}$.
+  \item[15.] $E_1\propto1/L^{2}$: ડોટ નાનો ⇒ ગેપ મોટો ⇒ ટૂંકી $\lambda$ ⇒ નીલમ તરફ.
+  \item[17.] પ્રેરિત ફોટોન = આગમન ફોટોનની સંપૂર્ણ પ્રતિકૃતિ (સમ-કલા, દિશા, ધ્રુવીકરણ) — લેસરનો આધાર.
+  \item[19.] થર્મલ-સંતુલન + પ્લાંક વિતરણ તારણીથી $A/B=8\pi h\nu^{3}/c^{3}$.
+  \item[31.] $H|0\rangle=\tfrac{1}{\sqrt2}(|0\rangle+|1\rangle)$ — અધિસ્થિતિ-નિર્માતા ગેટ.
+  \item[34.] બેલ અવસ્થાઓ $2^{n}$-અવસ્થા ઉત્પાદનમાં ન લખાય ⇒ ગૂંથિત.
+  \item[39.] ઈવ: $\tfrac12$ (ભિન્ન આધાર) × $\tfrac12$ (ખોટું પરિણામ) $=25\%$ ત્રુટિ.
+  \item[42.] ઉચ્ચ તાપ/ઓછી વસ્તીમાં $e^{\pm x}+1\simeq e^{\pm x}$ ⇒ FD→MB (શાસ્ત્રીય મર્યાદા).
+\end{description}
+શેષ પ્રશ્નો વ્યાખ્યા-આધારિત છે; \S5.2--\S5.3 સાથે સરખાવો.
+\end{javabchavi}

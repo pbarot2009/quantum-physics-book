@@ -1,0 +1,191 @@
+% !TEX program = xelatex
+% =====================================================================
+%  ક્વોન્ટમ ભૌતિકવિજ્ઞાન : સિદ્ધાંત, ગણિત અને એન્જિનિયરિંગ અનુપ્રયોગો
+%  Quantum Physics: Theory, Mathematics and Engineering Applications
+%  Compile with: xelatex main.tex   (run twice for TOC)
+%  Requires fonts: Noto Serif Gujarati (or Noto Sans Gujarati / Lohit Gujarati)
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{book}
+
+% ---------------- Mathematics ----------------
+\usepackage{amsmath,amssymb}
+\usepackage{physics}          % \dd, \pdv, \abs, \bra, \ket ...
+\providecommand{\odv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}  % compat for older physics.sty
+\usepackage{booktabs}         % \toprule, \midrule, \bottomrule
+\numberwithin{equation}{chapter}
+
+% ---------------- Graphics -------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,decorations.markings,
+                 patterns,patterns.meta,calc,positioning,angles,quotes,shadows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17,width=0.82\textwidth}
+
+% ---------------- Colour theme ---------------
+\usepackage{xcolor}
+\definecolor{qblue}{RGB}{12,60,110}     % deep indigo-blue (headings)
+\definecolor{qteal}{RGB}{0,105,92}       % teal (definition boxes)
+\definecolor{qamber}{RGB}{176,106,0}     % amber (examples)
+\definecolor{qviolet}{RGB}{86,44,132}    % violet (theorems)
+\definecolor{qgreen}{RGB}{27,94,32}      % green (key points)
+\definecolor{qred}{RGB}{155,28,30}       % red (exercises/MCQ)
+
+% ---------------- Layout ---------------------
+\usepackage[a4paper,top=25mm,bottom=27mm,inner=26mm,outer=24mm]{geometry}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\linespread{1.22}
+
+% ---------------- Fonts (XeLaTeX) -------------
+\usepackage{fontspec}
+% Main (Latin) face renders all English terminology; the Gujarati Unicode
+% block is switched automatically to a native Gujarati face via ucharclasses.
+\IfFontExistsTF{TeX Gyre Termes}{\setmainfont{TeX Gyre Termes}}{}
+\IfFontExistsTF{Noto Serif Gujarati}
+ { \newfontfamily\gujaratifont{Noto Serif Gujarati}[Script=Gujarati] }
+ { \IfFontExistsTF{Noto Sans Gujarati}
+    { \newfontfamily\gujaratifont{Noto Sans Gujarati}[Script=Gujarati] }
+    { \IfFontExistsTF{Lohit Gujarati}
+       { \newfontfamily\gujaratifont{Lohit Gujarati}[Script=Gujarati] }
+       { \typeout{WARNING: no Gujarati font found; install Noto Serif Gujarati.} } } }
+\IfFileExists{ucharclasses.sty}{
+  \usepackage{ucharclasses}
+  \setTransitionsFor{Gujarati}{\begingroup\gujaratifont}{\endgroup}
+}{}
+
+% ---------------- Boxes ----------------------
+\usepackage[most]{tcolorbox}
+
+% વ્યાખ્યા (Definition)
+\newtcolorbox{vyakhya}[1][]{enhanced,breakable,
+  colback=qteal!6,colframe=qteal,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={વ્યાખ્યા (Definition)\;#1}}
+
+% સિદ્ધાંત / પ્રમેય (Theorem)
+\newtcolorbox{pramey}[1][]{enhanced,breakable,
+  colback=qviolet!6,colframe=qviolet,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={પ્રમેય (Theorem)\;#1}}
+
+% નિયમ / સૂત્ર (Law)
+\newtcolorbox{niyam}[1][]{enhanced,breakable,
+  colback=qblue!5,colframe=qblue,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={નિયમ (Law / Rule)\;#1}}
+
+% ઉદાહરણ (Worked Example) -- optional tag argument
+\newtcolorbox{udaharan}[1][]{enhanced,breakable,
+  colback=qamber!7,colframe=qamber,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={ઉદાહરણ (Worked Example)\;#1}}
+
+% સિદ્ધાંત -- mandatory title argument
+\newtcolorbox{sidhant}[1]{enhanced,breakable,
+  colback=qviolet!6,colframe=qviolet,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={#1}}
+
+% વ્યાખ્યા -- alternate spelling used in some units (no argument)
+\newtcolorbox{vayakhya}{enhanced,breakable,
+  colback=qteal!6,colframe=qteal,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={વ્યાખ્યા (Definition)}}
+
+% શૈક્ષણિક ઉદ્દેશ્યો (Learning Objectives)
+\newtcolorbox{uddeshyo}{enhanced,breakable,
+  colback=qblue!5,colframe=qblue,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={શૈક્ષણિક ઉદ્દેશ્યો (Learning Objectives)}}
+
+% દાખલો -- worked example with mandatory title (uses \tcblower separator)
+\newtcolorbox{dahlo}[1]{enhanced,breakable,
+  colback=qamber!7,colframe=qamber,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={#1}}
+
+% એન્જિનિયરિંગ ઉપયોગ બોક્સ -- mandatory title
+\newtcolorbox{upayogbox}[1]{enhanced,breakable,
+  colback=qgreen!6,colframe=qgreen,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={#1}}
+
+% જવાબ ચાવી / સમજૂતી બોક્સ -- mandatory title
+\newtcolorbox{javabchavi}[1]{enhanced,breakable,
+  colback=gray!5,colframe=black!70,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={#1}}
+
+% મુખ્ય મુદ્દા (Key Points)
+\newtcolorbox{mulmudda}{enhanced,breakable,
+  colback=qgreen!6,colframe=qgreen,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={મુખ્ય મુદ્દા (Key Points)}}
+
+% સ્વાધ્યાય (Exercises)
+\newtcolorbox{svadhyay}{enhanced,breakable,
+  colback=qred!4,colframe=qred,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={સ્વાધ્યાય (Exercises)}}
+
+% બહુવિકલ્પીય પ્રશ્નો (MCQs)
+\newtcolorbox{mcqbox}{enhanced,breakable,
+  colback=gray!5,colframe=black!70,boxrule=0.9pt,arc=2.5mm,
+  fonttitle=\bfseries,title={બહુવિકલ્પીય પ્રશ્નો (Multiple Choice Questions)}}
+
+% ---------------- Handy macros ---------------
+% \term{ગુજરાતી શબ્દ}{English Term}  -- first-appearance bilingual terminology
+\newcommand{\term}[2]{#1 (#2)}
+% physical constants
+\newcommand{\hh}{\ensuremath{h}}
+\newcommand{\cvel}{\ensuremath{c}}
+\newcommand{\kB}{\ensuremath{k_{\mathrm{B}}}}
+\newcommand{\me}{\ensuremath{m_e}}
+% \en{...} : English rendering of a term inside headings/body
+\newcommand{\en}[1]{{\normalfont\itshape (#1)}}
+% \ii : imaginary unit
+\newcommand{\ii}{\ensuremath{\mathrm{i}}}
+
+% ---------------- Hyperref --------------------
+\usepackage[colorlinks=true,linkcolor=qblue,urlcolor=qteal,citecolor=qviolet]{hyperref}
+
+% ---------------- Title data ------------------
+\title{%
+  {\Huge\bfseries ક્વોન્ટમ ભૌતિકવિજ્ઞાન}\\[4mm]
+  {\Large સિદ્ધાંત, ગણિત અને એન્જિનિયરિંગ અનુપ્રયોગો}\\[8mm]
+  {\large Quantum Physics: Theory, Mathematics\\ and Engineering Applications}}
+\author{{\normalsize અધ્યાપન-સ્તરીય પાઠ્યપુસ્તક}\\[1mm]
+{GSEB (11--12 વિજ્ઞાન) · B.Tech/B.E. (સેમ. 1--8) · GATE · CSIR-NET · GRE}}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\begin{center}
+{\large\bfseries પ્રસ્તાવના (Preface)}\end{center}
+\addcontentsline{toc}{chapter}{પ્રસ્તાવના (Preface)}
+
+આ પુસ્તક ક્વોન્ટમ ભૌતિકવિજ્ઞાન (Quantum Physics) ના સિદ્ધાંત (Theory), ગાણિતિક ઢાંચો (Mathematical Framework)
+અને એન્જિનિયરિંગ અનુપ્રયોગો (Engineering Applications) ને એકત્રિત કરતું વિશ્વવિદ્યાલય-કક્ષાનું પાઠ્યપુસ્તક છે.
+તેની રચના GTU અને અન્ય ભારતીય ટેકનિકલ યુનિવર્સિટીઓના Engineering Physics અભ્યાસક્રમ, GSEB ધોરણ 11--12 વિજ્ઞાન
+પ્રવાહના આધુનિક ભૌતિકવિજ્ઞાન એકમો તથા GATE/CSIR-NET/GRE Physics ની તૈયારીની જરૂરિયાતોને આધારે થયેલ છે.
+દરેક વૈજ્ઞાનિક પરિભાષા (Technical Terminology) પ્રથમ વખત આવે ત્યારે પ્રમાણિત ગુજરાતી શબ્દ સાથે અંગ્રેજી શબ્દ
+કૌંસમાં આપેલ છે, જે ગુજરાત ગ્રંથ નિર્માણ બોર્ડની દ્વિભાષી પરિભાષા-પદ્ધતિ (Bilingual Terminology Convention) ને
+અનુસરે છે.
+
+\textbf{પુસ્તકનું ઘટનાક્રમ (Book Structure):}
+\begin{itemize}
+  \item \textbf{એકમ 1:} ક્વોન્ટમ ભૌતિકવિજ્ઞાનનો ઉદ્ભવ અને જૂનો ક્વોન્ટમ વાદ (Origin of Quantum Physics \& Old Quantum Mechanics)
+  \item \textbf{એકમ 2:} તરંગ-કણ દ્વૈતતા, તરંગ પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત (Wave--Particle Duality, Wave Packets \& Uncertainty Principle)
+  \item \textbf{એકમ 3:} શ્રોડિન્જર તરંગ યાંત્રિકી અને ગાણિતિક વિધેયવાદ (Schr\"odinger Wave Mechanics \& Mathematical Formalism)
+  \item \textbf{એકમ 4:} ચોક્કસ ઉકેલયોગ્ય પ્રણાલિઓ (Exactly Solvable Systems)
+  \item \textbf{એકમ 5:} કોણીય સંવેગ, હાઇડ્રોજન પરમાણુ અને ક્વોન્ટમ એન્જિનિયરિંગ અનુપ્રયોગો (Angular Momentum, Hydrogen Atom \& Quantum Engineering Applications)
+  \item \textbf{પરિશિષ્ટો:} સ્થિરાંકો, સૂત્રસંગ્રહ, પ્રશ્નોત્તર-કી, પરિભાષા કોશ અને સંદર્ભગ્રંથો
+\end{itemize}
+
+દરેક એકમમાં (i) પૂર્ણ ગાણિતિક ઉત્પત્તિ (Complete Derivations), (ii) મૂળ TikZ/PGFPlots આકૃતિઓ,
+(iii) હલ કરેલા ઉદાહરણો (Worked Examples), (iv) મુખ્ય મુદ્દા, (v) સ્વાધ્યાય અને (vi) બહુવિકલ્પીય પ્રશ્નો (MCQs)
+આપેલ છે. પરિશિષ્ટ C માં તમામ MCQ ની ઉત્તર-કી આપેલ છે.
+
+\tableofcontents
+
+\mainmatter
+
+\input{unit1}
+\input{unit2}
+\input{unit3}
+\input{unit4}
+\input{unit5}
+\input{appendix}
+
+\end{document}

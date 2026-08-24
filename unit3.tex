@@ -1,0 +1,497 @@
+% ============================================================================
+% UNIT 3 : શ્રોડિન્જર તરંગ યાંત્રિકી અને ગાણિતિક વિધેયવાદ
+% ============================================================================
+\chapter{શ્રોડિન્જર તરંગ યાંત્રિકી અને ગાણિતિક વિધેયવાદ \en{Schrödinger Wave Mechanics and Mathematical Formalism}}
+
+\section{પ્રસ્તાવના અને શૈક્ષણિક ઉદ્દેશ્યો}
+\begin{uddeshyo}
+આ એકમના અભ્યાસ પછી વિદ્યાર્થી:
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item તરંગ વિધેય (Wave Function) $\Psi(\mathbf{r},t)$ નો ભૌતિક અર્થ — બોર્નની સંભાવના-ઘનતા અર્થઘટન — સમજાવી શકશે.
+  \item પ્રમાણીકરણ (Normalization) અને લંબ-લંબતા (Orthogonality) શરતો લખી/ઉપયોગ કરી શકશે.
+  \item સંભાવ્યતા ધારા ઘનતા (Probability Current Density) $\mathbf{J}$ અને સાતત્ય સમીકરણ (Continuity Equation) ની ચુસ્ત સાબિતી કરી શકશે.
+  \item 1D અને 3D માટે TDSE અને TISE ની તારણી કરી શકશે.
+  \item ઓપરેટર, હર્મિટિયન ઓપરેટર, આઇજનમૂલ્ય/આઇજનવિધેય અને કમ્યુટેટર બીજગણિત વાપરી શકશે.
+  \item ડિરાક Bra-Ket સંજ્ઞા, અપેક્ષિત મૂલ્યો અને એહરનફેસ્ટ પ્રમેયોની સંપૂર્ણ સાબિતી કરી શકશે.
+\end{enumerate}
+\end{uddeshyo}
+
+\section{વિસ્તૃત સૈદ્ધાંતિક વિવરણ}
+
+\subsection{તરંગ વિધેયનો ભૌતિક અર્થ \en{Physical Meaning of the Wave Function}}
+1926માં શ્રોડિન્જરે દ્રવ્ય-તરંગોની ગતિનું નિયંત્રણ કરતું સમીકરણ આપ્યું; બોર્ને (1926) $\Psi$ ની \textbf{સંભાવના-ઘનતા અર્થઘટન (Born's Probability Interpretation)} આપી:
+\begin{vayakhya}
+$|\Psi(\mathbf{r},t)|^{2}\dd V$ = $t$ સમયે કણના આવેલા હોવાની સંભાવના $\mathbf{r}$ આસપાસ $\dd V$ કદમાં. એટલે $|\Psi|^{2}$ = \textbf{સંભાવના ઘનતા} $P(\mathbf{r},t)$.
+\end{vayakhya}
+$\Psi$ પોતે સામાન્ય રીતે સંકીર્ણ (Complex) છે, એટલે ફક્ત $|\Psi|^2=\Psi^*\Psi$ જ ભૌતિક છે. યોગ્ય તરંગ વિધેય માટે શરતો:
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{એકમૂલ્યતા (Single-valuedness)} — સંભાવના એક જ મૂલ્ય;
+  \item \textbf{સાતત્ય} — $\Psi$ અને $\dd\Psi/\dd x$ સતત ($V$ પરિમિત હોય ત્યાં);
+  \item \textbf{વર્ગ-એકીકરણીયતા (Square-integrability)} — $\int|\Psi|^{2}\,\dd V<\infty$.
+\end{enumerate}
+\textbf{પ્રમાણીકરણ:} $\displaystyle\int_{-\infty}^{\infty}|\Psi|^{2}\,\dd V=1$.
+\textbf{લંબ-લંબતા:} $\displaystyle\int\psi_m^*\psi_n\,\dd V=\delta_{mn}$.
+
+\subsection{સંભાવ્યતા ધારા ઘનતા અને સાતત્ય સમીકરણ}
+શાસ્ત્રીય પ્રવાહ-સાતત્યના સમાન ક્વોન્ટમ સંબંધ
+\[
+\frac{\partial P}{\partial t}+\nabla\cdot\mathbf{J}=0,
+\qquad
+P=|\Psi|^{2},\quad
+\boxed{\;\mathbf{J}=\frac{\hbar}{2m\ii}\left(\Psi^{*}\nabla\Psi-\Psi\nabla\Psi^{*}\right)\;}
+\]
+ની સંપૂર્ણ સાબિતી \S3.3 માં આપેલી છે. આ સમીકરણ કુલ સંભાવના $\int P\,\dd V$ નાં સંરક્ષણની ખાતરી કરે છે.
+
+\subsection{શ્રોડિન્જર સમીકરણો \en{The Schrödinger Equations}}
+
+\paragraph{(a) 1D કાળ-આધારિત (TDSE):}
+\begin{equation}
+\ii\hbar\frac{\partial\Psi(x,t)}{\partial t}
+=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi}{\partial x^{2}}+V(x,t)\Psi .
+\label{eq:tdse1d}
+\end{equation}
+
+\paragraph{(b) 3D TDSE:}
+\begin{equation}
+\ii\hbar\frac{\partial\Psi(\mathbf{r},t)}{\partial t}
+=\left[-\frac{\hbar^{2}}{2m}\nabla^{2}+V(\mathbf{r},t)\right]\Psi\equiv\hat H\Psi .
+\label{eq:tdse3d}
+\end{equation}
+
+\paragraph{(c) કાળ-સ્વતંત્ર (TISE):} સ્થિર $V$ માટે અલગ ચલ ઉકેલ $\Psi(\mathbf{r},t)=\psi(\mathbf{r})f(t)$ ધારી TISE મળે:
+\begin{equation}
+\hat H\psi=E\psi,\qquad
+-\frac{\hbar^{2}}{2m}\nabla^{2}\psi+V(\mathbf{r})\psi=E\psi ,
+\qquad f(t)=e^{-\ii Et/\hbar}.
+\label{eq:tise}
+\end{equation}
+
+\subsection{ક્વોન્ટમ ઓપરેટર \en{Quantum Operators}}
+દરેક અવલોકનીય રાશિ (Observable) માટે એક રૈખિક ઓપરેટર:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+રાશિ & ઓપરેટર & સ્વરૂપ \\
+\midrule
+સ્થિતિ $x$ & $\hat x$ & $\hat x\psi=x\psi$ \\
+સંવેગ $p_x$ & $\hat p_x$ & $-\ii\hbar\dfrac{\partial}{\partial x}$ \\
+ગતિઊર્જા $K$ & $\hat K$ & $-\dfrac{\hbar^{2}}{2m}\dfrac{\partial^{2}}{\partial x^{2}}$ \\
+કુલ ઊર્જા $E$ & $\hat E$ & $\ii\hbar\dfrac{\partial}{\partial t}$ \\
+કોણીય સંવેગ & $\hat L_z$ & $-\ii\hbar\dfrac{\partial}{\partial\phi}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+આ સંજ્ઞાઓ પ્લાંક-ડી બ્રોગ્લી સંબંધો $E=\hbar\omega,\ p=\hbar k$ માંથી મેળવાય છે.
+
+\begin{vayakhya}
+\textbf{હર્મિટિયન ઓપરેટર:} $\displaystyle\int\psi_1^{*}\,(\hat A\psi_2)\,\dd V
+=\int(\hat A\psi_1)^{*}\psi_2\,\dd V$ સંતોષતો ઓપરેટર. તેના આઇજનમૂલ્યો વાસ્તવિક હોય — એટલે જ અવલોકનીય રાશિઓ હર્મિટિયન હોવી જોઈએ.
+\end{vayakhya}
+
+\textbf{કમ્યુટેટર (Commutator):} $[\hat A,\hat B]=\hat A\hat B-\hat B\hat A$. મૂળભૂત સંબંધ:
+\begin{equation}
+[\hat x,\hat p_x]=\ii\hbar,\qquad [\hat y,\hat p_y]=\ii\hbar,\qquad [\hat z,\hat p_z]=\ii\hbar,
+\qquad [\hat x,\hat p_y]=0.
+\label{eq:comm}
+\end{equation}
+$[\hat A,\hat B]=0$ ⇒ સમકાલિક ચોકસાઈપૂર્વક માપન શક્ય; $[\hat x,\hat p_x]=\ii\hbar\neq0$ ⇒ અનિશ્ચિતતા સિદ્ધાંત.
+
+\subsection{ડિરાક Bra-Ket સંજ્ઞા \en{Dirac Notation}}
+અવસ્થા $|\psi\rangle$ (ket); તેનો સંકીર્ણ-સંયુગ્ત $\langle\psi|$ (bra). આંતરિક ગુણાકાર:
+\[
+\langle\phi|\psi\rangle=\int\phi^{*}\psi\,\dd V,\qquad
+\langle\psi|\psi\rangle=1,\qquad
+\langle\phi|\psi\rangle=\langle\psi|\phi\rangle^{*},
+\]
+\[
+|\psi\rangle=c_1|a_1\rangle+c_2|a_2\rangle,\qquad
+\hat A|a_n\rangle=a_n|a_n\rangle,\qquad
+\langle\hat A\rangle=\langle\psi|\hat A|\psi\rangle .
+\]
+
+\subsection{એહરનફેસ્ટ પ્રમેય \en{Ehrenfest's Theorems}}
+\[
+\frac{\dd}{\dd t}\langle x\rangle=\frac{\langle p_x\rangle}{m},
+\qquad
+\frac{\dd}{\dd t}\langle p_x\rangle=\Big\langle-\frac{\partial V}{\partial x}\Big\rangle .
+\]
+એટલે અપેક્ષિત મૂલ્યો શાસ્ત્રીય ન્યૂટન સમીકરણોને 'પાળે' છે — ક્વોન્ટમ↔શાસ્ત્રીય સંક્રમણનો પુલ. સાબિતી \S3.3 માં.
+
+\section{સંપૂર્ણ ગાણિતિક સાબિતીઓ}
+\label{sec:unit3proofs}
+
+\subsection{TDSEની તારણી (1D)}
+મુક્ત કણની સમતલ તરંગ: $\Psi=Ae^{\ii(kx-\omega t)}$. આંશિક વિકલન:
+\[
+\frac{\partial\Psi}{\partial t}=-\ii\omega\Psi=-\ii\frac{E}{\hbar}\Psi
+\Rightarrow \ii\hbar\frac{\partial\Psi}{\partial t}=E\Psi,
+\]
+\[
+\frac{\partial^{2}\Psi}{\partial x^{2}}=-k^{2}\Psi=-\frac{p^{2}}{\hbar^{2}}\Psi
+\Rightarrow -\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi}{\partial x^{2}}=\frac{p^{2}}{2m}\Psi=K\Psi .
+\]
+ઊર્જા સંરક્ષણ $E=K+V$ ને આ બે અભિવ્યક્તિઓમાં રાખતાં સીધું સમીકરણ~\eqref{eq:tdse1d} મળે છે. 3D માં $\nabla^{2}=\partial_x^{2}+\partial_y^{2}+\partial_z^{2}$ વાપરી સમાન પગલાંથી \eqref{eq:tdse3d}. નોંધ: TDSE ને 'તારવવું' નહીં પણ પ્લાંક/ડી બ્રોગ્લી સંબંધો સાથે સુસંગત \emph{પ્રકલ્પ} તરીકે સ્થાપિત કરવું છે — તેની સાચાઈ પ્રયોગથી પુષ્ટ થાય છે.
+
+\subsection{TISEની તારણી}
+સ્થિર વિભવ $V(x)$ માટે અલગ ચલ: $\Psi(x,t)=\psi(x)f(t)$ ધારી \eqref{eq:tdse1d} માં રાખી $2m/\hbar^2\psi f$ થી ભાગીએ:
+\[
+\ii\hbar\frac{f'}{f}=-\frac{\hbar^{2}}{2m}\frac{\psi''}{\psi}+V(x)=E\ (\text{અચલાંક}).
+\]
+બે બાજુ અલગ ચલ હોવાથી બંને અચલાંક $E$ સમાન હોવા જ જોઈએ. $f'=-\ii Ef/\hbar\Rightarrow f(t)=e^{-\ii Et/\hbar}$ અને $\psi$ માટે TISE~\eqref{eq:tise}. આવાં ઉકેલો \textbf{સ્થિર અવસ્થાઓ (Stationary States)} છે: $|\Psi|^{2}=|\psi|^{2}$ કાળ સાથે અપરિવર્તિત અને $\mathbf{J}$ સતત.
+
+\subsection{સંભાવ્યતા ધારા ઘનતા અને સાતત્ય સમીકરણની સાબિતી}
+\label{sec:continuity}
+TDSE~\eqref{eq:tdse1d} (સામાન્ય 3D માં પણ) અને તેનો સંકીર્ણ સંયુગ્ત:
+\[
+\ii\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^{2}}{2m}\nabla^{2}\Psi+V\Psi,
+\qquad
+-\ii\hbar\frac{\partial\Psi^{*}}{\partial t}=-\frac{\hbar^{2}}{2m}\nabla^{2}\Psi^{*}+V\Psi^{*}.
+\]
+($V$ વાસ્તવિક ધારવામાં આવ્યું.) પ્રથમને $\Psi^{*}$ થી અને બીજાને $\Psi$ થી ગુણી બાદ કરીએ:
+\[
+\ii\hbar\left(\Psi^{*}\frac{\partial\Psi}{\partial t}+\Psi\frac{\partial\Psi^{*}}{\partial t}\right)
+=-\frac{\hbar^{2}}{2m}\left(\Psi^{*}\nabla^{2}\Psi-\Psi\nabla^{2}\Psi^{*}\right).
+\]
+ડાબી બાજુ $= \ii\hbar\,\dfrac{\partial}{\partial t}(\Psi^{*}\Psi)=\ii\hbar\dfrac{\partial P}{\partial t}$.
+જમણી બાજુ ગ્રીન ઓળખ $\Psi^{*}\nabla^{2}\Psi-\Psi\nabla^{2}\Psi^{*}=\nabla\cdot(\Psi^{*}\nabla\Psi-\Psi\nabla\Psi^{*})$ વાપરી:
+\[
+\ii\hbar\frac{\partial P}{\partial t}
+=-\frac{\hbar^{2}}{2m}\nabla\cdot\big(\Psi^{*}\nabla\Psi-\Psi\nabla\Psi^{*}\big).
+\]
+$1/\ii\hbar=-\ii/\hbar$ વાપરી અને $\mathbf{J}$ ની વ્યાખ્યા રાખતાં:
+\[
+\boxed{\;\frac{\partial P}{\partial t}+\nabla\cdot\mathbf{J}=0\;}
+\]
+કાળ-સ્વતંત્ર ઉકેલ માટે $\Psi=\psi e^{-\ii Et/\hbar}$ માં કલા અચલાંક રદ થતાં $\partial P/\partial t=0$, એટલે $\nabla\cdot\mathbf J=0$ — સ્થિર અવસ્થાઓમાં ધારા અચલાંક.
+
+\subsection{હર્મિટિયન ઓપરેટરનાં આઇજનમૂલ્યો વાસ્તવિક છે — સાબિતી}
+ધારો $\hat A\psi=a\psi$ અને $\hat A$ હર્મિટિયન છે. હર્મિટિયન શરતમાં $\psi_1=\psi_2=\psi$ રાખીએ:
+\[
+\int\psi^{*}\hat A\psi\,\dd V=\int(\hat A\psi)^{*}\psi\,\dd V .
+\]
+ડાબી બાજુ $=a\int|\psi|^{2}\dd V$; જમણી બાજુ $=a^{*}\int|\psi|^{2}\dd V$. $\int|\psi|^2\neq0$ થી:
+\[
+a=a^{*}\Rightarrow\operatorname{Im}(a)=0 . \checkmark
+\]
+
+\subsection{લંબ-લંબતાની સાબિતી}
+ભિન્ન આઇજનમૂલ્યોનાં અવસ્થાઓ: $\hat A\psi_m=a_m\psi_m$, $\hat A\psi_n=a_n\psi_n$, $a_m\neq a_n$.
+હર્મિટિયન શરત $\psi_1=\psi_m,\ \psi_2=\psi_n$:
+\[
+a_m\langle\psi_m|\psi_n\rangle=\langle\hat A\psi_m|\psi_n\rangle=\langle\psi_m|\hat A\psi_n\rangle=a_n\langle\psi_m|\psi_n\rangle
+\Rightarrow (a_m-a_n)\langle\psi_m|\psi_n\rangle=0 .
+\]
+$a_m-a_n\neq0$ થી $\langle\psi_m|\psi_n\rangle=0$. ✓
+
+\subsection{કમ્યુટેટર $[\hat x,\hat p_x]=\ii\hbar$ ની સાબિતી}
+કોઈપણ સરળ વિધેય $\psi$ પર ક્રિયા કરીએ:
+\[
+\hat x\hat p_x\psi=x\left(-\ii\hbar\frac{\dd\psi}{\dd x}\right)=-\ii\hbar\,x\psi',
+\]
+\[
+\hat p_x\hat x\psi=-\ii\hbar\frac{\dd}{\dd x}(x\psi)=-\ii\hbar(\psi+x\psi').
+\]
+બાદબાકી: $[\hat x,\hat p_x]\psi=-\ii\hbar x\psi'+\ii\hbar\psi+\ii\hbar x\psi'=\ii\hbar\psi$ ⇒ $[\hat x,\hat p_x]=\ii\hbar$. ✓
+
+\subsection{એહરનફેસ્ટ પ્રમેયોની સાબિતી}
+સામાન્ય પરિણામ (TDSE + સંયુગ્તથી):
+\begin{equation}
+\frac{\dd}{\dd t}\langle\hat A\rangle=\frac{\dd}{\dd t}\langle\psi|\hat A|\psi\rangle
+=\frac{1}{\ii\hbar}\langle\psi|[\hat A,\hat H]|\psi\rangle+\Big\langle\frac{\partial\hat A}{\partial t}\Big\rangle .
+\label{eq:ehrenfestgeneral}
+\end{equation}
+
+\paragraph{પ્રમેય 1: $\dd\langle x\rangle/\dd t=\langle p_x\rangle/m$.}
+$\hat A=\hat x$, $\partial\hat x/\partial t=0$:
+\[
+\frac{\dd\langle x\rangle}{\dd t}=\frac{1}{\ii\hbar}\langle[\hat x,\hat H]\rangle .
+\]
+$\hat H=\hat p_x^{2}/2m+V(x)$ અને $[\hat x,V(x)]=0$:
+\[
+[\hat x,\hat p_x^{2}]=[\hat x,\hat p_x]\hat p_x+\hat p_x[\hat x,\hat p_x]=\ii\hbar\hat p_x+\ii\hbar\hat p_x=2\ii\hbar\hat p_x .
+\]
+\[
+\Rightarrow\ \frac{\dd\langle x\rangle}{\dd t}=\frac{1}{\ii\hbar}(2\ii\hbar)\Big\langle\frac{\hat p_x}{2m}\Big\rangle=\frac{\langle p_x\rangle}{m}. \checkmark
+\]
+
+\paragraph{પ્રમેય 2: $\dd\langle p_x\rangle/\dd t=\langle-\partial V/\partial x\rangle$.}
+$\hat A=\hat p_x$: $[\hat p_x,\hat p_x^2]=0$, અને
+\[
+[\hat p_x,V]=- \ii\hbar\frac{\partial}{\partial x}V+V\ii\hbar\frac{\partial}{\partial x}
+\ \xrightarrow{\ \psi\text{ પર}\ }\
+-\ii\hbar(V'\psi+V\psi')+V\ii\hbar\psi'=-\ii\hbar\frac{\partial V}{\partial x}\psi ,
+\]
+એટલે $[\hat p_x,V]=-\ii\hbar\,\partial V/\partial x$:
+\[
+\frac{\dd\langle p_x\rangle}{\dd t}=\frac{1}{\ii\hbar}\left\langle-\ii\hbar\frac{\partial V}{\partial x}\right\rangle
+=\Big\langle-\frac{\partial V}{\partial x}\Big\rangle . \checkmark
+\]
+આમ $\langle x\rangle,\ \langle p_x\rangle$ શાસ્ત્રીય ગતિ સમીકરણો પાળે છે; મોટા દળ/ઊંચી ક્વોન્ટમ સંખ્યા મર્યાદામાં શાસ્ત્રીય યાંત્રિકી મળે છે.
+
+\section{એન્જિનિયરિંગ અને તકનીકી ઉપયોગો}
+\begin{upayogbox}{B.Tech/B.E.\ ઉદ્યોગ ઉપયોગો (એકમ 3)}
+\begin{enumerate}[label=\textbullet]
+  \item \textbf{અર્ધવાહક ઉપકરણ સિમ્યુલેશન (TCAD):} MOSFET નેનો-સ્કેલ ચેનલમાં ઇલેક્ટ્રોન વહન TDSE/સંભાવ્યતા-ધારા મોડેલથી ગણાય છે (ECE).
+  \item \textbf{ક્વોન્ટમ રસાયણશાસ્ત્ર સૉફ્ટવેર (Gaussian/VASP):} આણ્વિક કક્ષકો = TISE આઇજનસમસ્યાનાં સંખ્યાત્મક ઉકેલો (Chem/Mech-materials).
+  \item \textbf{ક્વોન્ટમ કમ્પ્યુટિંગ સંજ્ઞા:} ડિરાક Bra-Ket જ Python/Qiskit/Cirq નો મૂળ ભાષા-મોડેલ છે (CSE).
+  \item \textbf{LED/OLED ડિઝાઇન:} સંક્રમણ-દર અને ઉત્સર્જન વર્ણપટ આઇજનઅવસ્થાઓનાં અધિસ્થિતિથી મળે છે.
+  \item \textbf{સંવેદક ડિઝાઇન:} MEMS/NEMS રીડોનેટરનાં શૂન્ય-બિંદુ દોલન $\hat H$ નાં આઇજનમૂલ્યોથી નક્કી થાય છે.
+\end{enumerate}
+\end{upayogbox}
+
+\section{TikZ / PGFPlots ભૌતિક આકૃતિઓ}
+
+\subsection*{આકૃતિ 3.1 : સંભાવના ધારા ઘનતાનું જ્યામિતિક ચિત્ર}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+ \draw[thick,-Stealth] (-4,0) -- (4.6,0) node[right] {$x$};
+ \draw[thick,-Stealth] (0,-1) -- (0,2.6) node[above] {$P,\ |\mathbf J|$};
+ \draw[blue,very thick,domain=-3.8:3.8,smooth,samples=100] plot (\x,{exp(-\x*\x/2)});
+ \node[blue,below right] at (-3.4,1.05) {$P=|\Psi|^{2}$ (તરંગ-પેકેટ)};
+ \draw[-Stealth,red!70!black,very thick] (1.5,1.9) -- (3.5,1.9);
+ \node[red!70!black,above] at (2.5,1.95) {$\mathbf J$: ધારા};
+ \draw[dashed] (1.5,0) -- (1.5,1.85);
+ \draw[dashed] (3.5,0) -- (3.5,1.85);
+ \draw[<->,green!45!black] (1.5,-0.35) -- node[below]{$\Delta P/\Delta t=-\Phi_J$} (3.5,-0.35);
+\end{tikzpicture}
+\caption{પ્રાદેશિક ઘનતા-ઘટાડો = ધારા-પ્રવાહ (સાતત્ય સમીકરણ).}
+\end{figure}
+
+\subsection*{આકૃતિ 3.2 : સ્થિર અવસ્થા — $\Re\Psi$, $\Im\Psi$ અને $|\Psi|^{2}$}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.9\linewidth,height=5.6cm,xlabel={$x$},ylabel={},
+ axis lines=middle,domain=0:12,samples=400,ymin=-1.25,ymax=1.55]
+ \addplot[blue,thin]{sin(deg(2*x))};        \addlegendentry{$\Re\Psi$};
+ \addplot[orange!80!black,thin]{cos(deg(2*x))}; \addlegendentry{$\Im\Psi$};
+ \addplot[violet!70!black,very thick]{0.75};   \addlegendentry{$|\Psi|^{2}$ (અચલાંક)};
+\end{axis}
+\end{tikzpicture}
+\caption{કાળ-સ્વતંત્ર અવસ્થામાં $\Psi$ કાળ સાથે ફરે છે પણ $|\Psi|^{2}$ સ્થિર રહે છે.}
+\end{figure}
+
+\subsection*{આકૃતિ 3.3 : એહરનફેસ્ટ — તરંગ-પેકેટનું શાસ્ત્રીય પથ પર પ્રવાસ}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+ \draw[thick,-Stealth] (-0.5,0) -- (8.6,0) node[right] {$x$};
+ \draw[gray!60,thick,dashed] (0,1.6) .. controls (3,1.6) and (5,0.9) .. (8,0.35);
+ \node[gray] at (4.2,2.0) {શાસ્ત્રીય પથ $x_{cl}(t)$};
+ \foreach \i in {0,1,2,3,4}{
+   \pgfmathsetmacro\x{1.4*\i}
+   \pgfmathsetmacro\y{-0.0009*(\x)*( \x)+1.6}
+   \draw[fill=cyan!30,cyan!60!black,opacity=0.85] (\x,\y) ellipse (0.42 and 0.28);
+   \draw[cyan!60!black,->,thin] (\x,\y) -- ++(0.55,-0.09);}
+ \node at (7.2,-0.65) {\small તરંગ-પેકેટનું કેન્દ્ર $\langle x\rangle$ ન્યૂટનીય ગતિ પાળે છે};
+\end{tikzpicture}
+\caption{એહરનફેસ્ટ: કણ-પેકેટનું કેન્દ્ર શાસ્ત્રીય પથ પર ચાલે છે (ફેલાવો અલગ ઘટના).}
+\end{figure}
+
+\section{સંપૂર્ણ ઉકેલેલા દાખલા}
+\begin{dahlo}{દાખલો 3.1 : પ્રમાણીકરણ નિયતાંક}
+$\Psi(x,t)=A e^{-x^{2}/2L^{2}}e^{-\ii\omega t}$ પ્રમાણિત કરો ($\int_{-\infty}^{\infty}e^{-x^{2}/L^{2}}\dd x=L\sqrt{\pi}$).
+\tcblower
+\textbf{ઉકેલ:} $P=|\Psi|^{2}=A^{2}e^{-x^{2}/L^{2}}$ (કલા-પદ રદ).
+\[
+1=A^{2}\int_{-\infty}^{\infty}e^{-x^{2}/L^{2}}\dd x=A^{2}L\sqrt{\pi}
+\Rightarrow A=\frac{1}{\sqrt{L\sqrt{\pi}}}=\frac{1}{\pi^{1/4}\sqrt L}. 
+\]
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.2 : મુક્ત કણની સંભાવ્યતા ધારા}
+$\Psi=Ae^{\ii(kx-\omega t)}$ માટે $\mathbf J$ ગણો અને કણ-ધારા સાથે સરખાવો.
+\tcblower
+\textbf{ઉકેલ:} $\nabla\Psi=\ii k\Psi$, $\nabla\Psi^{*}=-\ii k\Psi^{*}$:
+\[
+J=\frac{\hbar}{2m\ii}\left(A^{2}\ii k+A^{2}\ii k\right)=\frac{\hbar k}{m}A^{2}=vA^{2}.
+\]
+પ્રમાણિત કરે ($A^{2}\to n$ = કણ-ઘનતા) $J=nv$ — શાસ્ત્રીય પ્રવાહ સાથે સંપૂર્ણ સહમત.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.3 : TISEમાં સ્થિર અવસ્થાનું સત્યાપન}
+સાબિત કરો કે $\Psi(x,t)=\psi(x)e^{-\ii Et/\hbar}$ TDSE સંતોષે જો અને માત્ર જો $\psi$ TISE સંતોષે.
+\tcblower
+\textbf{ઉકેલ:} $\partial_t\Psi=(-\ii E/\hbar)\Psi$, $\partial_x^{2}\Psi=e^{-\ii Et/\hbar}\psi''$. TDSE માં રાખી $e^{-\ii Et/\hbar}$ થી ભાગીએ:
+\[
+E\psi=-\frac{\hbar^{2}}{2m}\psi''+V\psi ,
+\]
+જે જ TISE છે. વિપરીત દિશા સ્પષ્ટ. આમ બંને સમસ્યાઓ સમતુલ્ય છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.4 : અપેક્ષિત મૂલ્ય $\langle x\rangle$}
+દાખલો 3.1 નાં પ્રમાણિત ગોસિયન માટે $\langle x\rangle$ અને $\langle x^{2}\rangle$ ગણો ($\int x^{2}e^{-x^{2}/L^{2}}\dd x=L^{3}\sqrt\pi/2$).
+\tcblower
+\textbf{ઉકેલ:} $\langle x\rangle=\int xA^{2}e^{-x^{2}/L^{2}}\dd x=0$ (વિષમ સંકલન).
+\[
+\langle x^{2}\rangle=A^{2}\frac{L^{3}\sqrt{\pi}}{2}=\frac{1}{L\sqrt{\pi}}\cdot\frac{L^{3}\sqrt{\pi}}{2}=\frac{L^{2}}{2}.
+\]
+એટલે $\sigma_x=\sqrt{\langle x^2\rangle-\langle x\rangle^2}=L/\sqrt2$.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.5 : મુક્ત કણનાં આઇજનમૂલ્યો}
+$\hat p_x=-\ii\hbar\,\dd/\dd x$ નાં આઇજનવિધેય શોધો અને આઇજનમૂલ્યની ભૌતિક અર્થઘટન આપો.
+\tcblower
+\textbf{ઉકેલ:} $\hat p_x\psi=p\psi\Rightarrow-\ii\hbar\,\dd\psi/\dd x=p\psi\Rightarrow\psi=Ce^{\ii px/\hbar}$.
+આ સમતલ તરંગ છે: $|\psi|^{2}=|C|^{2}$ સર્વત્ર અચલાંક ⇒ $\Delta x=\infty$ (અનિશ્ચિતતા સિદ્ધાંત સુસંગત), અને $\lambda=h/p$ — ડી બ્રોગ્લી સંબંધ ફરી મળે છે. આઇજનમૂલ્ય $p$ = માપેલ સંવેગ.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.6 : કમ્યુટેટર બીજગણિત}
+$[\hat p_x,\hat x]$ અને $[\hat p_x,\hat H]$ ($V=V(x)$) ગણો.
+\tcblower
+\textbf{ઉકેલ:} $[\hat p_x,\hat x]=-[\hat x,\hat p_x]=-\ii\hbar$.
+$[\hat p_x,\hat H]=[\hat p_x,p_x^{2}/2m]+[\hat p_x,V]=0+(-\ii\hbar\,\partial V/\partial x)$ (દાખલા 3.10 ની જ્યામિતિ)
+એટલે $[\hat p_x,\hat H]=-\ii\hbar\,\dfrac{\partial V}{\partial x}$ — એહરનફેસ્ટ પ્રમેય 2 નો સીધો ઇનપુટ.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.7 : હર્મિટિયનત્વનું પરીક્ષણ}
+સાબિત કરો કે $\hat p_x=-\ii\hbar\,\dd/\dd x$ હર્મિટિયન છે ($x\to\pm\infty$ પર વિધેયો શૂન્ય ધારો).
+\tcblower
+\textbf{ઉકેલ:} ભાગશઃ સંકલન:
+\[
+\int_{-\infty}^{\infty}\psi_1^{*}\left(-\ii\hbar\psi_2'\right)\dd x
+=\underbrace{\left[-\ii\hbar\psi_1^{*}\psi_2\right]_{-\infty}^{\infty}}_{=0}
++\ii\hbar\int\psi_1'^{*}\psi_2\,\dd x
+=\int\left(-\ii\hbar\psi_1'\right)^{*}\psi_2\,\dd x . \checkmark
+\]
+સીમા-પદ શૂન્ય હોવાથી હર્મિટિયન શરત પૂરી થાય છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.8 : એહરનફેસ્ટ સંખ્યાત્મક ઉદાહરણ}
+મુક્ત ઇલેક્ટ્રોન-પેકેટનું $\langle p_x\rangle=2\times10^{-24}$ kg m/s છે. $t=1$ μs પછીનું $\langle x\rangle$ ગણો ($t=0$ એ $\langle x\rangle=0$).
+\tcblower
+\textbf{ઉકેલ:} એહરનફેસ્ટ 1: $\dd\langle x\rangle/\dd t=\langle p_x\rangle/m=$ અચલાંક (મુક્ત કણ).
+ઝડપ: $v=2\times10^{-24}/9.11\times10^{-31}=2.20\times10^{6}$ m/s.
+\[
+t=1\ \mu\mathrm{s}:\quad \langle x\rangle=v\,t=2.20\times10^{6}\times10^{-6}=2.20\ \mathrm{m}.
+\]
+
+(નોંધ: 1 μs માં પેકેટ-કેન્દ્ર 2.2 m જેટલું આગળ જાય — ઇલેક્ટ્રોન અતિ ઝડપી!)
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.9 : લંબ-લંબતાની તપાસ}
+અનંત કૂવાની પ્રારંભિક અવસ્થાઓ $\psi_n=\sqrt{2/L}\sin(n\pi x/L)$ માટે $\langle\psi_1|\psi_2\rangle$ ગણી લંબ-લંબતા તપાસો.
+\tcblower
+\textbf{ઉકેલ:}
+\[
+\langle\psi_1|\psi_2\rangle=\frac{2}{L}\int_0^{L}\sin\frac{\pi x}{L}\sin\frac{2\pi x}{L}\dd x
+=\frac{1}{L}\int_0^{L}\left[\cos\frac{\pi x}{L}-\cos\frac{3\pi x}{L}\right]\dd x
+=\frac{1}{L}\left[\frac{L}{\pi}\sin\frac{\pi x}{L}-\frac{L}{3\pi}\sin\frac{3\pi x}{L}\right]_0^{L}=0. \checkmark
+\]
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 3.10 : સાતત્ય સમીકરણ સાથે સુસંગતતા તપાસ}
+કોઈ અવસ્થા માટે $J(x)$ અચલાંક ન હોય તો શું નિષ્કર્ષ? 1D સ્થિર અવસ્થા માટે સમજાવો.
+\tcblower
+\textbf{ઉકેલ:} 1D સાતત્ય સમીકરણ: $\partial P/\partial t+\partial J/\partial x=0$.
+સ્થિર અવસ્થામાં $\partial P/\partial t=0\Rightarrow\dd J/\dd x=0\Rightarrow J=$ અચલાંક.
+જો $J$ અચલાંક ન હોય તો અવસ્થા સ્થિર નથી — સંભાવના પ્રાદેશિક રીતે એકઠી/ઘટે છે (દા.ત. કાળ-આધારિત અધિસ્થિતિ અવસ્થા $\psi_1+\psi_2$ માં $P(x,t)$ કાળ સાથે દોલાય છે અને સ્થાનિક $J$ પણ દોલાય છે, પણ કુલ $\int P\,\dd x$ સંરક્ષિત રહે છે).
+\end{dahlo}
+
+\section{સ્વાધ્યાય}
+
+\subsection{વૈચારિક પ્રશ્નો}
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+  \item $\Psi$ પોતો ભૌતિક નથી પણ $|\Psi|^2$ છે — કેમ?
+  \item તરંગ વિધેયની ત્રણ માનક શરતો અને દરેકનું ભૌતિક કારણ આપો.
+  \item પ્રમાણીકરણનું ભૌતિક અર્થઘટન શું છે? અપ્રમાણિત વિધેય કેમ નિરર્થક નથી?
+  \item સાતત્ય સમીકરણ શાસ્ત્રીય પ્રવાહ-સાતત્યને કેવી રીતે સામાન્યીકૃત કરે છે?
+  \item સ્થિર અવસ્થામાં $\Psi$ કાળ સાથે બદલાય છે તોપણ 'સ્થિર' કેમ કહેવાય?
+  \item હર્મિટિયન ઓપરેટરની બે મુખ્ય વિશેષતાઓ અને તેમનું માપન-મહત્વ લખો.
+  \item $[\hat x,\hat p_x]=\ii\hbar$ અને અનિશ્ચિતતા સિદ્ધાંત વચ્ચેનો સંબંધ સમજાવો.
+  \item ડિરાક સંજ્ઞામાં $\langle\psi|\hat A|\psi\rangle$ શું રજૂ કરે છે?
+  \item એહરનફેસ્ટ પ્રમેય ક્વોન્ટમ→શાસ્ત્રીય મર્યાદા કેવી રીતે સ્થાપિત કરે છે?
+  \item શું $\Psi$ અને $e^{\ii\alpha}\Psi$ એક જ ભૌતિક અવસ્થા રજૂ કરે છે? કારણ આપો.
+\end{enumerate}
+
+\subsection{અણઉકેલેલા દાખલા}
+\begin{enumerate}[label=\textbf{P\arabic*.}]
+  \item $\Psi=Ae^{-|x|/L}$ પ્રમાણિત કરો ($\int_0^\infty e^{-x/L}\dd x=L$). \hfill [\textbf{જવાબ:} $A=1/\sqrt L$]
+  \item દાખલા P1 ની અવસ્થા માટે $\langle x\rangle$ ગણો. \hfill [\textbf{જવાબ:} $0$]
+  \item મુક્ત કણ $\Psi=Ae^{-\ii(kx-\omega t)}$ માટે $J$ ની ચિહ્ન-દિશા તપાસો. \hfill [\textbf{જવાબ:} $J=-v|A|^{2}$, નકારાત્મક-$x$ દિશામાં]
+  \item $[\hat p_x,\hat p_x^{2}]$ ગણો. \hfill [\textbf{જવાબ:} $0$]
+  \item $[\hat x,\hat p_x^{2}]$ ગણો. \hfill [\textbf{જવાબ:} $2\ii\hbar\hat p_x$]
+  \item $\hat A$ હર્મિટિયન હોય તો $\langle A\rangle$ વાસ્તવિક છે — સાબિત કરો. \hfill [\textbf{જવાબ:} સાબિતી પ્રકરણમાં]
+  \item સ્થિર અવસ્થા $\Psi=\psi e^{-\ii Et/\hbar}$ માટે $J$ કાળ-સ્વતંત્ર છે — બતાવો. \hfill [\textbf{જવાબ:} કલા-પદ રદ]
+  \item ગોસિયન ($L=1$ nm) ઇલેક્ટ્રોન માટે $\sigma_x$ ગણો. \hfill [\textbf{જવાબ:} $0.71$ nm]
+  \item $\langle p^{2}\rangle$ માટે અભિવ્યક્તિ $\hbar^2\int|\psi'|^2dx$ છે (ભાગશઃ સંકલનથી) — તારવો. \hfill [\textbf{જવાબ:} સીમા-પદ શૂન્ય ધારી સાબિત]
+  \item $\hat L_z=-\ii\hbar\,\partial/\partial\phi$ માટે આઇજનવિધેય અને આઇજનમૂલ્યો શોધો. \hfill [\textbf{જવાબ:} $e^{\ii m\phi}$, $L_z=m\hbar$]
+\end{enumerate}
+
+\section{50 ઉચ્ચ સ્તરીય MCQs}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item બોર્ન અર્થઘટન મુજબ ભૌતિક રાશિ: (A) $\Psi$ (B) $|\Psi|^{2}$ (C) $\Re\Psi$ (D) $\Im\Psi$
+  \item પ્રમાણીકરણ શરત: (A) $\int\Psi\dd V=1$ (B) $\int|\Psi|^{2}\dd V=1$ (C) $\int|\Psi|\dd V=1$ (D) $|\Psi|=1$
+  \item સંભાવ્યતા ધારા ઘનતા સૂત્ર: (A) $\frac{\hbar}{2mi}(\Psi^{*}\nabla\Psi-\Psi\nabla\Psi^{*})$ (B) $\frac{\hbar}{m}\Psi^{2}$ (C) $\hbar\nabla\Psi$ (D) $\frac{\hbar}{m}|\Psi|^{2}$
+  \item સાતત્ય સમીકરણ: (A) $\partial P/\partial t+\nabla\cdot J=0$ (B) $\nabla\times J=0$ (C) $P=J$ (D) $\partial J/\partial t=0$
+  \item સ્થિર અવસ્થામાં અચલાંક: (A) $|\Psi|$ (B) $\Re\Psi$ (C) $\Psi$ (D) $\nabla\Psi$
+  \item TDSE રૈખિક છે કેમ મહત્વનું? (A) ઉકેલ સરળ (B) અધિસ્થિતિ સિદ્ધાંત શક્ય (C) ગણિત સરળ (D) પ્રમાણીકરણ જરૂરી
+  \item કાળ-સ્વતંત્ર સમીકરણ મળે છે જ્યારે: (A) $V=V(t)$ (B) $V=V(x)$ સ્થિર (C) કણ મુક્ત (D) તરંગ ગોસિયન
+  \item સ્થિર અવસ્થાનો કાળ-ઘટક: (A) $e^{Et/\hbar}$ (B) $e^{-\ii Et/\hbar}$ (C) $\cos(Et/\hbar)$ (D) $e^{-Et/\hbar}$
+  \item સંવેગ ઓપરેટર: (A) $\ii\hbar\partial/\partial x$ (B) $-\ii\hbar\partial/\partial x$ (C) $\hbar/x$ (D) $-\hbar\partial/\partial x$
+  \item ઊર્જા ઓપરેટર: (A) $-\ii\hbar\partial/\partial t$ (B) $\ii\hbar\partial/\partial t$ (C) $-\hbar^{2}\partial^{2}/\partial t^{2}$ (D) $E/t$
+  \item $[\hat x,\hat p_x]=$ ? (A) $0$ (B) $\ii\hbar$ (C) $-\ii\hbar$ (D) $\hbar$
+  \item $[\hat x,\hat p_y]=$ ? (A) $\ii\hbar$ (B) $\hbar$ (C) $0$ (D) $-\ii\hbar$
+  \item હર્મિટિયન ઓપરેટરનાં આઇજનમૂલ્યો હંમેશાં: (A) ધન (B) વાસ્તવિક (C) સંકીર્ણ (D) શૂન્ય
+  \item હર્મિટિયન શરત: (A) $\int\psi_1^{*}\hat A\psi_2=\int(\hat A\psi_1)^{*}\psi_2$ (B) $\hat A^2=I$ (C) $\hat A=0$ (D) $\det\hat A=1$
+  \item ભિન્ન આઇજનમૂલ્યનાં આઇજનઅવસ્થાઓ: (A) સમાંતર (B) લંબ-લંબ (C) સરખી (D) સંકીર્ણ
+  \item ડિરાક સંજ્ઞામાં ket: (A) $\langle\psi|$ (B) $|\psi\rangle$ (C) $\psi^{*}$ (D) $|\psi|^{2}$
+  \item $\langle\phi|\psi\rangle$ નાં ગુણધર્મ: (A) $\langle\phi|\psi\rangle=\langle\psi|\phi\rangle$ (B) $=\langle\psi|\phi\rangle^{*}$ (C) હંમેશાં $0$ (D) હંમેશાં $1$
+  \item અપેક્ષિત મૂલ્ય: (A) $\langle\psi|\hat A|\psi\rangle$ (B) $\hat A\psi$ (C) $\langle\psi|\psi\rangle$ (D) $\hat A|\psi\rangle$
+  \item એહરનફેસ્ટ 1: (A) $\dd\langle x\rangle/\dd t=\langle p\rangle/m$ (B) $=\langle F\rangle$ (C) $=0$ (D) $=\hbar/m$
+  \item એહરનફેસ્ટ 2: (A) $\dd\langle p\rangle/\dd t=\langle-\nabla V\rangle$ (B) $=0$ (C) $=\langle p\rangle/m$ (D) $=\hbar k$
+  \item સામાન્ય ગતિ-સમીકરણ: (A) $\dot A=\frac{1}{i\hbar}[A,H]$ (B) $\dot A=[H,A]$ (C) $\dot A=i\hbar[A,H]$ (D) $\dot A=AH$
+  \item મુક્ત કણ માટે $\dd\langle p\rangle/\dd t=$ ? (A) $0$ (B) $\hbar k$ (C) $\langle p\rangle/m$ (D) અનંત
+  \item સમતલ તરંગ માટે $\Delta x$: (A) $0$ (B) $\hbar/p$ (C) $\infty$ (D) $\lambda$
+  \item સમતલ તરંગ માટે $\Delta p$: (A) $0$ (B) $\infty$ (C) $\hbar$ (D) $p$
+  \item એકમૂલ્ય વિધેય કઈ શરત સંતોષે? (A) દરેક $x$ માટે એક જ મૂલ્ય (B) બે મૂલ્ય (C) અનંત મૂલ્ય (D) કોઈ મૂલ્ય નહીં
+  \item $\Psi$ સામાન્ય રીતે હોય: (A) વાસ્તવિક (B) ધન (C) સંકીર્ણ (D) શૂન્ય
+  \item ક્વોન્ટમ યાંત્રિકીમાં અવસ્થાની સંપૂર્ણ માહિતી ધરાવે: (A) $x$ અને $p$ (B) $|\Psi\rangle$ (C) ઊર્જા (D) પથ
+  \item સ્થિર $V$ માટે TISE નાં ઉકેલો કહેવાય: (A) પ્લેન તરંગો (B) આઇજનઅવસ્થાઓ/સ્થિર અવસ્થાઓ (C) ગોસિયનો (D) પલ્સો
+  \item આઇજનમૂલ્ય સમીકરણ: (A) $\hat A\psi=a\psi$ (B) $\hat A\psi=a$ (C) $\psi\hat A=\psi$ (D) $\hat A a=\psi$
+  \item ક્ષીણ (Degenerate) આઇજનમૂલ્ય એટલે: (A) એક જ મૂલ્યની બહુ અવસ્થાઓ (B) શૂન્ય મૂલ્ય (C) નકારાત્મક મૂલ્ય (D) અનંત મૂલ્ય
+  \item $\hat H$ ની રચના: (A) $\hat p^{2}/2m-V$ (B) $\hat p^{2}/2m+V$ (C) $-\hat p^{2}/2m+V$ (D) $\hat p/2m$
+  \item મુક્ત કણ ($V=0$) નાં TISE ઉકેલો: (A) ગોસિયન (B) સમતલ તરંગો (C) સાઈન (D) ઘાતાંકીય ક્ષય
+  \item $\Psi$ નું પારિમાણિક સ્વરૂપ (1D): (A) $m^{-1/2}s^{-1/2}$ (B) $m^{-1/2}$ (C) $s^{-1}$ (D) $J$
+  \item $J$ નું પારિમાણિક સ્વરૂપ: (A) $m^{-2}s^{-1}$ (B) $ms^{-1}$ (C) $J$ (D) $kg\,m/s$
+  \item હર્મિટિયન ઓપરેટરનાં ભિન્ન આઇજનમૂલ્યોનાં આઇજનઅવસ્થાઓ લંબ-લંબ — તેનું મૂળ: (A) રૈખિકતા (B) હર્મિટિયન શરત (C) પ્રમાણીકરણ (D) સાતત્ય
+  \item ક્વોન્ટમ યાંત્રિકીમાં માપન પહેલાં અવસ્થા: (A) ચોક્કસ મૂલ્ય ધરે (B) અધિસ્થિતિમાં હોય (C) શાસ્ત્રીય (D) અદૃશ્ય
+  \item સ્થિર અવસ્થામાં $\langle x\rangle$: (A) કાળ સાથે દોલાય (B) અચલાંક (C) શૂન્ય (D) અનંત
+  \item અધિસ્થિતિ $\psi_1+\psi_2$ ની સંભાવના ઘનતામાં દેખાય છે: (A) રૈખિક પદ (B) હસ્તક્ષેપ પદ $2\Re(\psi_1^{*}\psi_2)$ (C) વર્ગ પદ માત્ર (D) કંઈ નહીં
+  \item એહરનફેસ્ટ પ્રમેય બતાવે છે કે શાસ્ત્રીય યાંત્રિકી ક્વોન્ટમ યાંત્રિકીની મર્યાદા છે: (A) $\hbar\to0$ (B) $\hbar\to\infty$ (C) $m\to0$ (D) $c\to0$
+  \item કોઈપણ વાસ્તવિક $V$ માટે $\hat H$: (A) એકમ (B) હર્મિટિયન (C) શૂન્ય (D) એન્ટી-હર્મિટિયન
+  \item સ્થિતિ-નિરૂપણમાં $|\psi\rangle$ નું સ્વરૂપ: (A) $\psi(x)$ (B) $\tilde\psi(p)$ (C) મેટ્રિક્સ (D) સંખ્યા
+  \item $\delta_{mn}$ (Kronecker delta) મૂલ્ય: (A) $m=n$ પર $1$, અન્યથા $0$ (B) હંમેશાં 1 (C) હંમેશાં 0 (D) $-1$
+  \item સંકલન-સંજ્ઞામાં $\sum|a_n\rangle\langle a_n|=$ ? (A) $0$ (B) $\hat I$ (પૂર્ણતા) (C) $\hat H$ (D) અનંત
+  \item સંભાવના ઘનતાનું એકમ (3D): (A) $m^{3}$ (B) $m^{-3}$ (C) $m^{-1}$ (D) વિમાહીન
+  \item સ્થિર અવસ્થા માટે $J$ નું સ્વરૂપ (1D): (A) અચલાંક (B) રેખીય $x$ (C) શૂન્ય હંમેશાં (D) દોલાતું
+  \item $\hat A\psi=a\psi$ અને $\hat A$ હર્મિટિયન હોય તો $a$: (A) સંકીર્ણ (B) વાસ્તવિક (C) કાલ્પનિક (D) અનંત
+  \item TDSE કઈ પ્રકારનું સમીકરણ છે? (A) પ્રથમ-ક્રમ કાળ, બીજા-ક્રમ સ્થાન (B) બીજા-ક્રમ કાળ (C) પ્રથમ-ક્રમ સ્થાન (D) અરેખીય
+  \item ક્વોન્ટમ અવસ્થાનું કાળ-વિકાસ નિયંત્રિત કરે: (A) ન્યૂટન નિયમ (B) TDSE (C) મેક્સવેલ (D) બોલ્ટ્ઝમાન
+  \item $\langle\psi|\hat x|\psi\rangle$ નું ભૌતિક અર્થઘટન: (A) માપેલ $x$ નું સરેરાશ (B) મહત્તમ $x$ (C) ન્યૂનતમ $x$ (D) સંવેગ
+  \item હસ્તક્ષેપ પદ ક્યારે શૂન્ય? (A) $\psi_1\parallel\psi_2$ (B) $\psi_1\perp\psi_2$ (C) ક્યારેય નહીં (D) પ્રમાણીકરણ પર
+\end{enumerate}
+
+\subsection*{જવાબ ચાવી અને પગલાંવાર સમજૂતી}
+\begin{javabchavi}{MCQ જવાબ ચાવી (એકમ 3)}
+1-B | 2-B | 3-A | 4-A | 5-A | 6-B | 7-B | 8-B | 9-B | 10-B |
+11-B | 12-C | 13-B | 14-A | 15-B | 16-B | 17-B | 18-A | 19-A | 20-A |
+21-A | 22-A | 23-C | 24-A | 25-A | 26-C | 27-B | 28-B | 29-A | 30-A |
+31-B | 32-B | 33-A | 34-A | 35-B | 36-B | 37-B | 38-B | 39-A | 40-B |
+41-A | 42-A | 43-B | 44-B | 45-A | 46-B | 47-A | 48-B | 49-A | 50-B
+\end{javabchavi}
+
+\begin{javabchavi}{MCQ પગલાંવાર સમજૂતી (મુખ્ય તર્ક-આધારિત પ્રશ્નો)}
+\begin{description}[style=nextline,itemsep=0pt]
+  \item[21.] સામાન્ય ગતિ-સમીકરણ $\dd\langle\hat A\rangle/\dd t=\langle[\hat A,\hat H]\rangle/\ii\hbar$ — એહરનફેસ્ટનું મૂળ.
+  \item[22.] મુક્ત કણ: $V=0$ ⇒ $[\hat p,\hat H]=[\hat p,p^2/2m]=0$ ⇒ $\langle p\rangle$ સંરક્ષિત.
+  \item[23./24.] સમતલ તરંગ = ચોક્કસ સંવેગ ($\Delta p=0$) અને અનંત વિસ્તરણ ($\Delta x=\infty$) — અનિશ્ચિતતા સિદ્ધાંતની ચરમ સીમા.
+  \item[33.] 1D: $|\Psi|^{2}$ = સંભાવના-ઘનતા પ્રતિ લંબાઈ ⇒ $\Psi$ નું પારિમાણિક સ્વરૂપ $L^{-1/2}=m^{-1/2}s^{...}$ → વિકલ્પ (A).
+  \item[37.] સ્થિર અવસ્થામાં $P=|\psi|^{2}$ અચલાંક ⇒ દરેક અવલોકનીયનું અપેક્ષિત મૂલ્ય કાળ-સ્વતંત્ર.
+  \item[38.] $|\psi_1+\psi_2|^{2}=|\psi_1|^{2}+|\psi_2|^{2}+2\Re(\psi_1^{*}\psi_2)$ — હસ્તક્ષેપ પદ ક્વોન્ટમ વિશિષ્ટતા.
+  \item[50.] લંબ-લંબ અવસ્થાઓ માટે $\Re(\psi_1^{*}\psi_2)$-સંકલન શૂન્ય ⇒ હસ્તક્ષેપ પદ રદ.
+\end{description}
+શેષ પ્રશ્નો વ્યાખ્યા/સૂત્ર-આધારિત છે; \S3.2--\S3.3 સાથે સરખાવો.
+\end{javabchavi}
