@@ -1,0 +1,681 @@
+% =====================================================================
+% એકમ 1 : ક્વોન્ટમ ભૌતિકવિજ્ઞાનનો ઉદ્ભવ અને જૂનો ક્વોન્ટમ વાદ
+% =====================================================================
+\chapter{ક્વોન્ટમ ભૌતિકવિજ્ઞાનનો ઉદ્ભવ અને જૂનો ક્વોન્ટમ વા\\
+{\large (Origin of Quantum Physics \& Old Quantum Mechanics)}}
+\label{ch:unit1}
+
+\begin{mulmudda}
+\textbf{આ એકમ અભ્યાસ પછી વિદ્યાર્થી}: ચિરસંમત ભૌતિકી (Classical Physics) ની પરાજયો સમજી શકશે;
+પ્લાંકનો વિકિરણ નિયમ (Planck's Radiation Law) ની પૂર્ણ ગાણિતિક ઉત્પત્તિ કરી શકશે; \term{પ્રકાશ-વિદ્યુત અસર}{Photoelectric
+Effect}, \term{કૉમ્પ્ટન અસર}{Compton Effect} અને \term{ડી બ્રોગ્લી પદાર્થ તરંગો}{de Broglie Matter Waves} ની
+વ્યાખ્યા અને ગણતરી શીખશે; ડેવિસન-જર્મર તથા G.P.\ થોમસન પ્રયોગોની યોજના દોરી શકશે; અને
+\term{બોર-સોમરફેલ્ડ સંખ્યાત્મકીકરણ નિયમો}{Bohr--Sommerfeld Quantization Rules} તથા
+\term{ફ્રેંક-હર્ટ્ઝ પ્રયોગ}{Franck--Hertz Experiment} સમજી શકશે.
+\end{mulmudda}
+
+% ---------------------------------------------------------------------
+\section{ચિરસંમત ભૌતિકીની પરાજયો (Failures of Classical Mechanics)}
+
+\subsection{ઐતિહાસિક પૃષ્ઠભૂમિ}
+
+1900 સુધીમાં ચિરસંમત ભૌતિકીના ત્રણ સ્થંભ ઊભા હતા:
+(i) ન્યૂટનની ગતિશાસ્ત્ર (Newtonian Mechanics),
+(ii) મેક્સવેલનું વિદ્યુતચુંબકીય સિદ્ધાંત (Maxwell's Electromagnetic Theory), તથા
+(iii) ઊર્જાના સમવિભાજનનો સિદ્ધાંત (Classical Equipartition Theorem).
+આ ઢાંચાએ ગ્રહગતિથી લઈને તરંગ પ્રસરણ સુધી સફળતા મેળવી; પરંતુ ત્રણ પ્રયોગલબ્ધ ઘટનાઓ તેની સમજણની
+બહાર હતી:
+
+\begin{enumerate}
+  \item \textbf{\term{કૃષ્ણિકા વિકિરણ}{Black Body Radiation}} -- તાપમાન-આધારિત વિકિરણ વર્ણપટનું સ્વરૂપ.
+  \item \textbf{\term{પ્રકાશ-વિદ્યુત અસર}{Photoelectric Effect}} -- પ્રકાશથી ધાતુમાંથી ઇલેક્ટ્રોનનું ઉત્સર્જન (Emission).
+  \item \textbf{\term{પરમાણ્વીય વર્ણપટ}{Atomic Spectra}} -- પરમાણુના સ્વતંત્ર, સ્પષ્ટ રેખા-વર્ણપટ (Line Spectrum).
+\end{enumerate}
+
+\begin{vyakhya}
+\term{ચિરસંમત નિર્ધારણવાદ}{Classical Determinism} મુજબ કોઈપણ કણની સ્થિતિ (Position) $\vec r$ અને
+સંવેગ (Momentum) $\vec p$ એક સાથે અનંત ચોકસાઈએ માપી શકાય છે, અને ઊર્જા (Energy) એ
+\term{સંતત (સખત) ચલ}{Continuous Variable} છે. ક્વોન્ટમ વાદ આ બંને ધારણા બદલે છે: ઊર્જા
+\term{ક્વોન્ટમ}{Quanta} ના સ્વરૂપે વિખેરાયેલ (Discrete) હોય છે અને $\Delta x\,\Delta p\geq\hbar/2$
+ની \term{અનિશ્ચિતતા}{Uncertainty} મૂળભૂત છે.
+\end{vyakhya}
+
+% ---------------------------------------------------------------------
+\section{કૃષ્ણિકા વિકિરણ (Black Body Radiation)}
+
+\begin{vyakhya}
+\term{કૃષ્ણિકા}{Black Body} એવો આદર્શ પદાર્થ છે જે તેના પર પડતું \emph{તમામ} આવૃત્તિ (Frequency)
+$\nu$ નું \term{વિદ્યુતચુંબકીય વિકિરણ}{Electromagnetic Radiation} પૂર્ણપણે શોષે છે (\term{શોષણ ક્ષમતા}{Absorptivity}
+$a_\nu=1$). તે સાથે સૌથી સારો \term{ઉત્સર્જક}{Emitter} પણ છે. તેનું ઉત્સર્જન કેવળ તેના તાપમાન $T$ પર
+આધારિત છે, પદાર્થની પ્રકૃતિ પર નહીં.
+\end{vyakhya}
+
+\begin{vyakhya}
+\term{વર્ણપટ તીવ્રતા ઘનતા}{Spectral Energy Density} $u(\nu,T)$ એ એકમ કદ (Unit Volume)
+માં આવૃત્તિ $\nu$ થી $\nu+\dd\nu$ વચ્ચેની વિકિરણ ઊર્જા છે:
+\begin{equation}
+  u(\nu,T)\,\dd\nu = \frac{\text{$[\nu,\nu+\dd\nu]$ માં ઊર્જા}}{\text{કદ}}
+\end{equation}
+\term{કિરણોત્સર્ગીય ક્ષમતા}{Radiant Emittance / Exitance} $R(\nu,T)$ એ એકમ ક્ષેત્રફળમાં એકમ સમયમાં
+ઉત્સર્જિત ઊર્જા છે, અને $R = \dfrac{c}{4}\,u$ સંબંધ રહે છે.
+\end{vyakhya}
+
+\subsection{પ્રાયોગિક પરિણામો}
+
+\paragraph{(a) સ્ટેફન-બોલ્ટ્ઝમાન નિયમ (Stefan--Boltzmann Law, 1879--84):}
+કુલ ઉત્સર્જિત ક્ષમતા તાપમાનના ચોથા ઘાત (Fourth Power) ના પ્રમાણમાં હોય છે:
+\begin{equation}
+  R(T)=\sigma T^{4}, \qquad \sigma = 5.670\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}
+\end{equation}
+
+\paragraph{(b) વિનનો વિસ્થાપન નિયમ (Wien's Displacement Law, 1893):}
+\term{વર્ણપટ તીવ્રતા}{Spectral Intensity} ના મહત્તમ બિંદુ (Maximum) ની તરંગલંબાઈ
+$\lambda_{\max}$ તાપમાનના વ્યસ્તપ્રમાણમાં હોય છે:
+\begin{equation}
+  \lambda_{\max} T = b = 2.898\times10^{-3}\ \mathrm{m\,K}
+\end{equation}
+વિનનો પ્રયોગલબ્ધ સૂત્ર (Phenomenological Formula):
+\begin{equation}
+  u(\nu,T)=A\,\nu^{3}\,e^{-b'\nu/T}
+\end{equation}
+ઉચ્ચ આવૃત્તિ પર સાચો, પરંતુ નીચી આવૃત્તિ પર પ્રાયોગિક વળાંક સાથે નિષ્ફળ.
+
+\subsection{રેલે-જીન્સ નિયમની ઉત્પત્તિ (Rayleigh--Jeans Derivation, 1900)}
+
+\term{ગુબ્બારા મોડેલ}{Cavity Model} મુજબ લંબાઈ $L$ ના ચોરસ કેવિટી (Cavity) માં સંસ્થિત તરંગો
+(Standing Waves) બને છે. $x,y,z$ દિશામાં નિસ્પંદ શરત (Boundary Condition):
+\begin{equation}
+  n_x\frac{\lambda}{2}=L,\quad n_y\frac{\lambda}{2}=L,\quad n_z\frac{\lambda}{2}=L,
+  \qquad n_x,n_y,n_z=1,2,3,\dots
+\end{equation}
+તરંગ સંખ્યા (Wave Number) અવકાશ (k-space) માં આવૃત્તિ $\nu=c n/(2L)$ ના ગોળા (Sphere)
+ની અંદરના મોડ્સ (Modes) ની સંખ્યા ગણીએ, અને વિદ્યુતચુંબકીય તરંગના બે \term{ધ્રુવીકરણ}{Polarization}
+ધ્યાનમાં લઈએ:
+\begin{align}
+  g(\nu)\,\dd\nu &= 2\times \frac{1}{8}\cdot\frac{4\pi n^{2}\,\dd n}{L^{3}/?}\times L^3 \;\Rightarrow\;
+  \boxed{\,g(\nu)=\frac{8\pi\nu^{2}}{c^{3}}\,}
+\end{align}
+જે એકમ કદ દીઠ મોડ ઘનતા (Mode Density per Unit Volume per Unit Frequency) છે.
+
+\term{સમવિભાજન પ્રમેય}{Equipartition Theorem} મુજબ દરેક દોલક (Oscillator) ની સરેરાશ ઊર્જા
+$\bar\varepsilon=\kB T$ થાય ($\tfrac12 \kB T$ ગતિઊર્જા $+\tfrac12 \kB T$ સ્થિતિઊર્જા). આથી:
+\begin{niyam}[રેલે-જીન્સ નિયમ]
+\begin{equation}
+  u(\nu,T)=g(\nu)\,\bar\varepsilon=\frac{8\pi\nu^{2}}{c^{3}}\,\kB T
+  \qquad\text{અથવા}\qquad
+  u(\lambda,T)=\frac{8\pi}{\lambda^{4}}\,\kB T
+\end{equation}
+\end{niyam}
+
+\paragraph{\term{અલ્ટ્રાવાયોલેટ આપત્તિ}{Ultraviolet Catastrophe}:} $\nu\to\infty$ લેતાં
+$u(\nu,T)\to\infty$, એટલે કુલ ઊર્જા ઘનતા
+$u_0=\int_0^\infty u(\nu,T)\,\dd\nu=\infty$ આવે છે -- પ્રયોગમાં તો વર્ણપટ ઉચ્ચ આવૃત્તિ પર શૂન્ય તરફ
+જાય છે. આ ચિરસંમત ભૌતિકીની મૂળભૂત પરાજય હતી.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.78\textwidth,height=7cm,
+  xlabel={$\lambda\ (\mathrm{nm})$},ylabel={સાપેક્ષ તીવ્રતા},
+  xmin=0,xmax=2600,ymin=0,ymax=1.15,
+  legend pos=north east,legend style={font=\footnotesize},
+  domain=320:2500,samples=200]
+  % Planck-like curve at T=5000K (arbitrary units, normalized to peak ~ 1 near 580nm)
+  \addplot[qblue,very thick] {exp(-x/700)*pow(500/x,3)*1.35};
+  \addlegendentry{પ્લાંક (Planck)}
+  \addplot[qred,thick,dashed,domain=320:2500] {pow(580/x,4)*1.15};
+  \addlegendentry{રેલે-જીન્સ (Rayleigh--Jeans)}
+  \addplot[qteal,thick,dotted] {exp(-x/300)};
+  \addlegendentry{વિન (Wien)}
+\end{axis}
+\end{tikzpicture}
+\caption{કૃષ્ણિકા વર્ણપટ: પ્લાંકનો નિયમ પ્રયોગ સાથે સંમત; રેલે-જીન્સ લાંબી તરંગે સંમત
+પરંતુ નાની તરંગલંબાઈ (ઊંચી આવૃત્તિ) તરફ અનંતમાં ધસે છે -- UV આપત્તિ; વિનનો સૂત્ર લાંબી તરંગે નિષ્ફળ.}
+\label{fig:blackbody}
+\end{figure}
+
+\subsection{પ્લાંકનો વિકિરણ નિયમ : પૂર્ણ ઉત્પત્તિ (Complete Derivation of Planck's Law, 1900)}
+
+\begin{pramey}[પ્લાંકની ક્વોન્ટમ ધારણા]
+14 ડિસેમ્બર 1900 ના રોજ મેક્સ પ્લાંક (Max Planck) એ ધારણા રજૂ કરી કે કેવિટીની દીવાલોના પરમાણુ
+દોલકો ઊર્જાનો વિકિરણ અથવા શોષણ \emph{વિખેરાયેલ} રીતે કરે છે:
+\begin{equation}
+  \varepsilon_n = n\,h\nu, \qquad n=0,1,2,\dots
+\end{equation}
+જ્યાં $\hh = 6.626\times10^{-34}\ \mathrm{J\,s}$ એ \term{પ્લાંક સ્થિરાંક}{Planck's Constant} છે.
+\end{pramey}
+
+\paragraph{પગલું 1 : સરેરાશ ઊર્જા.} \term{બોલ્ટ્ઝમાન વિતરણ}{Boltzmann Distribution} મુજબ તાપમાન $T$
+પર $n$-ક્વોન્ટમ સ્થિતિની સંભાવના $P_n\propto e^{-n h\nu/\kB T}$ છે. સરેરાશ ઊર્જા:
+\begin{equation}
+  \bar\varepsilon=\frac{\sum_{n=0}^{\infty} n h\nu\, e^{-nh\nu/\kB T}}
+                        {\sum_{n=0}^{\infty} e^{-nh\nu/\kB T}}
+\end{equation}
+$x=e^{-h\nu/\kB T}$ રાખીએ. અપસર (Numerator):
+\begin{equation}
+  h\nu\sum n x^n = h\nu\, x\odv{}{x}\Bigl(\sum x^n\Bigr)= h\nu\, x\odv{}{x}\frac{1}{1-x}=\frac{h\nu\,x}{(1-x)^2}
+\end{equation}
+હર (Denominator) $=1/(1-x)$. આથી:
+\begin{equation}
+  \bar\varepsilon=h\nu\,x(1-x)^{-1}=\frac{h\nu}{e^{h\nu/\kB T}-1}
+  \label{eq:planckavg}
+\end{equation}
+સીમાંત ચકાસણી: $h\nu\ll \kB T$ લેતાં $e^{h\nu/\kB T}\approx 1+\dfrac{h\nu}{\kB T}$, એટલે
+$\bar\varepsilon\to\kB T$ -- ચિરસંમત પરિણામ મળે છે.
+
+\paragraph{પગલું 2 : પ્લાંકનો નિયમ.} $\bar\varepsilon$ ને મોડ ઘનતા સાથે ગુણતાં:
+\begin{niyam}[પ્લાંકનો વિકિરણ નિયમ]
+\begin{equation}
+  \boxed{\;u(\nu,T)=\frac{8\pi h\nu^{3}}{c^{3}}\,
+  \frac{1}{e^{h\nu/\kB T}-1}\;}
+  \qquad\Longleftrightarrow\qquad
+  u(\lambda,T)=\frac{8\pi hc}{\lambda^{5}}\,
+  \frac{1}{e^{hc/\lambda \kB T}-1}
+\end{equation}
+\end{niyam}
+
+\paragraph{પગલું 3 : સીમાઓની તપાસ.}
+\begin{enumerate}
+  \item \textbf{રેલે-જીન્સ સીમા:} $\lambda \kB T \gg hc$ (નીચી આવૃત્તિ) પર
+        $e^{hc/\lambda\kB T}-1\approx hc/\lambda\kB T$, એટલે $u\to 8\pi \kB T/\lambda^4$. \checkmark
+  \item \textbf{વિન સીમા:} $hc/\lambda\kB T\gg 1$ (ઉચ્ચ આવૃત્તિ) પર
+        $u\to (8\pi hc/\lambda^{5})\,e^{-hc/\lambda \kB T}$ -- વિનનો સૂત્ર મળે છે. \checkmark
+\end{enumerate}
+
+\paragraph{પગલું 4 : સ્ટેફન-બોલ્ટ્ઝમાન નિયમની ઉત્પત્તિ.} કુલ ઘનતા:
+\begin{equation}
+  u(T)=\int_0^\infty u(\nu,T)\,\dd\nu
+      =\frac{8\pi h}{c^{3}}\int_0^\infty \frac{\nu^{3}}{e^{h\nu/\kB T}-1}\,\dd\nu
+\end{equation}
+$x=h\nu/\kB T$ રાખતાં $\dd\nu=(\kB T/h)\dd x$:
+\begin{equation}
+  u(T)=\frac{8\pi h}{c^{3}}\left(\frac{\kB T}{h}\right)^{4}
+       \underbrace{\int_0^\infty \frac{x^{3}}{e^{x}-1}\,\dd x}_{=\pi^{4}/15}
+       =\frac{8\pi^{5}\kB^{4}}{15 c^{3}h^{3}}\,T^{4}
+\end{equation}
+એટલે $R=\sigma T^{4}$ સાથે
+$\sigma=\dfrac{2\pi^{5}\kB^{4}}{15c^{2}h^{3}}=5.67\times10^{-8}\ \mathrm{W\,m^{-2}K^{-4}}$ --
+પ્રાયોગિક મૂલ્ય સાથે સંપૂર્ણ સંમત! આ રીતે $h$ નું મૂલ્ય પ્રથમ વખત નક્કી થયું.
+
+\paragraph{પગલું 5 : વિનના વિસ્થાપન નિયમની ઉત્પત્તિ.} $\dd u/\dd\lambda=0$ માટે
+$x=hc/\lambda \kB T$ રાખીએ; શરત બને $(5-x)e^{x}=5$, જેનો ઉકેલ $x\simeq 4.965$ છે. આથી:
+\begin{equation}
+  \lambda_{\max}T=\frac{hc}{4.965\,\kB}=2.898\times10^{-3}\ \mathrm{m\,K}
+\end{equation}
+
+\begin{udaharan}[1.1]
+\textbf{પ્રશ્ન:} સૂર્યની સપાટી ($T\simeq5800\,$K) માટે $\lambda_{\max}$ શોધો અને તેનાથી
+સૂર્યપ્રકાશના રંગ વિશે નિષ્કર્ષ કાઢો.\\[1mm]
+\textbf{ઉકેલ:} $\lambda_{\max}=b/T=\dfrac{2.898\times10^{-3}}{5800}=4.997\times10^{-7}\,\mathrm{m}\simeq500\,$nm.
+આ લીલો પ્રકાશ (Green Light) છે; માનવ આંખની સંવેદનશીલતા (Eye Sensitivity) નો શિખર પણ
+$\sim555\,$nm પર છે -- ઉત્ક્રાંતિ (Evolution) એ સૌર વર્ણપટને અનુસરી છે.
+\end{udaharan}
+
+\begin{udaharan}[1.2]
+\textbf{પ્રશ્ન:} $T=300\,$K પર $\lambda=10\,\mu$m માટે પ્લાંક વિતરણમાંથી સરેરાશ ફોટોન ઊર્જા
+અને રેલે-જીન્સ મૂલ્યની તુલના કરો.\\[1mm]
+\textbf{उकेल:} $h\nu=hc/\lambda=(6.626\times10^{-34})(3\times10^{8})/10^{-5}
+=1.99\times10^{-20}\,$J. $\kB T=(1.38\times10^{-23})(300)=4.14\times10^{-21}\,$J.
+$h\nu/\kB T=4.80$, એટલે
+$\bar\varepsilon=\dfrac{1.99\times10^{-20}}{e^{4.80}-1}=1.98\times10^{-21}\,$J,
+જ્યારે ચિરસંમત મૂલ્ય $\kB T=4.14\times10^{-21}\,$J હોત -- લગભગ $2$ ગણો તફાવત; ક્વોન્ટમ સુધારો
+મહત્વનો છે.
+\end{udaharan}
+
+% ---------------------------------------------------------------------
+\section{પ્રકાશ-વિદ્યુત અસર (Photoelectric Effect)}
+
+\begin{vyakhya}
+પ્રકાશ (અથવા અન્ય વિદ્યુતચુંબકીય વિકિરણ) ના પ્રભાવે ધાતુની સપાટીમાંથી ઇલેક્ટ્રોન ઉત્સર્જનની ઘટનાને
+\term{પ્રકાશ-વિદ્યુત અસર}{Photoelectric Effect} કહે છે. ઉત્સર્જિત ઇલેક્ટ્રોનને
+\term{પ્રકાश-ઇલેક્ટ્રોન}{Photoelectron} કહે છે.
+\end{vyakhya}
+
+\subsection{પ્રાયોગિક નિયમો (Experimental Laws, Lenard 1902)}
+
+\begin{enumerate}
+  \item ઉત્સર્જિત પ્રકાશ-ઇલેક્ટ્રોનની સંખ્યા (એટલે કે \term{પ્રવાહ તીવ્રતા}{Photocurrent}) આપાત
+       પ્રકાશની \term{તીવ્રતા}{Intensity} ના પ્રમાણમાં હોય છે.
+  \item ઇલેક્ટ્રોનની મહત્તમ ગતિઊર્જા (Maximum Kinetic Energy) $K_{\max}$ તીવ્રતા પર
+       \emph{આધારિત નથી}; તે કેવળ આવૃત્તિ $\nu$ પર આધારિત છે.
+  \item દરેક ધાતુ માટે એક લઘુત્તમ આવૃત્તિ -- \term{દેહલી આવૃત્તિ}{Threshold Frequency} $\nu_0$ --
+       હોય છે; $\nu<\nu_0$ હોય ત્યાં સુધી ગમે તેટલી તીવ્રતાએ પણ ઉત્સર્જન થતું નથી.
+  \item ઉત્સર્જન પ્રકાશ પડવાના લગભગ તરત ($<10^{-9}\,$s -- કોઈ સમય-વિલંબ નહીં).
+\end{enumerate}
+
+\subsection{ચિરસંમત સમજણની નિષ્ફળતા}
+
+તરંગ-મોડેલ મુજબ પ્રકાશની ઊર્જા સપાટી પર સતત એકત્રિત થવી જોઈએ: (i) પૂરતી તીવ્રતા હોય તો ગમે
+તે આવૃત્તિએ ઉત્સર્જન થવું જોઈએ, (ii) નબળા પ્રકાશમાં ઘણો સમય-વિલંબ જોવો જોઈએ, (iii) $K_{\max}$
+તીવ્રતા સાથે વધવું જોઈએ. ત્રણેય અનુમાનો પ્રયોગ સામે નિષ્ફળ ગયા.
+
+\subsection{આઇન્સ્ટાઇનનું સમીકરણ (Einstein's Equation, 1905)}
+
+\begin{pramey}[પ્રકાશ ક્વોન્ટમ (Photon)]
+પ્રકાશ \term{ફોટોન}{Photon} નામના ઊર્જા-ક્વોન્ટાના ધારાધારના સ્વરૂપે પ્રસરે છે. દરેક ફોટોનની ઊર્જા
+$E=h\nu$ અને સંવેગ $p=E/c=h\nu/c=h/\lambda$ છે. ફોટોનનો \term{વિરામ સ્કંધ}{Rest Mass} શૂન્ય છે.
+\end{pramey}
+
+એક ફોટોન એક ઇલેક્ટ્રોન સાથે એકમાત્ર ઘટના (One-to-one Event) રીતે ક્રિયા કરે છે. ધાતુમાંથી
+ઇલેક્ટ્રોનને બહાર કાઢવા જરૂરી ન્યૂનતમ ઊર્જાને \term{કાર્ય વિધેય}{Work Function} $\phi=h\nu_0$ કહે છે.
+ઊર્જા-સંરક્ષણ (Conservation of Energy) આપે છે:
+\begin{niyam}[આઇન્સ્ટાઇનનું પ્રકાશ-વિદ્યુત સમીકરણ]
+\begin{equation}
+  \boxed{\;h\nu=\phi+K_{\max},\qquad K_{\max}=h(\nu-\nu_0)=\frac12 m_e v_{\max}^{2}\;}
+\end{equation}
+\end{niyam}
+
+\term{અટકાવતી વોલ્ટેજ}{Stopping Potential} $V_s$ એ એવો વ્યસ્ત વિભવ (Retarding Potential) છે જે
+સૌથી ઝડપી ઇલેક્ટ્રોનને પણ રોકે છે: $eV_s=K_{\max}$, એટલે:
+\begin{equation}
+  V_s=\left(\frac{h}{e}\right)\nu-\frac{\phi}{e}
+  \label{eq:stopping}
+\end{equation}
+એટલે $V_s$ વિરુદ્ધ $\nu$ નો આલેખ (Graph) સીધી રેખા આપે છે, જેનો \emph{ઢાળ (Slope) $h/e$ આપે છે}
+અને $x$-અંત:ખંડ (Intercept) $\nu_0=\phi/h$ આપે છે.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.62\textwidth,height=6.4cm,
+  xlabel={આવૃત્તિ $\nu$ ($\times10^{14}\,$Hz)},
+  ylabel={$V_s$ (V)},
+  xmin=0,xmax=18,ymin=-1.5,ymax=4.5,
+  axis lines=middle,
+  legend pos=north west,legend style={font=\footnotesize}]
+  \addplot[qblue,very thick,domain=5:17] {4.1357e-15*1e14*x - 2.0};
+  \addlegendentry{સોડિયમ ($\phi=2.0\,$eV)}
+  \addplot[qred,very thick,dashed,domain=9.6:17] {4.1357e-15*1e14*x - 3.97};
+  \addlegendentry{પ્લેટિનમ ($\phi=3.97\,$eV)}
+  \draw[gray,dotted] (4.84,-0.02)--(4.84,-1.2);
+  \node[anchor=south,font=\scriptsize] at (5.6,-1.25) {$\nu_0$(Na)};
+\end{axis}
+\end{tikzpicture}
+\caption{અટકાવતી વોલ્ટેજ $V_s$ વિરુદ્ધ આવૃત્તિ $\nu$: સીધી રેખા; ઢાળ $=h/e$
+(સર્વ-ધાતુસમાન), અંત:ખંડ ધાતુનું $\phi$ આપે છે.}
+\label{fig:photoelectric}
+\end{figure}
+
+\subsection{મિલિકનનો પ્રયોગ (Millikan's Experiment, 1916)}
+
+રોબર્ટ મિલિકન (Robert A. Millikan) એ નિર્વાત ફોટોસેલ (Vacuum Photocell) માં ઘૂમતી (Rotating)
+બહુધાતુકીય લકીર (Multi-metal Target) વાપરી, એક-વર્ણક (Monochromatic) પ્રકાશની સ્પષ્ટ આવૃત્તિઓ પર
+$V_s$ માપી અને સમીકરણ~\eqref{eq:stopping} ના ઢાળમાંથી
+$h=6.57\times10^{-34}\,\mathrm{J\,s}$ મેળવ્યું -- પ્લાંકના મૂલ્ય સાથે $0.5\%$ અંદર સંમત.
+આમ ફોટોન ધારણાની પ્રયોગલબ્ધ પુષ્ટિ થઈ.
+
+\begin{udaharan}[1.3]
+\textbf{પ્રશ્ન:} સોડિયમ ($\phi=2.28\,$eV) પર $\lambda=400\,$nm નો પ્રકાશ પાડતાં $V_s$ શોધો.\\[1mm]
+\textbf{उकेल:} $E_\gamma=hc/\lambda=(1240\,\mathrm{eV\,nm})/(400\,\mathrm{nm})=3.10\,$eV.
+$K_{\max}=E_\gamma-\phi=3.10-2.28=0.82\,$eV, એટલે $V_s=0.82\,$V.
+(ટૂંકો સૂત્ર: $E_\gamma(\mathrm{eV})=1240/\lambda(\mathrm{nm})$ યાદ રાખો.)
+\end{udaharan}
+
+% ---------------------------------------------------------------------
+\section{કૉમ્પ્ટન અસર (Compton Effect, 1923)}
+
+\begin{vyakhya}
+ઉચ્ચ આવૃત્તિના (X-ray) ફોટોન જ્યારે નબળી બંધન-ઊર્જાવાળા (Loosely Bound) ઇલેક્ટ્રોન સાથે
+\term{સ્થિતિસ્થાપક વિક્ષેપણ}{Elastic Scattering} માંથી પસાર થાય છે, ત્યારે વિક્ષેપિત (Scattered) ફોટોનની
+તરંગલંબાઈ મૂળ કરતાં વધે છે. આ ઘટના અને તેનાથી થતા તરંગલંબાઈ-વધારાને
+\term{કૉમ્પ્ટન અસર}{Compton Effect} કહે છે.
+\end{vyakhya}
+
+\subsection{પૂર્ણ સાપેક્ષિક ઉત્પત્તિ (Full Relativistic Derivation)}
+
+ચિત્ર~\ref{fig:comptongeom} મુજબ $\theta$ કોણે વિક્ષેપિત થતાં ફોટોન સાથે ઇલેક્ટ્રોન $\varphi$ કોણે
+\term{પ્રતિક્ષેપિત}{Recoil} થાય છે.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=1.05,>={Stealth}]
+  \coordinate (O) at (0,0);
+  \coordinate (Lft) at (-3,0);
+  \coordinate (Sct) at (30:3.2);
+  \coordinate (Rgt) at (1.6,0);
+  \coordinate (Rec) at (-65:2.8);
+  % incident photon
+  \draw[->,thick,qblue] (Lft)--(O) node[midway,below]{આપાત ફોટોન $(\lambda,\;p=h/\lambda)$};
+  % electron at rest
+  \fill[qviolet] (O) circle (2.5pt) node[below right=1pt]{સ્થિર ઇલેક્ટ્રોન $(m_0)$};
+  % scattered photon
+  \draw[->,thick,qteal] (O)--(Sct);
+  \node[qteal] at (38:3.4) {વિક્ષેપિત ફોટોન};
+  \node[qteal,font=\small] at (52:2.6) {$(\lambda',\;p'=h/\lambda')$};
+  \pic [draw,<-,angle radius=11mm,"$\theta$",angle eccentricity=1.35] {angle = Sct--O--Rgt};
+  % recoil electron
+  \draw[->,thick,qamber] (O)--(Rec);
+  \node[qamber,font=\small] at (-70:3.1) {પ્રતિક્ષેપિત ઇલેક્ટ્રોન $(p_e)$};
+  \pic [draw,<-,angle radius=9mm,"$\varphi$",angle eccentricity=1.3] {angle = Rec--O--Rgt};
+\end{tikzpicture}
+\caption{કૉમ્પ્ટન વિક્ષેપણની જ્યામિતિ: ફોટોન-ઇલેક્ટ્રોન અસર (Collision) અને સંવેગ-ત્રિકોણ.}
+\label{fig:comptongeom}
+\end{figure}
+
+\paragraph{પગલું 1 : સંવેગ-સંરક્ષણ.} સંવેગ સદિશ (Momentum Vector) સમીકરણો:
+\begin{align}
+  x\text{-દિશા}:&& \frac{h}{\lambda}&=\frac{h}{\lambda'}\cos\theta+p_e\cos\varphi
+  \label{eq:cx}\\
+  y\text{-દિશા}:&& 0&=\frac{h}{\lambda'}\sin\theta-p_e\sin\varphi
+  \label{eq:cy}
+\end{align}
+
+\paragraph{પગલું 2 : સંવેગ ત્રિકોણ.} \eqref{eq:cx}, \eqref{eq:cy} ના વર્ગની સરવાળા કરતાં:
+\begin{equation}
+  p_e^{2}=\left(\frac{h}{\lambda}\right)^{2}+\left(\frac{h}{\lambda'}\right)^{2}
+          -\frac{2h^{2}}{\lambda\lambda'}\cos\theta
+  \label{eq:pe}
+\end{equation}
+
+\paragraph{પગલું 3 : ઊર્જા-સંરક્ષણ.} \term{સાપેક્ષિક ઊર્જા-સંવેગ સંબંધ}{Relativistic Energy--Momentum
+Relation} $E^{2}=p^{2}c^{2}+m_0^{2}c^{4}$ વાપરીએ:
+\begin{equation}
+  \frac{hc}{\lambda}+m_0c^{2}=\frac{hc}{\lambda'}+\sqrt{p_e^{2}c^{2}+m_0^{2}c^{4}}
+\end{equation}
+ઇલેક્ટ્રોન-પદ અલગ કરી, વર્ગ કરતાં:
+\begin{equation}
+  p_e^{2}c^{2}=\left(\frac{hc}{\lambda}+m_0c^{2}-\frac{hc}{\lambda'}\right)^{2}-m_0^{2}c^{4}
+  =\left[h c\Bigl(\frac{1}{\lambda}-\frac{1}{\lambda'}\Bigr)+m_0c^{2}\right]^{2}-m_0^{2}c^{4}
+\end{equation}
+ખોલીએ:
+\begin{equation}
+  p_e^{2}c^{2}=h^{2}c^{2}\left(\frac{1}{\lambda}-\frac{1}{\lambda'}\right)^{2}
+  +2m_0c^{3}h\left(\frac{1}{\lambda}-\frac{1}{\lambda'}\right)
+  \label{eq:econs}
+\end{equation}
+
+\paragraph{પગલું 4 : સરખાવીએ.} \eqref{eq:pe}$\times c^2$ અને \eqref{eq:econs} સમાન રાખી
+$c^{2}(1-\cos\theta)$ થી ભાગો:
+\begin{align}
+  h^{2}\!\left[\frac{1}{\lambda^{2}}+\frac{1}{\lambda'^{2}}-\frac{2\cos\theta}{\lambda\lambda'}\right]
+  &=h^{2}\!\left[\frac{1}{\lambda^{2}}+\frac{1}{\lambda'^{2}}-\frac{2}{\lambda\lambda'}\right]
+   +\frac{2m_0ch}{\lambda\lambda'}(\lambda'-\lambda)\notag\\
+  \Rightarrow\quad \frac{2h^{2}}{\lambda\lambda'}(1-\cos\theta)&=\frac{2m_0ch}{\lambda\lambda'}
+  (\lambda'-\lambda)\notag
+\end{align}
+
+\begin{niyam}[કૉમ્પ્ટન વિસ્થાપન સૂત્ર]
+\begin{equation}
+  \boxed{\;\Delta\lambda=\lambda'-\lambda=\frac{h}{m_0c}\,(1-\cos\theta)
+  =\frac{2h}{m_0c}\,\sin^{2}\!\frac{\theta}{2}\;}
+\end{equation}
+જ્યાં $\Lambda\equiv\dfrac{h}{m_ec}=2.426\times10^{-12}\,\mathrm{m}=2.426\,$pm એ ઇલેક્ટ્રોનની
+\term{કૉમ્પ્ટન તરંગલંબાઈ}{Compton Wavelength} છે.
+\end{niyam}
+
+\paragraph{મહત્વની ટિપ્પણીઓ:}
+\begin{enumerate}
+  \item $\Delta\lambda$ કેવળ $\theta$ પર આધારિત છે -- $\lambda$ કે $m_0$ પર નહીં; આ
+        સૂત્રની "આવૃત્તિ-સ્વતંત્રતા" તેની સૌથી અદ્ભુત વિશેષતા છે.
+  \item $\theta=0^\circ:\Delta\lambda=0$; \quad $\theta=90^\circ:\Delta\lambda=\Lambda=2.43\,$pm;
+        \quad $\theta=180^\circ:\Delta\lambda=2\Lambda=4.85\,$pm (મહત્તમ).
+  \item $\Delta\lambda\ll\lambda$ દ્રશ્ય પ્રકાશ માટે ($\lambda\sim500\,$nm, ગુણોત્તર
+        $\sim10^{-5}$) અસર નિરીક્ષણ-યોગ્ય નથી; X-ray ($\lambda\sim50\,$pm) માટે જ
+        સ્પષ્ટ દેખાય છે.
+  \item પ્રયોગમાં અપરિવર્તિત રેખા (Unmodified Line) પણ દેખાય છે -- તે પરમાણુના
+        મજબૂત બંધનવાળા આંતરિક ઇલેક્ટ્રોન સાથેના અસરને આભારી છે, જ્યાં અસરકારક સ્કંધ
+        $m_0\gg m_e$ થઈ જાય અને $\Delta\lambda\to0$ થાય.
+\end{enumerate}
+
+\begin{udaharan}[1.4]
+\textbf{પ્રશ્ન:} $\lambda=71\,$pm ના X-ray ને $90^\circ$ કોણે વિક્ષેપિત કરતાં (i) $\Delta\lambda$,
+(ii) વિક્ષેપિત ફોટોનની ઊર્જા, (iii) પ્રતિક્ષેપિત ઇલેક્ટ્રોનની ગતિઊર્જા શોધો.\\[1mm]
+\textbf{उकेल:} (i) $\Delta\lambda=\Lambda(1-\cos90^\circ)=2.426\,$pm.
+(ii) $\lambda'=73.43\,$pm; $E'=(1240\ \mathrm{keV\,pm})/73.43\,\mathrm{pm}=16.89\,$keV.
+(iii) $K_e=E-E'=1240/71-16.89=17.46-16.89=0.57\,$keV.
+\end{udaharan}
+
+% ---------------------------------------------------------------------
+\section{ડી બ્રોગ્લી પદાર્થ તરંગો (de Broglie Matter Waves, 1924)}
+
+\begin{pramey}[ડી બ્રોગ્લીની અનુમાનિત સમમિતિ (Symmetry Hypothesis)]
+પ્રકાશમાં તરંગ-કણ દ્વૈતતા (Wave--Particle Duality) છે તો પદાર્થમાં પણ હોવી જોઈએ. સ્કંધ $m$ અને
+ઝડપ $v$ વાળા કણ સાથે \term{પદાર્થ તરંગ}{Matter Wave} સંકળાયેલ છે, જેની તરંગલંબાઈ:
+\begin{equation}
+  \boxed{\;\lambda=\frac{\hh}{p}=\frac{\hh}{mv}\;}
+\end{equation}
+\end{pramey}
+
+\subsection{વિવિધ ભૌતિક પરિસ્થિતિઓમાં તરંગલંબાઈની ઉત્પત્તિ}
+
+\paragraph{(a) અસાપેક્ષિક ગતિ (Non-relativistic Motion):}
+$p=mv=\sqrt{2mK}$ થી:
+\begin{equation}
+  \lambda=\frac{\hh}{\sqrt{2mK}}=\frac{\hh}{mv}
+\end{equation}
+
+\paragraph{(b) વિભવ તફાવત $V$ થી ત્વરિત આવેશિત કણ (Charged Particle Accelerated through $V$):}
+$K=qV$ થી:
+\begin{equation}
+  \lambda=\frac{\hh}{\sqrt{2mqV}}
+  \qquad\xrightarrow{\ q=e,\ V\ \text{વોલ્ટમાં}\ }\qquad
+  \lambda=\sqrt{\frac{150}{V}}\ \text{\AA}\;=\frac{12.27}{\sqrt{V}}\ \text{\AA}
+  \label{eq:ebrogli}
+\end{equation}
+ઇલેક્ટ્રોન માટે ઉપયોગી સંખ્યાત્મક સ્વરૂપ. પ્રોટોન માટે $\lambda=0.286/\sqrt{V}$ \AA.
+
+\paragraph{(c) સાપેક્ષિક સુધારો (Relativistic Case):}
+$K=(\gamma-1)m_0c^{2}$ અને $pc=\sqrt{K(K+2m_0c^{2})}$ થી:
+\begin{equation}
+  \lambda=\frac{hc}{\sqrt{K(K+2m_0c^{2})}},\qquad \gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}
+\end{equation}
+$K\ll m_0c^2$ લેતાં (a) મળે છે; $K\gg m_0c^{2}$ લેતાં $\lambda\to hc/K$ (ફોટોન-જેવું).
+
+\paragraph{(d) તાપમાન $T$ પર ઔષ્ધિજ કણ (Thermal Particles):}
+$K=\tfrac32 \kB T$ થી:
+\begin{equation}
+  \lambda=\frac{\hh}{\sqrt{3m\kB T}}
+\end{equation}
+
+\begin{udaharan}[1.5]
+\textbf{પ્રશ્ન:} $150\,$V થી ત્વરિત ઇલેક્ટ્રોન, $300\,$K પરનું ન્યૂટ્રોન તથા $54\,$kg ના માણસની
+$1\,\mathrm{m/s}$ ઝડપની તરંગલંબાઈ શોધો.\\[1mm]
+\textbf{उकेल:}
+(i) $\lambda=12.27/\sqrt{150}=1.00\,\text{\AA}$ (X-ray ક્રમ -- ક્રિસ્ટલ diffraction શક્ય).
+(ii) $\lambda=h/\sqrt{3m\kB T}=6.626\times10^{-34}/\sqrt{3(1.675\times10^{-27})(1.38\times10^{-23})(300)}
+=1.45\,\text{\AA}$ -- ગ્રેફાઈટ સાથે ન્યૂટ્રોન diffraction માટે આદર્શ.
+(iii) $\lambda=6.626\times10^{-34}/54\approx1.2\times10^{-35}\,$m --
+પ્રાયોગિક રીતે નિરીક્ષણ-અયોગ્ય; એટલે જ મેક્રોસ્કોપિક જગતમાં ક્વોન્ટમ અસરો દેખાતી નથી.
+\end{udaharan}
+
+% ---------------------------------------------------------------------
+\section{ડેવિસન-જર્મર અને G.P.\ થોમસન પ્રયોગો}
+
+\subsection{ડેવિસન-જર્મર પ્રયોગ (Davisson--Germer Experiment, 1927)}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=0.95,>={Stealth},every node/.style={font=\small}]
+  % filament and gun
+  \fill[qamber] (-3.2,0) rectangle (-3.0,0.6); \node at (-3.6,0.3){ફિલામેન્ટ};
+  \draw[qblue,fill=qblue!10] (-2.6,0) rectangle (-2.3,0.9); \node at (-2.45,1.15){ત્વરક A};
+  \draw[->,thick,qblue] (-2.3,0.45)--(0,0.45) node[midway,above]{$e^{-}$ કિરણ-ધારા};
+  \node[font=\footnotesize,qblue] at (-1.3,0.72) {ત્વરણ વિભવ $V$};
+  % nickel crystal
+  \draw[qviolet,fill=qviolet!12] (-0.6,-0.6) rectangle (0.6,0.6);
+  \foreach \i in {-0.4,-0.13,...,0.5} {\draw[qviolet] (-0.5,\i)--(0.5,\i);}
+  \node at (0,-0.95) {Ni ક્રિસ્ટલ (d = 0.91 \AA)};
+  % scattered beam
+  \draw[->,thick,qteal] (0,0.45)--(2.9,2.35);
+  \node[qteal] at (2.2,2.75) {વિક્ષેપિત ઇલેક્ટ્રોન};
+  \draw[gray,dotted] (0,0.45)--(3.4,0.45);
+  \coordinate (Vtx) at (0,0.45); \coordinate (Hz) at (2.4,0.45); \coordinate (Sc) at (2.6,1.69);
+  \pic[draw,<-,angle radius=13mm,"$\phi$",angle eccentricity=1.3] {angle=Sc--Vtx--Hz};
+  % detector
+  \draw[qgreen,thick] (2.7,2.1) arc[start angle=33,end angle=-60,radius=3];
+  \node[qgreen] at (2.0,-0.6) {ચલિત સંસૂચક (Faraday cup)};
+  \draw[->,qgreen] (2.9,1.9) -- (4.1,1.9) node[right]{ગેલ્વેનોમીટર $\Rightarrow I$};
+\end{tikzpicture}
+\caption{ડેવિસન-જર્મર પ્રયોગની યોજના: ત્વરિત ઇલેક્ટ્રોન Ni ક્રિસ્ટલ પર વિક્ષેપિત થાય છે;
+સંસૂચક કોણ $\phi$ બદલાવી તીવ્રતા માપે છે.}
+\label{fig:davisson}
+\end{figure}
+
+\paragraph{પરિણામ અને વિશ્લેષણ:} $V=54\,$V પર $\phi=50^\circ$ કોણે તીવ્રતા-શિખર (Intensity Peak)
+મળ્યું. \term{પરાવર્તન બ્રેગ શરત}{Bragg Condition} $2d\sin\alpha=n\lambda$ માં ગ્લેઝિંગ કોણ
+$\alpha=(180^\circ-\phi)/2=65^\circ$ અને Ni ના સ્તર-અંતર $d=0.91\,\text{\AA}$ વાપરતાં:
+\begin{equation}
+  \lambda_{\text{Bragg}}=2(0.91)\sin65^\circ=1.65\,\text{\AA}
+\end{equation}
+જ્યારે ડી બ્રોગ્લી ભવિષ્યવાણી \eqref{eq:ebrogli} મુજબ:
+\begin{equation}
+  \lambda_{\text{dB}}=\frac{12.27}{\sqrt{54}}=1.67\,\text{\AA}
+\end{equation}
+-- લગભગ સંપૂર્ણ સંમત! આ પદાર્થ તરંગોની પ્રથમ પ્રત્યક્ષ પુષ્ટિ હતી (નોબેલ પુરસ્કાર 1937).
+
+\subsection{G.P.\ થોમસન પ્રયોગ (G.P.\ Thomson Experiment, 1927)}
+
+પાતળી સોનાની પટ્ટી (Thin Gold Foil, $\sim10^{-7}\,$m) પર $10$--$50\,$keV ઇલેક્ટ્રોન-ધારા
+પાડતાં પડદા પર \emph{વર્તુળાકાર વિવર્તન વલયો} (Circular Diffraction Rings) મળ્યાં -- X-ray ના
+\term{પાવડર ચિત્ર}{Powder Pattern} સાથે સમરૂપ. વલય-ત્રિજ્યામાંથી ગણતરી કરેલ $\lambda$ ડી બ્રોગ્લી
+મૂલ્ય સાથે સંમત હતી. રસપ્રદ વિરોધાભાસ (Paradox): પિતા J.J.\ થોમસને ઇલેક્ટ્રોનને \emph{કણ}
+તરીકે શોધ્યો, પુત્રે તેની \emph{તરંગ} પ્રકૃતિ દર્શાવી!
+
+% ---------------------------------------------------------------------
+\section{બોર-સોમરફેલ્ડ સંખ્યાત્મકીકરણ અને ફ્રેંક-હર્ટ્ઝ પ્રયોગ}
+
+\subsection{બોર મોડેલનો સારાંશ અને સોમરફેલ્ડ વિસ્તરણ}
+
+બોરે (1913) સ્થિર કક્ષાઓ (Stationary Orbits) ની ધારણા આપી જેમાં કોણીય સંવેગ
+$L=mvr=n\hbar$ ($\hbar=h/2\pi$) છે. સોમરફેલ્ડે (1915) તેને સામાન્યીકૃત કરી
+\term{ક્રિયા ચલ}{Action Variable} ના સ્વરૂપે આપ્યો:
+
+\begin{niyam}[બોર-સોમરફેલ્ડ સંખ્યાત્મકીકરણ નિયમ]
+આવર્તિત ગતિ (Periodic Motion) માટે દરેક સ્વતંત્ર નિર્દેશાંક $q_i$ માટે:
+\begin{equation}
+  \boxed{\;\oint p_i\,\dd q_i=n_i h,\qquad n_i=1,2,3,\dots\;}
+\end{equation}
+\end{niyam}
+
+\paragraph{ઉદાહરણ 1 -- એક-પરિમાણીય ગોળાકાર કક્ષા:} $\oint p\,\dd q=p\oint \dd q=p(2\pi r)=nh$
+આપે છે $pr=L=nh/2\pi=n\hbar$ -- બોર શરત પુનઃપ્રાપ્ત થાય છે.
+
+\paragraph{ઉદાહરણ 2 -- દીર્ઘવૃત્તીય કક્ષાઓ (Elliptical Orbits):} ધ્રુવીય નિર્દેશાંક $(r,\theta)$ માં
+બે શરતો આવે છે:
+\begin{equation}
+  \oint L\,\dd\theta=n_\theta h,\qquad \oint p_r\,\dd r=n_r h
+\end{equation}
+પ્રથમથી $L=n_\theta\hbar$; બીજીથી (ગણિત વિગતે) દીર્ઘવૃત્તની \term{અર્ધ-મહાઅક્ષ}{Semi-major Axis}
+$a=n^{2}a_0/Z$ અને \term{ઉત્કેન્દ્રતા}{Eccentricity}
+\begin{equation}
+  a=\frac{n^{2}}{Z}\,a_0,\qquad
+  \varepsilon=\sqrt{1-\frac{n_\theta^{2}}{n^{2}}},\qquad n=n_r+n_\theta
+\end{equation}
+ઊર્જા કેવળ મુખ્ય સંખ્યા $n$ પર આધારિત રહે છે:
+\begin{equation}
+  E_n=-\frac{me^{4}Z^{2}}{2(4\pi\varepsilon_0)^{2}\hbar^{2}}\,\frac{1}{n^{2}}
+     =-\frac{13.6\,Z^{2}}{n^{2}}\ \mathrm{eV}
+\end{equation}
+$n_\theta=n$ (વર્તુળ) થી $n_\theta=1$ (સૌથી ચપટી) સુધી $n$ દીઠ $n$ ભિન્ન દીર્ઘવૃત્ત મળે છે --
+\term{કક્ષા-ક્ષય (ડીજનરસી)}{Orbital Degeneracy} નું પ્રથમ ચિત્રણ. આ મોડેલ પછીથી સાપેક્ષિક
+સૂક્ષ્મ-માળખું (Fine Structure) સમજાવવા સુધારાયું પણ અંતે પૂર્ણ ક્વોન્ટમ યાંત્રિકીએ તેનું
+સ્થાન લીધું.
+
+\subsection{ફ્રેંક-હર્ટ્ઝ પ્રયોગ (Franck--Hertz Experiment, 1914)}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=0.9,>={Stealth},every node/.style={font=\small}]
+  % tube
+  \draw[qblue,rounded corners=3mm,thick] (-3,-1) rectangle (3,1.6);
+  \fill[qamber] (-2.4,0.3) circle (2.5pt); \node[qamber] at (-2.4,0.85){કેથોડ K};
+  \draw[densely dashed,gray] (1.4,-1)--(1.4,1.6);
+  \draw[qteal,line width=1.2pt] (1.4,1.6)--(1.4,-1); \node[qteal] at (1.4,-1.35){જાલી G};
+  \draw[qred,line width=1.2pt] (2.5,1.6)--(2.5,-1); \node[qred] at (2.5,-1.35){પ્લેટ P};
+  \node at (0,1.3) {Hg વાષ્પ ($\sim1\,$mm Hg)};
+  % circuit
+  \draw[->,thick] (-2.4,0.3)--++(-1.2,0) node[left]{$V_{KG}$ (પરિવર્તનીય)};
+  \draw[thick] (2.5,0.3)--++(1.1,0) node[right]{$V_{PG}=0.5\,$V};
+\end{tikzpicture}
+\hspace{4mm}
+\begin{tikzpicture}
+\begin{axis}[width=0.42\textwidth,height=5.6cm,
+  xlabel={$V_{KG}$ (V)},ylabel={પ્લેટ પ્રવાહ $I_P$},
+  xmin=0,xmax=25,ymin=0,axis lines=left,
+  tick label style={font=\footnotesize}]
+  \addplot[qblue,very thick] coordinates
+    {(0,0)(4.9,1.0)(6.2,0.55)(9.8,1.7)(11.1,1.1)(14.7,2.4)(16,1.7)(19.6,3.0)(21,2.2)(24,3.4)};
+  \draw[gray,dotted] (4.9,0)--(4.9,3.2);
+  \draw[gray,dotted] (9.8,0)--(9.8,3.2);
+  \draw[gray,dotted] (14.7,0)--(14.7,3.2);
+  \draw[gray,dotted] (19.6,0)--(19.6,3.2);
+\end{axis}
+\end{tikzpicture}
+\caption{ફ્રેંક-હર્ટ્ઝ પ્રયોગ: (ડાબે) ઉપકરણ-યોજના, (જમણે) પ્લેટ પ્રવાહમાં $4.9\,$V ના અંતરે આવેલા
+ન્યૂનતમ (Dips) -- પારદની પ્રથમ ઉત્તેજન વિભવ (Excitation Potential).}
+\label{fig:franckhertz}
+\end{figure}
+
+\paragraph{સિદ્ધાંત:} ઇલેક્ટ્રોન $V_{KG}<4.9\,$V પર Hg પરમાણુ સાથે \term{સ્થિતિસ્થાપક અસર}{Elastic
+Collision} કરે છે (ઊર્જા ગુમાવતા નથી, પ્રવાહ વધે છે). $V_{KG}=4.9\,$V પર ઇલેક્ટ્રોનની ઊર્જા
+$4.9\,$eV થાય કે તરત \term{અસ્થિતિસ્થાપક અસર}{Inelastic Collision} થઈ પરમાણુને પ્રથમ ઉત્તેજિત સ્થિતિમાં
+ધકેલે છે: $eV=6.6\times10^{-19}\,$J શોષાય છે, પ્રવાહ ઘટે છે. ઉત્તેજિત પરમાણુ $253.7\,$nm નો UV
+પ્રકાશ ઉત્સર્જે છે:
+\begin{equation}
+  \lambda=\frac{hc}{\Delta E}=\frac{1240\ \mathrm{eV\,nm}}{4.9\ \mathrm{eV}}=253\,\mathrm{nm}
+\end{equation}
+પ્રયોગમાં આ રેખા ખરેખર દેખાઈ! આ સિદ્ધાંત મુજબ પરમાણુની ઊર્જા વિખેરાયેલ છે તેનું
+\emph{સ્વતંત્ર} પુરાવું હતું -- વર્ણપટ-વિજ્ઞાન વિના.
+
+% ---------------------------------------------------------------------
+\section{સારાંશ અને સૂત્રો (Summary)}
+
+\begin{mulmudda}
+\begin{itemize}
+  \item પ્લાંક: $u(\nu,T)=\dfrac{8\pi h\nu^{3}}{c^{3}}\bigl(e^{h\nu/\kB T}-1\bigr)^{-1}$;
+        $\bar\varepsilon=h\nu/(e^{h\nu/\kB T}-1)$.
+  \item સ્ટેફન-બોલ્ટ્ઝમાન $R=\sigma T^{4}$; વિન $\lambda_{\max}T=b=2.898\times10^{-3}\,$m·K.
+  \item આઇન્સ્ટાઇન: $h\nu=\phi+K_{\max}$, \ $eV_s=h\nu-\phi$; ઢાળ($V_s$ vs $\nu$)$=h/e$.
+  \item કૉમ્પ્ટન: $\Delta\lambda=\dfrac{h}{m_ec}(1-\cos\theta)$; $\Lambda=2.426\,$pm.
+  \item ડી બ્રોગ્લી: $\lambda=h/p$; ઇલેક્ટ્રોન: $\lambda=12.27/\sqrt{V}$ \AA.
+  \item ડેવિસન-જર્મર: $54\,$V, $\phi=50^\circ$ પર શિખર; Bragg અને dB મૂલ્ય સંમત.
+  \item બોર-સોમરફેલ્ડ: $\oint p_i\dd q_i=n_ih$; ફ્રેંક-હર્ટ્ઝ: $\Delta E=eV=4.9\,$eV (Hg).
+\end{itemize}
+\end{mulmudda}
+
+\begin{svadhyay}
+\begin{enumerate}
+  \item રેલે-જીન્સ નિયમમાંથી UV આપત્તિ કેવી રીતે ઉદભવે છે તે ગાણિતિક રીતે સમજાવો.
+  \item પ્લાંકના નિયમમાંથી સ્ટેફન-બોલ્ટ્ઝમાન નિયમ અને વિનનો વિસ્થાપન નિયમ મેળવો.
+  \item પ્રકાશ-વિદ્યુત અસરના ચાર પ્રાયોગિક નિયમો લખો અને દરેકની ચિરસંમત સમજણ સામે ચર્ચા કરો.
+  \item કૉમ્પ્ટન વિસ્થાપન સૂત્રની સંપૂર્ણ સાપેક્ષિક ઉત્પત્તિ કરો. $180^\circ$ વિક્ષેપણ માટે
+        ઇલેક્ટ્રોનની પ્રતિક્ષેપન ઝડપ શોધો.
+  \item (a) ત્વરિત ઇલેક્ટ્રોન, (b) ઔષ્ધિજ ન્યૂટ્રોન, (c) સાપેક્ષિક કણ માટે ડી બ્રોગ્લી
+        તરંગલંબાઈના વ્યંજક (Expression) ઉત્પન્ન કરો.
+  \item $0.5\,\text{\AA}$ ડી બ્રોગ્લી તરંગલંબાઈ માટે ઇલેક્ટ્રોનને કેટલા વિભવથી ત્વરિત કરવા?
+        [$\approx602\,$V]
+  \item ડેવિસન-જર્મર પ્રયોગમાં $V=65\,$V પર શિખર આવે તો $\phi$ કેટલું અપેક્ષિત?
+        [$\approx51^\circ$]
+  \item બોર-સોમરફેલ્ડ નિયમમાંથી બોર કક્ષાની ત્રિજ્યા અને ઊર્જા મેળવો.
+  \item ફ્રેંક-હર્ટ્ઝ પ્રયોગની યોજના દોરી $I_P$--$V_{KG}$ વળાંકના ન્યૂનતમની સમજણ આપો.
+\end{enumerate}
+\end{svadhyay}
+
+\begin{mcqbox}
+\begin{enumerate}
+  \item કૃષ્ણિકા વિકિરણમાં $\lambda_{\max}T$ નું મૂલ્ય કેટલું?\\
+    (a) $1.44\times10^{-2}$\,m·K\quad (b) $2.898\times10^{-3}$\,m·K\quad
+    (c) $6.626\times10^{-34}$\,m·K\quad (d) $4.965$\,m·K
+  \item $T$ બમણું કરતાં કૃષ્ણિકાની કુલ ઉત્સર્જન ક્ષમતા:\\
+    (a) બમણી\quad (b) ચાર ગણી\quad (c) 8 ગણી\quad (d) 16 ગણી
+  \item પ્લાંક વિતરણમાં સરેરાશ ઊર્જા $\kB T$ થી ઓછી હોય ત્યારે:\\
+    (a) $h\nu\ll\kB T$\quad (b) $h\nu\gg\kB T$\quad (c) $h\nu=\kB T$\quad (d) ક્યારેય નહીં
+  \item પ્રકાશ-વિદ્યુત અસરમાં $V_s$ vs $\nu$ આલેખનો ઢાળ:\\
+    (a) $h$\quad (b) $h/e$\quad (c) $e/h$\quad (d) $\phi/e$
+  \item ઇલેક્ટ્રોનની કૉમ્પ્ટન તરંગલંબાઈ:\\
+    (a) $0.024\,$\AA\quad (b) $0.243\,$\AA\quad (c) $2.43\,$\AA\quad (d) $24.3\,$\AA
+  \item $120^\circ$ કોણે વિક્ષેપિત ફોટોનના $\Delta\lambda$ નું મૂલ્ય:\\
+    (a) $\Lambda$\quad (b) $1.5\Lambda$\quad (c) $2\Lambda$\quad (d) $\Lambda/2$
+  \item $54\,$V થી ત્વરિત ઇલેક્ટ્રોનની ડી બ્રોગ્લી તરંગલંબાઈ:\\
+    (a) $1.67\,$\AA\quad (b) $0.167\,$\AA\quad (c) $16.7\,$\AA\quad (d) $3.34\,$\AA
+  \item બોર-સોમરફેલ્ડ નિયમ મુજબ એક-પરિમાણીય બેસર (Box) માં કણની ઊર્જા:\\
+    (a) $n^{2}h^{2}/8mL^{2}$\quad (b) $nh/2L$\quad (c) $n^{2}h^{2}/2mL^{2}$\quad (d) $nh/mL$
+  \item ફ્રેંક-હર્ટ્ઝ પ્રયોગમાં Hg ના પ્રવાહ-ન્યૂનતમ વચ્ચેનું અંતર:\\
+    (a) $2.1\,$V\quad (b) $4.9\,$V\quad (c) $10.4\,$V\quad (d) $13.6\,$V
+  \item ડી બ્રોગ્લી તરંગલંબાઈ ઝડપ સાથે (અસાપેક્ષિક):\\
+    (a) પ્રમાણમાં\quad (b) વ્યસ્તપ્રમાણમાં\quad (c) વર્ગ વ્યસ્તપ્રમાણમાં\quad (d) સ્વતંત્ર
+\end{enumerate}
+\textit{ઉત્તર:} 1(b) 2(d) 3(a) 4(b) 5(b) 6(b) 7(a) 8(a) 9(b) 10(b) -- વિગતે પરિશિષ્ટ C.
+\end{mcqbox}

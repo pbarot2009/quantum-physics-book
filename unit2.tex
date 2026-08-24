@@ -1,0 +1,463 @@
+% ============================================================================
+% UNIT 2 : તરંગ-કણ દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત
+% ============================================================================
+\chapter{તરંગ-કણ દ્વૈતતા, તરંગ-પેકેટ અને અનિશ્ચિતતાનો સિદ્ધાંત \en{Wave-Particle Duality, Wave Packets and the Uncertainty Principle}}
+
+\section{પ્રસ્તાવના અને શૈક્ષણિક ઉદ્દેશ્યો}
+\begin{uddeshyo}
+આ એકમના અભ્યાસ પછી વિદ્યાર્થી:
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item કલા વેગ (Phase Velocity) $v_p$ અને સમૂહ વેગ (Group Velocity) $v_g$ માં ભેદ પાડી શકશે.
+  \item $v_g=v_p-\lambda\dfrac{\dd v_p}{\dd\lambda}$ સંબંધની સંપૂર્ણ તારણી કરી શકશે.
+  \item ગોસિયન તરંગ-પેકેટ, પ્રકીર્ણન (Dispersion) અને પેકેટ-ફેલાવો સમજી શકશે.
+  \item હાઇઝનબર્ગ અનિશ્ચિતતા સિદ્ધાંતનાં ત્રણ રૂપો ($x$--$p$, $E$--$t$, $L$--$\theta$) તારવી/ઉપયોગ કરી શકશે.
+  \item ગામા-કિરણ સૂક્ષ્મદર્શક (Gamma-Ray Microscope) અને એક-છિદ્ર વિવર્તન ચિંતન પ્રયોગો વર્ણવી શકશે.
+  \item અનિશ્ચિતતા સિદ્ધાંતથી ન્યુક્લિયસમાં ઇલેક્ટ્રોનનું અનિસ્તિત્વ, હાઇડ્રોજન ભૂમિ-ઊર્જા, દોલકની શૂન્ય-બિંદુ ઊર્જા અને સ્વાભાવિક રેખા-પહોળાઈ સમજાવી શકશે.
+\end{enumerate}
+\end{uddeshyo}
+
+\section{વિસ્તૃત સૈદ્ધાંતિક વિવરણ}
+
+\subsection{તરંગ-કણ દ્વૈતતા \en{Wave-Particle Duality}}
+એકમ 1એ બતાવ્યું કે પ્રકાશ કણ-સ્વભાવ (ફોટોન) અને ઇલેક્ટ્રોન તરંગ-સ્વભાવ ધરાવે છે. \textbf{દ્વૈતતા (Duality)} એટલે — કોઈ પણ વસ્તુ સંપૂર્ણ તરંગ કે સંપૂર્ણ કણ નથી; પ્રયોગની રચના જ કઈ પ્રકૃતિ દેખાશે તે નક્કી કરે છે. દ્રવ્ય તરંગનું ગાણિતિક સ્વરૂપ:
+\begin{equation}
+\Psi(x,t)=A\cos(kx-\omega t),\qquad k=\frac{2\pi}{\lambda}=\frac{p}{\hbar},\qquad \omega=2\pi\nu=\frac{E}{\hbar}.
+\end{equation}
+
+\subsection{કલા વેગ અને સમૂહ વેગ \en{Phase Velocity and Group Velocity}}
+\begin{vayakhya}
+\textbf{કલા વેગ (Phase Velocity):} એકલ આવર્તી તરંગના કલા-તળિયાં (Wavefront) ની ઝડપ,
+$v_p=\omega/k$. \textbf{સમૂહ વેગ (Group Velocity):} તરંગ-પેકેટ (ઊર્જા/માહિતીનું ધાવડું) જે ઝડપે ગતિ કરે છે તે, $v_g=\dd\omega/\dd k$.
+\end{vayakhya}
+
+શુદ્ધ સાઈન તરંગ $\infty$ વિસ્તરેલો હોવાથી સ્થાન-માહિતી આપતો નથી; સ્થાનીય (Localized) કણ રજૂ કરવા ઘણાં નજીકનાં $\lambda$ વાળાં તરંગો ઉમેરવા પડે — આ જ \textbf{તરંગ-પેકેટ (Wave Packet)} છે. માધ્યમમાં $v_p$ આવૃત્તિ પર આધારિત હોય તો પેકેટ પ્રકીર્ણિત થાય છે.
+
+\subsection{ગોસિયન તરંગ-પેકેટ અને પ્રકીર્ણન \en{Gaussian Wave Packets and Dispersion}}
+ગોસિયન પેકેટ:
+\begin{equation}
+\Psi(x,0)=A\,e^{-x^{2}/2\sigma^{2}}\,e^{\ii k_0 x},
+\qquad \Psi(x,t)=\frac{A}{\sqrt{1+\ii\,\frac{\hbar t}{m\sigma^{2}}}}\;
+\exp\!\left[-\frac{x^{2}}{2\sigma^{2}\!\left(1+\ii\frac{\hbar t}{m\sigma^{2}}\right)}+\ii k_0x-\ii\frac{\hbar k_0^{2}t}{2m}\right].
+\label{eq:gausspacket}
+\end{equation}
+સંભાવના ઘનતા ગોસિયન જ રહે છે પણ પહોળાઈ વધે છે:
+\begin{equation}
+\sigma(t)=\sigma\sqrt{1+\left(\frac{\hbar t}{m\sigma^{2}}\right)^{2}},
+\label{eq:spreading}
+\end{equation}
+— આ \textbf{પેકેટ-ફેલાવો (Packet Spreading)} છે; જેનું કારણ મુક્ત કણની ઊર્જા $E=\hbar^2k^2/2m$ નું અરેખીય-નહિ ($k$-પ્રકીર્ણન) છે. ઇલેક્ટ્રોન માટે ફેલાવો નોંધપાત્ર, મેક્રોસ્કોપિક કણ માટે નગણ્ય.
+
+\subsection{હાઇઝનબર્ગ અનિશ્ચિતતા સિદ્ધાંત \en{Heisenberg Uncertainty Principle}}
+\begin{sidhant}{અનિશ્ચિતતા સિદ્ધાંત (Heisenberg, 1927)}
+એક સાથે માપન કરી શકાય તેવાં યુગલ રાશિઓનાં અનિશ્ચિતતા ઉત્પાદનની મર્યાદા:
+\[
+\Delta x\,\Delta p_x\ge\frac{\hbar}{2},\qquad
+\Delta E\,\Delta t\ge\frac{\hbar}{2},\qquad
+\Delta L\,\Delta\theta\ge\frac{\hbar}{2}.
+\]
+આ પ્રયોગિક માપન-ત્રુટિઓ નહીં, પણ \emph{પ્રકૃતિનો મૂળભૂત નિયમ} છે.
+\end{sidhant}
+$x$–$p_x$ રૂપ તરંગ-પેકેટમાંથી સીધું મળે છે: $\lambda$ ની અનિશ્ચિતતા $\Delta\lambda$ એ $x$-વિસ્તરણ નક્કી કરે; $p=h/\lambda$ થી $\Delta p=(h/\lambda^2)\Delta\lambda$ અને ગોસિયન માટે ચોક્કસ ગણતરી $\Delta x\,\Delta p_x=\hbar/2$ (ન્યૂનતમ) આપે છે.
+
+\subsection{ચિંતન પ્રયોગો \en{Gedanken Experiments}}
+\subsubsection*{(a) હાઇઝનબર્ગ ગામા-કિરણ સૂક્ષ્મદર્શક}
+ઇલેક્ટ્રોનની સ્થિતિ માપવા $\lambda$ તરંગલંબાઈનાં ગામા-કિરણ વાપરીએ: વિભેદન $\Delta x\simeq\lambda/\sin\theta$ માટે નાનું $\lambda$ જરૂરી. પરંતુ ફોટોન–ઇલેક્ટ્રોન કૉમ્પ્ટન ટક્કરમાં ફોટોન કોન $2\theta$ માં અનિશ્ચિત વિચલિત થાય, તેથી ઇલેક્ટ્રોનને સંવેગ-ક્ષતિ $\Delta p_x\simeq(h/\lambda)\sin\theta$ થાય:
+\[
+\Delta x\,\Delta p_x\simeq\frac{\lambda}{\sin\theta}\cdot\frac{h\sin\theta}{\lambda}=h\ge\frac{\hbar}{2}.
+\]
+સૂક્ષ્મદર્શકની ભૌમિતિ સુધારવાથી ઉત્પાદન ફક્ત $\sim h$ ક્રમમાં રહે છે — મર્યાદા પ્રકૃતિની છે, ઉપકરણની નહીં.
+
+\subsubsection*{(b) એક-છિદ્ર વિવર્તન પ્રયોગ}
+પહોળાઈ $d$ નાં છિદ્રમાંથી પસાર થતાં કણની $\Delta x=d$. વિવર્તનથી પ્રથમ શૂન્ય $\sin\theta=\lambda/d$ પર; સંવેગ-ઘટક અનિશ્ચિતતા $\Delta p_x\simeq p\sin\theta=p\lambda/d=h/d$:
+\[
+\Delta x\,\Delta p_x=d\cdot\frac{h}{d}=h\ge\frac{\hbar}{2}.
+\]
+
+\section{સંપૂર્ણ ગાણિતિક સાબિતીઓ}
+
+\subsection{$v_g=v_p-\lambda\dfrac{\dd v_p}{\dd\lambda}$ ની તારણી}
+\label{sec:vgderivation}
+બે લગભગ-સમાન આવૃત્તિનાં તરંગો $(\omega,k)$ અને $(\omega+\dd\omega,\ k+\dd k)$ નું અધિસ્થિતિ (Superposition):
+\[
+y=A\cos(\omega t-kx)+A\cos[(\omega+\dd\omega)t-(k+\dd k)x].
+\]
+ત્રિકોણમિતિ સરવાળા સૂત્રથી:
+\begin{equation}
+y=2A\cos\!\Big(\tfrac{\dd\omega\,t-\dd k\,x}{2}\Big)\cos\!\Big[\big(\omega+\tfrac{\dd\omega}{2}\big)t-\big(k+\tfrac{\dd k}{2}\big)x\Big].
+\label{eq:beat}
+\end{equation}
+ઝડપી વહન તરંગ (Carrier): $v_p=\dfrac{\omega+\dd\omega/2}{k+\dd k/2}\simeq\dfrac{\omega}{k}$.
+\textbf{ધીમો આવર્તી-પરિવર્તક (Modulation Envelope)} $\cos\big(\frac{\dd\omega\,t-\dd k\,x}{2}\big)$ નું મહત્તમ જ્યારે $\dd\omega\,t-\dd k\,x=$ અચલાંક, એટલે તેની ઝડપ:
+\begin{equation}
+\boxed{\;v_g=\frac{\dd\omega}{\dd k}\;}
+\end{equation}
+
+\paragraph{આગળ, $v_p$ માં વ્યક્ત કરવું.} $\omega=k\,v_p$ અને $k=2\pi/\lambda$ વાપરીએ:
+\[
+v_g=\frac{\dd}{\dd k}(kv_p)=v_p+k\frac{\dd v_p}{\dd k}.
+\]
+$\dd v_p/\dd k=\dfrac{\dd v_p}{\dd\lambda}\cdot\dfrac{\dd\lambda}{\dd k}$ અને $\lambda=2\pi/k\Rightarrow\dd\lambda/\dd k=-2\pi/k^{2}=-\lambda/k$:
+\[
+v_g=v_p+k\cdot\frac{\dd v_p}{\dd\lambda}\cdot\left(-\frac{\lambda}{k}\right)
+\;\Longrightarrow\;
+\boxed{\;v_g=v_p-\lambda\,\frac{\dd v_p}{\dd\lambda}\;}
+\]
+વિશિષ્ટ કિસ્સા:
+\begin{align*}
+&\text{શૂન્યાવકાશ ફોટોન: } v_p=v_g=c\ (\dd v_p/\dd\lambda=0),\\
+&\text{અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ: } v_p=\frac{E}{p}=\frac{\tfrac12mv^2}{mv}=\frac{v}{2},\qquad
+v_g=\frac{p}{m}=v\quad(\text{કણ-ઝડપ}),\\
+&\text{સાપેક્ષતાવાદી: } E=mc^{2},\ p=mv\Rightarrow v_p=E/p=c^{2}/v>c,\quad v_g=v<c.
+\end{align*}
+એટલે દ્રવ્ય-તરંગની કલા-ઝડપ પ્રકાશની ઝડપથી વધી શકે (કોઈ વિરોધાભાસ નહીં — કલા ઊર્જા/માહિતી વહન કરતી નથી); સમૂહ વેગ જ કણની ભૌતિક ઝડપ આપે છે.
+
+\subsection{અનિશ્ચિતતા સિદ્ધાંતના ઉપયોગોની સાબિતીઓ}
+
+\paragraph{(i) ન્યુક્લિયસમાં ઇલેક્ટ્રોનનું અનિસ્તિત્વ.}
+ઇલેક્ટ્રોન ન્યુક્લિયસ ($R\approx5\times10^{-15}$ m) અંદર બંધનિત હોય તો $\Delta x=R$:
+\[
+\Delta p\gtrsim\frac{\hbar}{2R},\qquad
+K\approx\frac{(\Delta p)^{2}}{2m_e}=\frac{\hbar^{2}}{8m_eR^{2}}
+=\frac{(1.055\times10^{-34})^{2}}{8(9.11\times10^{-31})(5\times10^{-15})^{2}}
+\approx3\times10^{-11}\ \mathrm{J}\approx194\ \mathrm{MeV}.
+\]
+પરંતુ $\beta$-ક્ષયમાં ઉત્સર્જિત ઇલેક્ટ્રોનો ફક્ત $\sim1$ MeV ઊર્જા ધરે છે. $194$ MeV બંધનિત ઇલેક્ટ્રોન અસંગત છે $\Rightarrow$ ન્યુક્લિયસમાં ઇલેક્ટ્રોન હોઈ જ શકતો નથી. ✓
+
+\paragraph{(ii) હાઇડ્રોજનની ભૂમિ-અવસ્થા ઊર્જા.}
+ત્રિજ્યા $r$ ની કક્ષામાં $\Delta p\sim\hbar/r$, એટલે $K\sim\hbar^{2}/2mr^{2}$; કુલ ઊર્જા:
+\[
+E(r)\approx\frac{\hbar^{2}}{2mr^{2}}-\frac{e^{2}}{4\pi\varepsilon_0 r}.
+\]
+ન્યૂનતમ: $\dd E/\dd r=-\dfrac{\hbar^{2}}{mr^{3}}+\dfrac{e^{2}}{4\pi\varepsilon_0r^{2}}=0$
+\[
+\Rightarrow\ r_{\min}=\frac{4\pi\varepsilon_0\hbar^{2}}{me^{2}}=a_0\ (=0.53\ \text{Å}),
+\qquad
+E(a_0)=-\frac{me^{4}}{2(4\pi\varepsilon_0)^{2}\hbar^{2}}=-13.6\ \mathrm{eV}.
+\]
+આમ અનિશ્ચિતતા સિદ્ધાંત જ પરમાણુની સ્થિરતા અને બોર પરિણામો આપે છે.
+
+\paragraph{(iii) સરળ આવર્તી દોલકની શૂન્ય-બિંદુ ઊર્જા.}
+સંતુલન-સ્થાનની આસપાસ વિસ્તરણ $A$ વાળા દોલક માટે $\Delta x\sim A$, $K\sim(\hbar/2A)^2/2m$, $U\sim\tfrac12m\omega^2A^2$:
+\[
+E(A)\approx\frac{\hbar^{2}}{8mA^{2}}+\frac12m\omega^{2}A^{2};
+\qquad
+\frac{\dd E}{\dd A}=0\Rightarrow A^{2}=\frac{\hbar}{2m\omega},
+\]
+\[
+E_{\min}=\frac{\hbar^{2}}{8m(\hbar/2m\omega)}+\frac12m\omega\frac{\hbar}{2m\omega}
+=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega .
+\]
+શૂન્ય તાપમાને પણ દોલક રહી શકતો નથી — શૂન્ય-બિંદુ ઊર્જા (Zero-point Energy) $\tfrac12\hbar\omega$, જે ચોક્કસ શ્રોડિન્જર ઉકેલ સાથે સહમત છે.
+
+\paragraph{(iv) સ્વાભાવિક રેખા-પહોળાઈ (Natural Line Broadening).}
+ઉત્તેજિત અવસ્થાનું સરેરાશ આયુ $\tau\sim10^{-8}$ s હોવાથી $\Delta E\gtrsim\hbar/2\tau$:
+\[
+\Delta E\gtrsim\frac{1.055\times10^{-34}}{2\times10^{-8}}\approx5.3\times10^{-27}\ \mathrm{J}\approx3.3\times10^{-8}\ \mathrm{eV}.
+\]
+ઉત્સર્જિત રેખાની પહોળાઈ $\Delta\nu=\Delta E/h\gtrsim1/(4\pi\tau)\approx8\times10^{6}$ Hz — \textbf{સ્વાભાવિક પહોળાઈ}, જે ઉપકરણ-ત્રુટિ નહીં પણ ક્વોન્ટમ સિદ્ધાંતનું પરિણામ છે.
+
+\section{એન્જિનિયરિંગ અને તકનીકી ઉપયોગો}
+\begin{upayogbox}{B.Tech/B.E.\ ઉદ્યોગ ઉપયોગો (એકમ 2)}
+\begin{enumerate}[label=\textbullet]
+  \item \textbf{ઇલેક્ટ્રોન બીમ લિથોગ્રાફી (EBL) અને SEM:} બીમ ફોકસિંગની મર્યાદા $\Delta x\,\Delta p\sim\hbar$ થી નક્કી થાય છે (ECE/CSE-nanofab).
+  \item \textbf{લેસર રેખા-પહોળાઈ અને ટાઇમિંગ:} $\Delta E\,\Delta t$ મર્યાદા લેસર પલ્સ ટૂંકાઈ-વર્ણપટ સંબંધ આપે છે (ultrafast optics).
+  \item \textbf{ATMS ઓસિલેટર અને MEMS:} શૂન્ય-બિંદુ દોલન નેનો-યાંત્રિક રિઝોનેટરની ન્યૂનતમ ધ્વનિ-મર્યાદા નક્કી કરે છે.
+  \item \textbf{સિગ્નલ-પ્રોસેસિંગ સાદૃશ્ય:} કલા/સમૂહ વેગ = વાહક/આવરણ (carrier/envelope); AM-FM સંદેશાવ્યવહાર અને ફાઈબર-ઑપ્ટિક પ્રકીર્ણન સમજવા સરખી જ ગાણિતિક ઢાંચો.
+  \item \textbf{ટનલ-ટાઇમ અને $\mu$-ઇલેક્ટ્રોનિક્સ:} $\Delta E\,\Delta t$ થી અવસ્થા-આયુ માપન ટ્રાન્ઝિસ્ટર ડિઝાઇનમાં ઉપયોગી.
+\end{enumerate}
+\end{upayogbox}
+
+\section{TikZ / PGFPlots ભૌતિક આકૃતિઓ}
+
+\subsection*{આકૃતિ 2.1 : તરંગ-પેકેટ — વાહક તરંગ અને આવરણ}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.9\linewidth,height=5.6cm,xlabel={$x$},ylabel={$\Psi$},
+ axis lines=middle,domain=-6:6,samples=400,ymin=-1.35,ymax=1.35]
+ \addplot[blue,thin]{cos(deg(4*x))};
+ \addlegendentry{વાહક તરંગ}
+ \addplot[red,very thick]{exp(-x*x/4)};
+ \addlegendentry{આવરણ (Envelope)}
+ \addplot[green!50!black,very thick]{exp(-x*x/4)*cos(deg(4*x))};
+ \addlegendentry{પેકેટ}
+\end{axis}
+\end{tikzpicture}
+\caption{તરંગ-પેકેટ = ઝડપી કલા તરંગ ($v_p$) × ધીમું આવરણ ($v_g$); ઊર્જા આવરણ સાથે જાય છે.}
+\end{figure}
+
+\subsection*{આકૃતિ 2.2 : હાઇઝનબર્ગ ગામા-કિરણ સૂક્ષ્મદર્શક}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.05]
+ % objective lens
+ \draw[thick] (-2.4,2.2) -- (-0.7,2.7) -- (0.7,2.7) -- (2.4,2.2);
+ \node[above] at (0,2.75) {\small અભિદર્શક લેન્સ (Aperture $2\alpha$)};
+ % electron
+ \fill[cyan!40] (0,0) circle (0.16); \node[below right] at (0.15,-0.05) {ઇલેક્ટ્રોન};
+ % incoming photon
+ \draw[-Stealth,orange!80!black,very thick] (-2.6,-1.4) -- (-0.12,-0.08);
+ \node[left] at (-2.7,-1.5) {$\gamma$: $\lambda$};
+ % scattered photons within cone
+ \draw[-Stealth,violet!70!black,thick] (0.1,0.12) -- (1.5,2.45);
+ \draw[-Stealth,violet!70!black,thick] (0.1,0.12) -- (0,2.6);
+ \draw[-Stealth,violet!70!black,thick] (0.1,0.12) -- (-1.3,2.35);
+ \draw[dashed] (0,0) -- (0,2.6);
+ % resolution angle
+ \draw[densely dotted] (0,0) circle[radius=1.1];
+ \draw (0.55,1.55) arc[start angle=60,end angle=120,radius=1.8];
+ \node at (0.95,1.85) {$2\theta$};
+ \node at (-1.5,-0.6) {$\Delta x\sim\lambda/\sin\theta$};
+ \node at (1.7,-0.9) {$\Delta p_x\sim(p\,\sin\theta)$};
+\end{tikzpicture}
+\caption{ગામા-સૂક્ષ્મદર્શક: વધુ સારું વિભેદન ($\downarrow\Delta x$) માટે મોટું $\sin\theta$ અથવા નાનું $\lambda$ — બંને ઇલેક્ટ્રોન સંવેગ-અનિશ્ચિતતા વધારે છે.}
+\end{figure}
+
+\subsection*{આકૃતિ 2.3 : એક-છિદ્ર વિવર્તન અને સંવેગ-અનિશ્ચિતતા}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+ \draw[thick,pattern=north east lines] (0,0.6) rectangle (0.25,2.6);
+ \draw[thick,pattern=north east lines] (0,-0.6) rectangle (0.25,-2.6);
+ \node[right] at (0.27,1.6) {છિદ્ર પહોળાઈ $d=\Delta x$};
+ \foreach \y in {-0.4,-0.2,0,0.2,0.4}{
+   \draw[-Stealth,cyan!60!black,thick] (-1.8,\y) -- (-0.05,\y);}
+ \draw[cyan!60!black,very thick] (0.25,0) -- (4.5,1.5);
+ \draw[cyan!60!black,very thick] (0.25,0) -- (4.5,0);
+ \draw[cyan!60!black,very thick] (0.25,0) -- (4.5,-1.5);
+ \node[right] at (4.5,1.65) {વિવર્તન મહત્તમ/શૂન્ય};
+ \draw (1.2,0) arc[start angle=0,end angle=18,radius=1.2];
+ \node at (1.5,0.22) {$\sin\theta=\lambda/d$};
+ \draw[<->,red] (0,-2.8) -- node[below]{$d$} (0.25,-2.8);
+ \draw[<->,red,dashed] (-0.02,2.6) -- (-0.02,-2.6);
+\end{tikzpicture}
+\caption{છિદ્રથી સ્થાન-અનિશ્ચિતતા $d$; વિવર્તનથી $\Delta p_x\sim h/d$ — ઉત્પાદન $\sim h$.}
+\end{figure}
+
+\subsection*{આકૃતિ 2.4 : પેકેટ-ફેલાવો $\sigma(t)$ vs $t$}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.62\linewidth,height=5.4cm,xlabel={$t$ (fs)},ylabel={$\sigma/\sigma_0$},
+ axis lines=box,domain=0:20,samples=200,legend pos=south east]
+ \addplot[blue,very thick,domain=0:20]{sqrt(1+(x/4)^2)};
+ \addlegendentry{ઇલેક્ટ્રોન ($m\sigma^2/\hbar=4$ fs)}
+ \addplot[red,very thick,domain=0:20]{sqrt(1+(x/7000)^2)};
+ \addlegendentry{પ્રોટોન (1836× ધીમો)}
+\end{axis}
+\end{tikzpicture}
+\caption{હલકા કણોનાં પેકેટ ઝડપથી ફેલાય છે; $m\to\infty$ મર્યાદામાં શાસ્ત્રીય કણ મળે.}
+\end{figure}
+
+\section{સંપૂર્ણ ઉકેલેલા દાખલા}
+\begin{dahlo}{દાખલો 2.1 : કલા અને સમૂહ વેગ — દ્રવ્ય તરંગ}
+$2\times10^{6}$ m/s ઝડપે ફરતા ઇલેક્ટ્રોન માટે $v_p$ અને $v_g$ ગણો.
+\tcblower
+\textbf{ઉકેલ:} અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ માટે $v_p=v/2=1.0\times10^{6}$ m/s અને $v_g=v=2\times10^{6}$ m/s.
+તપાસ: $\gamma=1/\sqrt{1-(v/c)^2}=1.000022$ — સુધારો નગણ્ય. કલા-ઝડપ $c$ થી ઓછી દેખાય છે; સાપેક્ષતાવાદી સામાન્ય કિસ્સામાં $v_p=c^2/v>c$ થાય છે, પણ તે સિદ્ધાંત-વિરોધી નથી.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.2 : $v_g=v_p-\lambda\,\dd v_p/\dd\lambda$ નો ઉપયોગ}
+માધ્યમમાં દ્રવ્ય-તરંગ માટે $v_p\propto1/\lambda$ છે. $v_g$ શોધો.
+\tcblower
+\textbf{ઉકેલ:} $v_p=C/\lambda\Rightarrow\dd v_p/\dd\lambda=-C/\lambda^{2}$.
+\[
+v_g=v_p-\lambda\left(-\frac{C}{\lambda^{2}}\right)=\frac{C}{\lambda}+\frac{C}{\lambda}=\frac{2C}{\lambda}=2v_p .
+\]
+સત્યાપન: અસાપેક્ષતાવાદી દ્રવ્ય-તરંગમાં ખરેખર $v_p\propto1/\lambda$ અને $v_g=2v_p=v$ ✓
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.3 : પેકેટ-ફેલાવો}
+ઇલેક્ટ્રોન પેકેટની પ્રારંભિક પહોળાઈ $\sigma=1$ nm છે. $t=1$ ns પછીની પહોળાઈ ગણો.
+\tcblower
+\textbf{ઉકેલ:} સૂત્ર~\eqref{eq:spreading}: $\sigma(t)=\sigma\sqrt{1+(\hbar t/m\sigma^2)^2}$.
+\[
+\frac{\hbar t}{m\sigma^{2}}=\frac{1.055\times10^{-34}\times10^{-9}}{9.11\times10^{-31}\times10^{-18}}
+=1.158\times10^{5}\gg1 ,
+\]
+\[
+\sigma(1\ \text{ns})\approx\frac{\hbar t}{m\sigma}=1.158\times10^{5}\times1\ \text{nm}\approx116\ \mu\mathrm{m}.
+\]
+એક નેનોમીટર-ઇલેક્ટ્રોન પેકેટ એક નેનોસેકન્ડમાં સો-માઇક્રોમીટર જેટલો ફેલાય છે!
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.4 : પરિસ્થિતિ-સંવેગ અનિશ્ચિતતા}
+ઇલેક્ટ્રોનની સ્થિતિ $0.100$ nm ચોકસાઈએ માપેલ છે. સંવેગ-અનિશ્ચિતતાની ન્યૂનતમ મૂલ્ય અને તેમાંથી થતી ન્યૂનતમ ઊર્જા-અનિશ્ચિતતા શોધો.
+\tcblower
+\textbf{ઉકેલ:} $\Delta p\ge\hbar/2\Delta x=1.055\times10^{-34}/(2\times10^{-10})=5.28\times10^{-25}$ kg m/s.
+ઊર્જા-અનિશ્ચિતતા (અસાપેક્ષતાવાદી): $\Delta K\approx(\Delta p)^2/2m=(5.28\times10^{-25})^2/(2\times9.11\times10^{-31})=1.53\times10^{-19}$ J $\approx0.96$ eV.
+એટલે પરમાણુ-ક્રમ ($\sim$Å) માં બંધનિત ઇલેક્ટ્રોનની ઊર્જા અવશ્ય eV ક્રમની હોવી જોઈએ — જે અવલોકાય છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.5 : ઊર્જા-કાળ અનિશ્ચિતતા}
+ઉત્તેજિત અવસ્થાનું આયુ $\tau=10^{-9}$ s છે. ઉત્સર્જિત ફોટોનની આવૃત્તિ-અનિશ્ચિતતા અને $500$ nm રેખાની સાપેક્ષ પહોળાઈ ગણો.
+\tcblower
+\textbf{ઉકેલ:} $\Delta E\ge\hbar/2\tau=1.055\times10^{-34}/(2\times10^{-9})=5.28\times10^{-26}$ J.
+\[
+\Delta\nu=\frac{\Delta E}{h}=\frac{5.28\times10^{-26}}{6.626\times10^{-34}}=7.97\times10^{7}\ \mathrm{Hz}.
+\]
+$\nu=c/\lambda=6\times10^{14}$ Hz માટે સાપેક્ષ પહોળાઈ $\Delta\nu/\nu\approx1.3\times10^{-7}$ — રેખા અતિ પાતળી પણ અશૂન્ય પહોળાઈ ધરે છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.6 : કોણીય સંવેગ-ખૂણા અનિશ્ચિતતા}
+પરમાણુમાં ઇલેક્ટ્રોનનો કોણીય સ્થાન-અનિશ્ચિતતા $\Delta\theta=30^\circ$ હોય તો $\Delta L$ નું ન્યૂનતમ મૂલ્ય શોધો.
+\tcblower
+\textbf{ઉકેલ:} $\Delta\theta=30^\circ=\pi/6$ rad.
+\[
+\Delta L\ge\frac{\hbar}{2\Delta\theta}=\frac{1.055\times10^{-34}}{2(\pi/6)}=1.008\times10^{-34}\ \mathrm{J\,s}.
+\]
+સરખામણી માટે $\hbar=1.055\times10^{-34}$ J s — એટલે આ અનિશ્ચિતતા કોણીય સંવેગના જ ક્રમની છે; પરમાણુમાં 'કક્ષા'ના શાસ્ત્રીય ચિત્રની અર્થહીનતા દર્શાવે છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.7 : ન્યુક્લિયસ-ઇલેક્ટ્રોન અનિસ્તિત્વની ગણતરી}
+$R=1.0\times10^{-14}$ m (હલકું ન્યુક્લિયસ) માટે બંધનિત ઇલેક્ટ્રોનની ન્યૂનતમ ઊર્જા ગણો.
+\tcblower
+\textbf{ઉકેલ:} $K_{\min}\sim\hbar^2/8mR^2$
+\[
+=\frac{(1.055\times10^{-34})^{2}}{8(9.11\times10^{-31})(10^{-14})^{2}}
+=\frac{1.113\times10^{-68}}{7.288\times10^{-58}}=1.53\times10^{-11}\ \mathrm{J}\approx95\ \mathrm{MeV}.
+\]
+પ્રયોગે $\beta$-ઇલેક્ટ્રોન માત્ર $\sim1$ MeV બતાવે છે $\Rightarrow$ ન્યુક્લિયસમાં ઇલેક્ટ્રોન નથી.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.8 : હાઇડ્રોજન ભૂમિ-અવસ્થાનો અંદાજ}
+અનિશ્ચિતતા પદ્ધતિથી બોર ત્રિજ્યા અને ભૂમિ-ઊર્જા ગણો ($e^2/4\pi\varepsilon_0=2.307\times10^{-28}$ J m).
+\tcblower
+\textbf{ઉકેલ:} $E(r)=\hbar^{2}/2mr^{2}-ke^{2}/r$ ($k\equiv1/4\pi\varepsilon_0$).
+$\dd E/\dd r=0:\ -\hbar^{2}/mr^{3}+ke^{2}/r^{2}=0\Rightarrow r=a_0=\hbar^{2}/mke^{2}$.
+\[
+a_0=\frac{(1.055\times10^{-34})^{2}}{9.11\times10^{-31}\times2.307\times10^{-28}}=5.29\times10^{-11}\ \mathrm{m}=0.53\ \text{Å}.
+\]
+\[
+E(a_0)=-\frac{ke^{2}}{2a_0}=-\frac{2.307\times10^{-28}}{2\times5.29\times10^{-11}}=-2.18\times10^{-18}\ \mathrm{J}=-13.6\ \mathrm{eV}. \checkmark
+\]
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.9 : દોલકની શૂન્ય-બિંદુ ઊર્જા}
+$m=10^{-26}$ kg અને $\nu=10^{12}$ Hz (આણ્વિક કંપન) દોલકની શૂન્ય-બિંદુ ઊર્જા અને તેની સરખામણી $k_BT$ ($T=300$ K) સાથે કરો.
+\tcblower
+\textbf{ઉકેલ:} $E_0=\tfrac12h\nu=\tfrac12(6.626\times10^{-34})(10^{12})=3.31\times10^{-22}$ J $=2.07\times10^{-3}$ eV.
+$k_B T=1.381\times10^{-23}\times300=4.14\times10^{-21}$ J.
+ગુણોત્તર $E_0/k_BT=0.08$ — ઓરડા-તાપમાને થર્મલ ઊર્જા પ્રબળ છે, પણ $T\to0$ પર ક્વોન્ટમ દોલન અનિવાર્યપણે રહે છે.
+\end{dahlo}
+
+\begin{dahlo}{દાખલો 2.10 : ગામા-સૂક્ષ્મદર્શકની મર્યાદા}
+$\lambda=10^{-12}$ m નાં ગામા-કિરણો અને $\sin\theta=0.5$ લેન્સ સાથે ઇલેક્ટ્રોનની સ્થિતિ માપેલ છે. $\Delta x$ અને $\Delta p_x$ નાં મૂલ્યો અને ઉત્પાદન ગણો.
+\tcblower
+\textbf{ઉકેલ:} $\Delta x\simeq\lambda/\sin\theta=10^{-12}/0.5=2\times10^{-12}$ m.
+$\Delta p_x\simeq(h/\lambda)\sin\theta=(6.626\times10^{-34}/10^{-12})(0.5)=3.31\times10^{-22}$ kg m/s.
+\[
+\Delta x\,\Delta p_x=2\times10^{-12}\times3.31\times10^{-22}=6.63\times10^{-34}\ \mathrm{J\,s}=h\ge\hbar/2.\ \checkmark
+\]
+ઉત્પાદન હંમેશાં $\sim h$ ક્રમમાં રહે છે — ઉપકરણ કેમ સુધારાય તોપણ મર્યાદા ટકે છે.
+\end{dahlo}
+
+\section{સ્વાધ્યાય}
+
+\subsection{વૈચારિક પ્રશ્નો}
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+  \item કલા વેગ પ્રકાશની ઝડપથી વધી શકે છે તોપણ સિદ્ધાંત-વિરોધી કેમ નથી?
+  \item શુદ્ધ સાઈન તરંગ કોઈ 'કણ' રજૂ કરતો નથી — કારણ સમજાવો.
+  \item $v_g=\dd\omega/\dd k$ અને કણની ઝડપ વચ્ચેનો સંબંધ દ્રવ્ય-તરંગ માટે કેમ અનિવાર્ય છે?
+  \item અનિશ્ચિતતા સિદ્ધાંત 'માપન પ્રણાલીની ખામી' છે કે 'પ્રકૃતિનો નિયમ'? તર્ક આપો.
+  \item ગામા-સૂક્ષ્મદર્શક ચિંતનમાં $\lambda$ ઘટાડવાથી શું થાય છે?
+  \item $\Delta E\,\Delta t$ સંબંધમાં $t$ નો 'અર્થ' $x$ જેવો જ ઓપરેટર જેવો કેમ નથી?
+  \item પેકેટ-ફેલાવો મેક્રોસ્કોપિક કણ માટે અવલોકાતો કેમ નથી?
+  \item શૂન્ય-બિંદુ ઊર્જા શા માટે થર્મોડાયનેમિક્સના તૃતીય નિયમની સાથે સુસંગત છે?
+  \item સ્વાભાવિક રેખા-પહોળાઈ અને ડોપલર પહોળાઈમાં ભેદ કરો.
+  \item કોણીય-સંવેગ અનિશ્ચિતતા પરમાણુ 'કક્ષા'-ચિત્રને કેવી રીતે નકારે છે?
+\end{enumerate}
+
+\subsection{અણઉકેલેલા દાખલા}
+\begin{enumerate}[label=\textbf{P\arabic*.}]
+  \item $v_p=4\times10^{6}$ m/s ઇલેક્ટ્રોન માટે $v_g$ ગણો. \hfill [\textbf{જવાબ:} $8\times10^{6}$ m/s]
+  \item કોઈ તરંગ માટે $v_p=a+b\lambda$ હોય તો $v_g$ શોધો. \hfill [\textbf{જવાબ:} $v_g=a-2b\lambda+v_p$... એટલે $v_g=a-b\lambda$]
+  \item $\sigma=10$ nm ઇલેક્ટ્રોન પેકેટ $t=10^{-12}$ s પછી કેટલો ફેલાય? \hfill [\textbf{જવાબ:} $\approx115$ nm]
+  \item $\Delta x=1$ μm ઇલેક્ટ્રોન માટે $\Delta p_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.28\times10^{-29}$ kg m/s]
+  \item પ્રોટોન ($R=10^{-15}$ m) ન્યુક્લિયસ-ક્રમ બંધન માટે ન્યૂનતમ ઊર્જા ગણો. \hfill [\textbf{જવાબ:} $\approx0.1$ MeV]
+  \item $\tau=10^{-8}$ s અવસ્થાની રેખાની આવૃત્તિ-પહોળાઈ ગણો. \hfill [\textbf{જવાબ:} $\approx8\times10^{6}$ Hz]
+  \item $\Delta\theta=60^\circ$ માટે $\Delta L_{\min}$ ગણો. \hfill [\textbf{જવાબ:} $5.82\times10^{-35}$ J s]
+  \item $\omega=10^{14}$ rad/s દોલક ($m=9.11\times10^{-31}$ kg) ની શૂન્ય-બિંદુ ઊર્જા eV માં ગણો. \hfill [\textbf{જવાબ:} $\approx0.033$ eV]
+  \item ગામા-સૂક્ષ્મદર્શક $\lambda=10^{-13}$ m, $\sin\theta=0.3$: $\Delta x$ ગણો. \hfill [\textbf{જવાબ:} $\approx3.3\times10^{-13}$ m]
+  \item દાખલો P9 માં $\Delta p_x$ અને ઉત્પાદન $\Delta x\,\Delta p_x$ ગણો. \hfill [\textbf{જવાબ:} $\Delta p_x\approx1.99\times10^{-21}$; ઉત્પાદન $\approx h$]
+\end{enumerate}
+
+\section{50 ઉચ્ચ સ્તરીય MCQs}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item કલા વેગની વ્યાખ્યા: (A) $\dd\omega/\dd k$ (B) $\omega/k$ (C) $\omega k$ (D) $k/\omega$
+  \item સમૂહ વેગની વ્યાખ્યા: (A) $\omega/k$ (B) $\dd k/\dd\omega$ (C) $\dd\omega/\dd k$ (D) $\omega-k$
+  \item અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ માટે $v_p:v_g=$ ? (A) $2{:}1$ (B) $1{:}2$ (C) $1{:}1$ (D) $4{:}1$
+  \item સાપેક્ષતાવાદી દ્રવ્ય-તરંગમાં $v_p v_g=$ ? (A) $c$ (B) $c^{2}$ (C) $c/2$ (D) $v^{2}$
+  \item શૂન્યાવકાશ ફોટોન માટે: (A) $v_p>v_g$ (B) $v_p<v_g$ (C) $v_p=v_g=c$ (D) $v_pv_g=c^2$
+  \item $v_g=v_p-\lambda\,\dd v_p/\dd\lambda$ માં જો $v_p\propto\lambda$ તો: (A) $v_g=0$ (B) $v_g=2v_p$ (C) $v_g=v_p$ (D) $v_g=-v_p$
+  \item તરંગ-પેકેટમાં ઊર્જા કોની ઝડપે જાય? (A) $v_p$ (B) $v_g$ (C) $c$ (D) કોઈ નહીં
+  \item ગોસિયન પેકેટ મુક્ત-કણ પર: (A) આકાર જળવાય (B) ફેલાય (C) સંકોચાય (D) અદૃશ્ય થાય
+  \item પેકેટ-ફેલાવાનું કારણ: (A) ગુરુત્વાકર્ષણ (B) $E(k)$ નું અરેખીય ન હોવું (C) વિદ્યુત ક્ષેત્ર (D) ઘર્ષણ
+  \item $\Delta x\,\Delta p_x\ge$ ? (A) $h$ (B) $2\hbar$ (C) $\hbar/2$ (D) $\hbar$
+  \item $\Delta E\,\Delta t\ge$ ? (A) $\hbar$ (B) $\hbar/2$ (C) $h/2\pi^2$ (D) $2\hbar$
+  \item અનિશ્ચિતતા સિદ્ધાંત કોણે આપ્યો? (A) શ્રોડિન્જર (B) હાઇઝનબર્ગ (C) બોર (D) ડી બ્રોગ્લી
+  \item ગામા-સૂક્ષ્મદર્શકમાં સ્થિતિ-વિભેદન $\Delta x\sim$ ? (A) $\lambda\sin\theta$ (B) $\lambda/\sin\theta$ (C) $\sin\theta/\lambda$ (D) $\lambda^2\theta$
+  \item ગામા-સૂક્ષ્મદર્શકમાં સંવેગ-અનિશ્ચિતતાનું મૂળ: (A) લેન્સ ત્રુટિ (B) કૉમ્પ્ટન પ્રક્ષેપણ ખૂણો અનિશ્ચિત (C) ગણતરી ત્રુટિ (D) તાપમાન
+  \item એક-છિદ્ર પ્રયોગમાં છિદ્ર પહોળાઈ ઘટાડવાથી: (A) $\Delta x$ ઘટે, $\Delta p_x$ વધે (B) બંને ઘટે (C) બંને વધે (D) $\Delta x$ વધે, $\Delta p_x$ ઘટે
+  \item વિવર્તન પ્રથમ શૂન્યની શરત: (A) $\sin\theta=\lambda/d$ (B) $\sin\theta=d/\lambda$ (C) $\sin\theta=\lambda d$ (D) $\theta=\lambda/2d$
+  \item ન્યુક્લિયસ ($10^{-14}$ m) માં બંધનિત ઇલેક્ટ્રોનની અંદાઝિત ઊર્જા: (A) $1$ eV (B) $1$ keV (C) $\sim100$ MeV (D) $13.6$ eV
+  \item $\beta$-ક્ષય ઇલેક્ટ્રોનની લાક્ષણિક ઊર્જા: (A) $1$ MeV ક્રમ (B) $100$ MeV ક્રમ (C) $1$ GeV ક્રમ (D) $1$ eV ક્રમ
+  \item અનિશ્ચિતતા-અંદાજથી હાઇડ્રોજન ન્યૂનતમ-ઊર્જા ત્રિજ્યા: (A) $a_0$ (B) $2a_0$ (C) $a_0/2$ (D) $\infty$
+  \item અનિશ્ચિતતા-અંદાજથી હાઇડ્રોજન ભૂમિ-ઊર્જા: (A) $-27.2$ eV (B) $-13.6$ eV (C) $-6.8$ eV (D) $-3.4$ eV
+  \item શૂન્ય-બિંદુ ઊર્જા દોલક માટે ચોક્કસ મૂલ્ય: (A) $\hbar\omega$ (B) $\hbar\omega/2$ (C) $3\hbar\omega/2$ (D) $0$
+  \item શૂન્ય-બિંદુ ઊર્જા કઈ મર્યાદાથી આવે છે? (A) $\Delta x\,\Delta p$ (B) $\Delta E\,\Delta t$ (C) $\Delta L\,\Delta\theta$ (D) સમ-વિભાજન
+  \item ઉત્તેજિત અવસ્થા આયુ $\tau$ માટે રેખા-પહોળાઈ $\Delta\nu\sim$ ? (A) $\tau/h$ (B) $1/2\pi\tau$ (C) $h/\tau$ (D) $\tau^2h$
+  \item લાંબી આયુવાળી અવસ્થાની સ્પેક્ટ્રલ રેખા: (A) પહોળી (B) પાતળી (C) અનુપસ્થિત (D) દ્વિગુણિત
+  \item $\Delta L\,\Delta\theta\ge\hbar/2$ માં જો $\Delta\theta\to0$ તો: (A) $\Delta L\to0$ (B) $\Delta L\to\infty$ (C) $\Delta L$ અપરિવર્તિત (D) $\Delta L\to\hbar/2$
+  \item કણ જેટલો સ્થાનીય તો તેના સંવેગ-તરંગો: (A) એક ચોક્કસ $\lambda$ (B) વ્યાપક $\lambda$-શ્રેણી (C) શૂન્ય $\lambda$ (D) અનંત આયુ
+  \item અનિશ્ચિતતા સિદ્ધાંત કયા સિદ્ધાંતનું પરિણામ છે? (A) શાસ્ત્રીય યાંત્રિકી (B) ક્વોન્ટમ યાંત્રિકી (તરંગ-પ્રકૃતિ) (C) સાપેક્ષતા (D) થર્મોડાયનેમિક્સ
+  \item ઇલેક્ટ્રોન $\Delta x=0.5$ Å: $\Delta p\ge$ ? (A) $1.06\times10^{-24}$ (B) $1.06\times10^{-23}$ (C) $5.3\times10^{-25}$ (D) $1.06\times10^{-22}$ kg m/s
+  \item પ્રશ્ન 28 માં સંકળાયેલ ન્યૂનતમ ઊર્જા ક્રમ: (A) meV (B) eV (C) keV (D) MeV
+  \item મેક્રોસ્કોપિક કણ માટે અનિશ્ચિતતા નગણ્ય કારણ કે: (A) $\hbar$ અતિ નાનો (B) $h$ અતિ મોટો (C) કણ ચાર્જિત નથી (D) તરંગ નથી
+  \item તરંગ-પેકેટ માટે $\Delta k$ ઘટાડવાથી પેકેટ પહોળાઈ: (A) ઘટે (B) વધે (C) સરખી (D) શૂન્ય
+  \item ફોટોન માટે $E$--$p$ સંબંધ અરેખીય છે; એટલે ફોટોન પેકેટ: (A) ફેલાય છે (B) શૂન્યાવકાશમાં ફેલાતો નથી (C) સંકોચાય છે (D) અદૃશ્ય થાય છે
+  \item સ્વાભાવિક રેખા-પહોળાઈનું મૂળ કારણ: (A) ઉષ્મીય ગતિ (B) અવસ્થાની પરિમિત આયુ (C) ઉપકરણ ત્રુટિ (D) દબાણ
+  \item હાઇઝનબર્ગ માઇક્રોસ્કોપ ચિંતનનું મુખ્ય પાઠ: (A) માપક યંત્ર સુધારવું શક્ય (B) મર્યાદા પ્રકૃતિની મૂળ છે (C) ગામા-કિરણ હાનિકારક (D) લેન્સ જરૂરી
+  \item કોઈ કણ સંપૂર્ણ સ્થિર ($p=0$, $\Delta p=0$) હોય તો તેનું $\Delta x$: (A) $0$ (B) પરિમિત (C) અનંત (D) $\hbar/p$
+  \item અનિશ્ચિતતા સંબંધ ક્યા પ્રયોગથી સીધી પુષ્ટ થાય છે? (A) વિવર્તન/વિખેરણ પ્રયોગો (B) ફ્રેન્ક-હર્ટ્ઝ (C) મિલિકન (D) સ્ટર્ન-જર્લાચ
+  \item ગોસિયન પેકેટ વિશિષ્ટ છે કારણ કે: (A) તે ક્યારેય ફેલાતો નથી (B) તેનું ઉત્પાદન $\Delta x\,\Delta p$ ન્યૂનતમ $\hbar/2$ છે (C) તે ગોળ છે (D) તે સ્થિર છે
+  \item $v_g$ ક્યાં 'માહિતી' વહન કરે છે? (A) કલા-તળિયાં પર (B) આવરણ પર (C) ક્યાંય નહીં (D) બંને પર
+  \item ઇલેક્ટ્રોન માઇક્રોસ્કોપની વિભેદન-મર્યાદા મૂળભૂત રીતે મર્યાદિત છે: (A) લેન્સ દોષે (B) $\Delta x\,\Delta p$ મર્યાદાથી (C) તાપમાને (D) નિર્વાતની ગુણવત્તાથી
+  \item જો $\Delta E=10^{-6}$ eV હોય તો અવસ્થા આયુ $\tau\gtrsim$ ? (A) $3\times10^{-10}$ s (B) $3\times10^{-13}$ s (C) $3\times10^{-16}$ s (D) $3\times10^{-7}$ s
+  \item પેકેટ ફેલાવાની ઝડપ $\propto$ ? (A) $m$ (B) $1/m$ (C) $m^{2}$ (D) $m$ પર આધાર નહીં
+  \item હાઇડ્રોજન અંદાજમાં $E(r)$ નું ન્યૂનતમ અસ્તિત્વ કેમ છે? (A) બંને પદ ધન (B) $1/r^{2}$ શોષણ + $1/r$ કુંડલિત પદ (C) અનંત પદ (D) ક્વોન્ટાઇઝેશન
+  \item કલા-તળિયાં ઊર્જા વહન કરતાં નથી કારણ કે: (A) તે ગાણિતિક સ્થિરતા-બિંદુઓ છે (B) તે ખૂબ ઝડપી (C) તે ચાર્જિત (D) તે લંબાઈ ધરે
+  \item $\Delta x\to0$ પરિમિત કરે તો પેકેટમાં જરૂરી $\Delta k$: (A) પરિમિત (B) શૂન્ય (C) અનંત તરફ (D) નકારાત્મક
+  \item અનિશ્ચિતતા સિદ્ધાંતનો સૌથી નજીકનો શાસ્ત્રીય સાદૃશ્ય: (A) ફોરિયર વિશ્લેષણની સમય-આવૃત્તિ મર્યાદા (B) ઘર્ષણ (C) ગુરુત્વ (D) વિદ્યુત પ્રેરણ
+  \item ઇલેક્ટ્રોન પેકેટ $v_g=10^6$ m/s, $\sigma=1$ nm: ફેલાવાનો લાક્ષણિક કાળ $\tau_s=m\sigma^2/\hbar$: (A) $\sim1$ ps (B) $\sim9$ fs (C) $\sim1$ s (D) $\sim1$ ms
+  \item કોણીય અનિશ્ચિતતા $\Delta\theta=\pi$ (પૂરેપૂરું અજ્ઞાત) માટે $\Delta L$: (A) $\hbar/2\pi$ (B) $\hbar/2$ (C) શૂન્ય (D) અનંત
+  \item સૂક્ષ્મદર્શક વિભેદન સુધારવા UV ને બદલે ગામા વાપરવાની મર્યાદા: (A) ખર્ચ (B) સંવેગ-અનિશ્ચિતતા અને નમૂના-વિનાશ (C) લેન્સ ન મળે (D) તાપમાન
+  \item શૂન્ય-બિંદુ ઊર્જાનો પ્રયોગિક પુરાવો: (A) રંગીન પ્રકાશ (B) નિમ્ન તાપમાન X-ray વિવર્તનમાં અવશેષ દોલન (C) ફોટોવિદ્યુત અસર (D) કૉમ્પ્ટન અસર
+  \item $\Delta x\,\Delta p=\hbar/2$ ગોસિયન માટે; બિન-ગોસિયન માટે ઉત્પાદન હંમેશાં: (A) $\le\hbar/2$ (B) $=\hbar/2$ (C) $\ge\hbar/2$ (D) $=0$
+\end{enumerate}
+
+\subsection*{જવાબ ચાવી અને પગલાંવાર સમજૂતી}
+\begin{javabchavi}{MCQ જવાબ ચાવી (એકમ 2)}
+1-B | 2-C | 3-B | 4-B | 5-C | 6-A | 7-B | 8-B | 9-B | 10-C |
+11-B | 12-B | 13-B | 14-B | 15-A | 16-A | 17-C | 18-A | 19-A | 20-B |
+21-B | 22-A | 23-B | 24-B | 25-B | 26-B | 27-B | 28-A | 29-B | 30-A |
+31-B | 32-B | 33-B | 34-B | 35-C | 36-A | 37-B | 38-B | 39-B | 40-A |
+41-B | 42-B | 43-A | 44-C | 45-A | 46-B | 47-A | 48-B | 49-B | 50-C
+\end{javabchavi}
+
+\begin{javabchavi}{MCQ પગલાંવાર સમજૂતી (મુખ્ય ગણતરી-આધારિત પ્રશ્નો)}
+\begin{description}[style=nextline,itemsep=0pt]
+  \item[3.] અસાપેક્ષતાવાદી દ્રવ્ય-તરંગ: $v_p=v/2$, $v_g=v$ ⇒ ગુણોત્તર $1{:}2$.
+  \item[4.] $v_p=c^2/v$, $v_g=v$ ⇒ $v_pv_g=c^2$ — સાપેક્ષતાવાદી સંબંધ.
+  \item[6.] $v_p\propto\lambda\Rightarrow\dd v_p/\dd\lambda>0\Rightarrow v_g=v_p-\lambda(\text{ધન})<v_p$; $v_p=a\lambda$ માટે $v_g=a\lambda-a\lambda=0$.
+  \item[17.] $K\sim\hbar^2/8mR^2$ અને $R=10^{-14}$ m ⇒ $\approx95$ MeV → વિકલ્પ (C).
+  \item[20.] ચોક્કસ શ્રોડિન્જર ઉકેલ $E_n=(n+\tfrac12)\hbar\omega$; $n=0$ ⇒ $\hbar\omega/2$.
+  \item[23.] $\Delta E=h\Delta\nu\sim\hbar/2\tau\Rightarrow\Delta\nu\sim1/4\pi\tau\approx1/2\pi\tau$ (ક્રમ) → (B).
+  \item[28.] $\Delta p\ge\hbar/2\Delta x=1.055\times10^{-34}/(10^{-10})=1.06\times10^{-24}$ kg m/s.
+  \item[40.] $\tau\gtrsim\hbar/2\Delta E=(1.055\times10^{-34})/(2\times1.602\times10^{-25})=3.3\times10^{-10}$ s.
+  \item[46.] $\tau_s=m\sigma^{2}/\hbar=9.11\times10^{-31}\times10^{-18}/1.055\times10^{-34}\approx8.6\times10^{-15}$ s ≈ 9 fs.
+  \item[47.] $\Delta L\ge\hbar/2\Delta\theta=\hbar/2\pi$.
+\end{description}
+શેષ પ્રશ્નો વ્યાખ્યા-આધારિત છે; \S2.2--\S2.3નાં સૂત્રો સાથે સરખાવો.
+\end{javabchavi}
